@@ -1,0 +1,214 @@
+---
+title: "Patrón vs. mecanismo (proceso)"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Describir lo que ocurre no es lo mismo que explicar por qué ocurre]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Un **patrón** es una regularidad observable, como una forma, tendencia, distribución o estructura que se repite en el espacio, el tiempo o entre variables. Describe *qué* ocurre.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+Un **mecanismo** (o proceso) es el conjunto de procesos, interacciones o relaciones causales que generan el patrón observado. Explica *por qué* y *cómo* ocurre.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa chart-area >}} Una forma o regularidad que se puede describir y medir.
+:::
+
+::: {.mm-tag}
+QUÉ ES
+:::
+
+::: {.mm-cell .orange}
+{{< fa gears >}} Un proceso subyacente que produce esa forma.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} "¿Qué forma tiene esta distribución o tendencia?"
+:::
+
+::: {.mm-tag}
+PREGUNTA
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-question >}} "¿Qué reglas o dinámicas la generan?"
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa eye >}} Descriptivo: documenta la regularidad tal como se observa.
+:::
+
+::: {.mm-tag}
+NIVEL
+:::
+
+::: {.mm-cell .orange}
+{{< fa diagram-project >}} Explicativo: propone un proceso causal que la produce.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa clone >}} Un mismo patrón puede surgir de mecanismos muy distintos.
+:::
+
+::: {.mm-tag}
+UNICIDAD
+:::
+
+::: {.mm-cell .orange}
+{{< fa route >}} Un mismo mecanismo puede generar patrones diferentes dependiendo del contexto y la escala de observación.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa ruler-combined >}} Estadística descriptiva, análisis espacial, series de tiempo, agrupamiento.
+:::
+
+::: {.mm-tag}
+HERRAMIENTAS
+:::
+
+::: {.mm-cell .orange}
+{{< fa cogs >}} Modelos mecanicistas, simulaciones, experimentos, modelos estadísticos explicativos, modelos basados en procesos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa triangle-exclamation >}} Confundir describir con explicar: "ya sabemos qué pasa" no es "ya sabemos por qué".
+:::
+
+::: {.mm-tag}
+RIESGO
+:::
+
+::: {.mm-cell .orange}
+{{< fa flask-vial >}} Aceptar un mecanismo solo porque parece plausible, sin comprobar que realmente reproduce el patrón observado.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa clock-rotate-left >}} Permite anticipar qué podría ocurrir si la regularidad se mantiene.
+:::
+
+::: {.mm-tag}
+PREDICCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa shield-halved >}} Permite predecir qué ocurrirá incluso cuando cambien las condiciones.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa table >}} Describe lo observado en un conjunto de datos.
+:::
+
+::: {.mm-tag}
+GENERALIZACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa expand >}} Permite explicar y extrapolar el comportamiento a situaciones nuevas.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa leaf >}} **En ecología:** el modelado orientado a patrones (*pattern-oriented modeling*) funciona como una investigación policial: una sola pista puede señalar a muchos sospechosos, pero cuantas más pistas coincidan a la vez, menos mecanismos quedan en pie. Por eso un modelo no se valida con un solo patrón —por ejemplo, el tamaño de la población—, sino exigiendo que reproduzca varios a la vez: su estructura de edades, su distribución espacial, su tasa de crecimiento. Así se descartan los mecanismos que solo acertaban por casualidad en uno de ellos.
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa chart-line >}} Que las ventas de un producto crezcan de forma exponencial cada mes es un **patrón** — no explica si se debe al marketing, al boca a boca o a la estacionalidad.
+:::
+
+::: {.mm-example}
+{{< fa paw >}} Que la abundancia de una especie disminuya al alejarse del borde de un bosque es un **patrón** espacial; el **mecanismo** podría ser depredación, competencia o microclima — cada mecanismo genera predicciones diferentes que pueden contrastarse con nuevos datos.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿CÓMO SE RELACIONAN?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[EL PATRÓN ES EL PUNTO DE PARTIDA]{.pill}
+
+Muchas investigaciones empíricas arrancan detectando un patrón: una diferencia, tendencia o estructura llamativa que pide explicación.
+:::
+
+::: {.mm-def .orange}
+[EL MECANISMO ES LA META]{.pill}
+
+En muchas investigaciones, la ciencia intenta ir más allá de describir, para proponer y contrastar los procesos que generan lo observado — igual que la causalidad va más allá de la correlación.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} **No siempre hace falta llegar al mecanismo:** para muchos fines prácticos —como predecir— puede bastar con caracterizar bien el patrón. Identificar el mecanismo se vuelve indispensable cuando se quiere intervenir, generalizar a contextos nuevos, o cuando el patrón podría deberse a un artefacto del muestreo más que a un proceso real. En disciplinas como la biogeografía, la taxonomía, la vigilancia epidemiológica o el monitoreo ambiental, la descripción rigurosa de un patrón es, por sí misma, un resultado científico valioso.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El patrón describe la forma de lo que ocurre; el mecanismo explica el proceso que lo produce. Detectar un patrón es el punto de partida de la investigación, pero confirmar el mecanismo que lo genera requiere un paso adicional — y que un mismo patrón admita varias explicaciones plausibles es justamente la razón por la que ese paso no puede saltarse.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

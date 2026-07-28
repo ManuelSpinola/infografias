@@ -1,21 +1,58 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "R_website_infografias"
+  title: "Infografías"
+  site-url: https://mspinola-infografias.netlify.app
+  page-footer:
+    left: |
+      Una iniciativa del ICOMVIS  
+      ![](/imagenes/logo_icomvis_circular.png){fig-alt="ICOMVIS" width=45px}
+    right: |
+      Universidad Nacional, Costa Rica  
+      ![](/imagenes/logo_UNA.jpg){fig-alt="UNA" width=65px}
+  
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Inicio"
+    right:
+      - icon: github
+        href: https://github.com/ManuelSpinola
+  sidebar:
+    style: "floating"
+    search: true
+    background: light
+    contents:
+      - section: "Metodología de la investigación"
+        contents:
+          - text: "Método vs. metodología de investigación"
+            href: infografias/metodo_vs_metodologia.qmd
+          - text: "Investigación cualitativa vs. cuantitativa"
+            href: infografias/cualitativa_vs_cuantitativa.qmd
+          - text: "Objetivos de investigación"
+            href: infografias/objetivos_investigacion.qmd
+          - text: "Correlación vs. causalidad"
+            href: infografias/correlacion_vs_causalidad.qmd
+          - text: "Patrón vs. mecanismo"
+            href: infografias/patron_vs_mecanismo.qmd
+      - section: "Estadística y ciencia de datos"
+        contents:
+          - text: "Prueba de hipótesis vs. estimación"
+            href: infografias/prueba_hipotesis_vs_estimacion.qmd
+      - section: "Modelado ecológico"
+        contents:
+          - text: "Nicho ecológico vs. distribución de especies"
+            href: infografias/nicho_vs_distribucion.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
-
-editor: visual
-
+    theme: cosmo
+    css: /design-system.css
+    toc: false
+    grid:
+      sidebar-width: 260px
+      body-width: 900px
+      margin-width: 250px
+      gutter-width: 1.5rem

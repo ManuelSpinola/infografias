@@ -1,0 +1,110 @@
+---
+title: "Estadística bayesiana"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Probabilidad como grado de creencia, actualizada con los datos]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La estadística bayesiana interpreta la **probabilidad como el grado de creencia razonable** en una afirmación, dado el conocimiento disponible — y ese grado se actualiza a medida que llegan nuevos datos.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+A diferencia del enfoque frecuentista, sí permite hablar directamente de "qué tan probable es esta hipótesis", combinando lo que ya sabíamos con lo que aportan los datos.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EL TEOREMA DE BAYES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PRIOR]{.pill}
+
+Lo que creíamos **antes** de ver los datos. Puede basarse en estudios previos, teoría establecida, o ser deliberadamente poco informativo cuando no hay conocimiento previo sólido.
+:::
+
+::: {.mm-def .orange}
+[VEROSIMILITUD]{.pill}
+
+Qué tan bien explican los **datos observados** cada valor posible del parámetro — el mismo ingrediente que usa la estadística frecuentista.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa arrows-rotate >}} El teorema de Bayes combina el prior y la verosimilitud para producir la **distribución posterior**: una actualización de nuestras creencias que incorpora tanto lo que sabíamos antes como lo que aportan los datos nuevos.
+:::
+
+::: {.mm-banner .gray}
+CÓMO SE REPORTA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[INTERVALO DE CREDIBILIDAD]{.pill}
+
+Un rango con una interpretación directa de probabilidad: "hay 95% de probabilidad de que el parámetro esté en este rango", dado el modelo y los priors usados.
+:::
+
+::: {.mm-def .orange}
+[FACTOR DE BAYES]{.pill}
+
+Compara la evidencia relativa a favor de una hipótesis frente a otra. (Ver la infografía de críticas al valor de p para la escala de interpretación del BF₁₀.)
+:::
+
+:::
+
+::: {.mm-banner .purple}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS]{.pill}
+
+Permite hablar directamente de la probabilidad de una hipótesis o un parámetro, incorpora conocimiento previo de forma explícita, y cuantifica la incertidumbre de manera intuitiva.
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+El resultado depende de los priors elegidos —una fuente de subjetividad que debe justificarse— y el cómputo puede ser exigente en modelos complejos.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} **El prior no es arbitrario:** las buenas prácticas exigen justificarlo con evidencia previa o mostrar, mediante un análisis de sensibilidad, que el resultado no cambia mucho ante priors razonablemente distintos.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La estadística bayesiana actualiza creencias —expresadas como probabilidades— a la luz de los datos, combinando un prior explícito con la verosimilitud de lo observado. A cambio de la subjetividad del prior, gana la capacidad de cuantificar directamente la probabilidad de una hipótesis o de un parámetro.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

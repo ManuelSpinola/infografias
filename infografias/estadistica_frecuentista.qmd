@@ -1,0 +1,90 @@
+---
+title: "Estadística frecuentista"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Probabilidad como frecuencia a largo plazo, y decisiones basadas en el muestreo repetido]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La estadística frecuentista interpreta la **probabilidad como la frecuencia relativa** con la que ocurriría un evento si el experimento se repitiera muchas veces bajo las mismas condiciones.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No habla de qué tan creíble es una hipótesis, sino de qué tan seguido ocurrirían estos datos (u otros iguales o más extremos) si repitiéramos el estudio una y otra vez.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa dice >}} **Analogía:** decir que un dado tiene 1/6 de probabilidad de caer en 3 significa que, si lo tirás miles de veces, cerca de 1 de cada 6 tiros dará 3 — no que hay "1/6 de creencia" de que salga 3 en este tiro puntual.
+:::
+
+::: {.mm-banner .purple}
+HERRAMIENTAS PRINCIPALES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PRUEBA DE HIPÓTESIS]{.pill}
+
+Parte de una hipótesis nula (H₀) y usa el **valor de p** para medir qué tan compatibles son los datos con ella.
+:::
+
+::: {.mm-def .orange}
+[ESTIMACIÓN E INTERVALOS DE CONFIANZA]{.pill}
+
+Calcula el valor más probable de un parámetro junto con un rango (IC) que, en un muestreo repetido, contendría el valor verdadero un % determinado de las veces (ej. 95%).
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** "hay 95% de probabilidad de que el valor verdadero esté en este intervalo". **Interpretación correcta:** si repitiéramos el estudio muchas veces, el 95% de los intervalos calculados así contendrían el valor verdadero — un intervalo particular ya lo contiene o no lo contiene, sin término medio.
+:::
+
+::: {.mm-banner .gray}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS]{.pill}
+
+No requiere especificar creencias previas, se apoya en procedimientos estandarizados y ampliamente aceptados, y su cómputo suele ser simple y rápido.
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+No permite hablar directamente de la probabilidad de una hipótesis, muchos métodos requieren muestras suficientemente grandes, y su mal uso —umbrales rígidos, dicotomización— generó años de malas prácticas.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La estadística frecuentista responde si los datos son compatibles con una hipótesis, apoyándose en el comportamiento a largo plazo de un procedimiento repetido. Es la base de las pruebas de hipótesis, los valores de p y los intervalos de confianza — herramientas poderosas cuando se interpretan correctamente.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

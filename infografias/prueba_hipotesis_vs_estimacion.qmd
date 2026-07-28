@@ -1,0 +1,158 @@
+---
+title: "Prueba de hipótesis vs. estimación de parámetros"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos formas de responder con datos]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **prueba de hipótesis** parte de un supuesto (la hipótesis nula) y pregunta si los datos aportan evidencia suficiente para rechazarlo. El resultado es una decisión: sí o no.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+La **estimación de parámetros** calcula el valor más probable de una cantidad poblacional (una media, una proporción, un coeficiente) junto con un margen de precisión. El resultado es un número, con su incertidumbre.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa toggle-on >}} Responde con una decisión binaria: rechazar o no rechazar.
+:::
+
+::: {.mm-tag}
+RESULTADO
+:::
+
+::: {.mm-cell .orange}
+{{< fa ruler >}} Responde con una magnitud y su rango de incertidumbre.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} "¿Existe un efecto o diferencia?"
+:::
+
+::: {.mm-tag}
+PREGUNTA
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-simple >}} "¿Cuál es el tamaño de ese efecto, y con qué precisión?"
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa flask >}} Prueba t, ANOVA, chi-cuadrado, prueba de proporciones.
+:::
+
+::: {.mm-tag}
+EJEMPLOS
+:::
+
+::: {.mm-cell .orange}
+{{< fa arrows-left-right >}} Intervalo de confianza, coeficiente de una regresión, bootstrap.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa percent >}} Se apoya en el valor p y un nivel de significancia (ej. 0.05).
+:::
+
+::: {.mm-tag}
+MÉTRICA
+:::
+
+::: {.mm-cell .orange}
+{{< fa arrows-up-down >}} Se apoya en el error estándar y el intervalo de confianza.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa link >}} Puede verse como un caso particular: ¿el intervalo incluye el valor nulo?
+:::
+
+::: {.mm-tag}
+RELACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa link >}} Contiene la misma información que la prueba, y además el tamaño del efecto.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa flask-vial >}} "¿Este fertilizante aumenta el rendimiento?" — eso es una **prueba de hipótesis**: la respuesta es sí o no.
+:::
+
+::: {.mm-example}
+{{< fa chart-line >}} "¿Cuánto aumenta el rendimiento, y con qué margen de error?" — eso es **estimación de parámetros**.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿CÓMO REPORTARLO EN TU TESIS O ARTÍCULO?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[SOLO VALOR P]{.pill}
+
+Suficiente si tu pregunta es puramente de decisión (¿hay diferencia o no?). Pero no dice nada sobre la magnitud del efecto.
+:::
+
+::: {.mm-def .orange}
+[VALOR P + INTERVALO]{.pill}
+
+Es lo que piden hoy APA 7 y la mayoría de revistas: acompañar el valor p con el tamaño del efecto y su intervalo de confianza.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La prueba de hipótesis te dice si hay evidencia de un efecto; la estimación te dice qué tan grande es ese efecto (su magnitud) y qué tan precisa es esa cifra. Reportar ambas da una imagen más completa que reportar solo una.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

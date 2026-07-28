@@ -1,0 +1,174 @@
+---
+title: "Método vs. metodología"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Entendiendo la diferencia]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Los **métodos** son las técnicas, herramientas y procedimientos específicos que se usan para recolectar y analizar datos. Son las formas o medios concretos para llevar a cabo la investigación.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+La **metodología** es la estrategia, el plan y el marco general que guía todo el proceso de investigación de principio a fin. Es el "plano" que le da sentido y justificación a esa investigación.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa bullseye >}} Se enfoca en técnicas y herramientas puntuales.
+:::
+
+::: {.mm-tag}
+ENFOQUE
+:::
+
+::: {.mm-cell .orange}
+{{< fa puzzle-piece >}} Se enfoca en el proceso de investigación completo.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa hammer >}} Trata sobre cómo recolectar y analizar los datos.
+:::
+
+::: {.mm-tag}
+ALCANCE
+:::
+
+::: {.mm-cell .orange}
+{{< fa clipboard-list >}} Trata sobre el diseño y enfoque general de la investigación.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa chart-simple >}} Experimentos, encuestas, entrevistas, cuestionarios, pruebas, observaciones, estadística, etc.
+:::
+
+::: {.mm-tag}
+EJEMPLOS
+:::
+
+::: {.mm-cell .orange}
+{{< fa book >}} Diseño de investigación, enfoque, selección de métodos, muestreo, análisis, ética, etc.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa gear >}} Es una parte de la metodología de investigación.
+:::
+
+::: {.mm-tag}
+RELACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa diagram-project >}} Es el marco más amplio que incluye a los métodos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa hourglass-half >}} Responde a *"¿Cómo?"*
+:::
+
+::: {.mm-tag}
+ABORDA
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-question >}} Responde a *"¿Por qué, qué, cuándo, dónde y cómo?"*
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa key >}} Aporta las herramientas para llevar a cabo la investigación.
+:::
+
+::: {.mm-tag}
+PROPÓSITO
+:::
+
+::: {.mm-cell .orange}
+{{< fa map-location-dot >}} Aporta la hoja de ruta para llevar a cabo la investigación.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa car-side >}} Si la investigación es un viaje, los **métodos** son el vehículo, las herramientas y los instrumentos que usás en el camino.
+:::
+
+::: {.mm-example}
+{{< fa map >}} La **metodología** es el mapa completo y el plan de viaje: destino, ruta, tiempos y estrategia.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿CÓMO LLAMAR LA SECCIÓN EN TU TRABAJO?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[USÁ "MÉTODO"]{.pill}
+
+Si tu sección solo describe **qué hiciste**: participantes, instrumentos, procedimiento. Es lo más común en artículos con formato IMRaD (APA, revistas científicas).
+:::
+
+::: {.mm-def .orange}
+[USÁ "METODOLOGÍA"]{.pill}
+
+Si además **justificás por qué** elegiste ese camino: enfoque, diseño, paradigma. Es lo más común en tesis, sobre todo en ciencias sociales.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La metodología es el panorama general (el plan); los métodos son las acciones puntuales (las herramientas) usadas para llevar a cabo ese plan con éxito.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,1 +1,229 @@
-/* css styles */
+.info-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.info-header h2 {
+  margin-bottom: 4px;
+}
+
+.card-purple, .card-teal {
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-purple {
+  background-color: #EEEDFE;
+}
+
+.card-teal {
+  background-color: #E1F5EE;
+}
+
+.card-purple h3, .card-teal h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.card-purple h3 {
+  color: #3C3489;
+}
+
+.card-teal h3 {
+  color: #085041;
+}
+
+.card-purple ul, .card-teal ul {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.card-purple code, .card-teal code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.info-footer {
+  background-color: #f4f3f1;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.info-footer h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.info-footer p {
+  font-size: 0.85rem;
+  color: #5f5e5a;
+  margin-bottom: 0;
+}
+
+/* --- Título partido con VS --- */
+.title-vs {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.title-vs .side-blue, .title-vs .side-green {
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  display: block;
+}
+
+.title-vs .side-blue { color: #2C4A9E; }
+.title-vs .side-green { color: #0B6B45; }
+
+.title-vs .vs-badge {
+  display: inline-block;
+  background-color: #16233F;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 6px 0;
+}
+
+.subtitle-pill {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 4px 16px;
+  display: inline-block;
+  margin: 0 auto 1.5rem auto;
+}
+
+.subtitle-wrap { text-align: center; }
+
+/* --- Tarjetas de definición --- */
+.def-blue, .def-green {
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.def-blue { background-color: #EDF1FB; }
+.def-green { background-color: #EAF7EF; }
+
+.def-blue .def-label, .def-green .def-label {
+  display: inline-block;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.def-blue .def-label { background-color: #2C4A9E; }
+.def-green .def-label { background-color: #0B6B45; }
+
+.def-blue p, .def-green p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* --- Sección de diferencias clave --- */
+.diff-banner {
+  background-color: #F6C6C6;
+  color: #6E1E1E;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.diff-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.85rem;
+}
+
+.diff-row:last-child { border-bottom: none; }
+
+.diff-left, .diff-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.diff-left { background-color: #FCEEEE; border-radius: 8px; padding: 0.5rem 0.7rem; }
+.diff-right { background-color: #EAF7EF; border-radius: 8px; padding: 0.5rem 0.7rem; }
+
+.diff-label {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #8a6d1a;
+  background-color: #FDF3D8;
+  border-radius: 6px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+/* --- Ejemplo / analogía --- */
+.example-banner {
+  background-color: #DCD3F5;
+  color: #3C2E6E;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.example-box {
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.example-box.left { background-color: #EDF1FB; }
+.example-box.right { background-color: #EAF7EF; }
+
+/* --- Resumen final --- */
+.summary-banner {
+  background-color: #FCEFC7;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.summary-banner .summary-tag {
+  display: inline-block;
+  background-color: #B8860B;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.summary-banner p {
+  font-size: 0.9rem;
+  color: #5b4b12;
+  margin-bottom: 0;
+}

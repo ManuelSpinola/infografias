@@ -1,0 +1,158 @@
+---
+title: "Modelo de nicho ecológico vs. modelo de distribución de especies"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos espacios, una misma especie]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El **modelo de nicho ecológico** relaciona a la especie con variables ambientales (temperatura, precipitación, suelo) en el **espacio ambiental**. Estima el conjunto de condiciones bajo las cuales la especie podría persistir.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+El **modelo de distribución de especies** proyecta esa relación de vuelta al **espacio geográfico**, sobre un mapa. Estima dónde, en el territorio, es probable encontrar a la especie.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa temperature-half >}} Trabaja en el espacio ambiental: ejes de clima, suelo, altitud.
+:::
+
+::: {.mm-tag}
+ESPACIO
+:::
+
+::: {.mm-cell .orange}
+{{< fa map-location-dot >}} Trabaja en el espacio geográfico: coordenadas sobre un mapa.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} "¿Bajo qué condiciones puede vivir la especie?"
+:::
+
+::: {.mm-tag}
+PREGUNTA
+:::
+
+::: {.mm-cell .orange}
+{{< fa location-dot >}} "¿Dónde se espera encontrarla en el territorio?"
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa shapes >}} Un nicho estimado: un rango de condiciones ambientales viables.
+:::
+
+::: {.mm-tag}
+SALIDA
+:::
+
+::: {.mm-cell .orange}
+{{< fa map >}} Un mapa de idoneidad o probabilidad de presencia.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa cloud-sun >}} En la práctica suele estimarse solo con variables abióticas: clima, suelo, topografía.
+:::
+
+::: {.mm-tag}
+FACTORES
+:::
+
+::: {.mm-cell .orange}
+{{< fa paw >}} La distribución real sí depende de factores bióticos (competencia, depredación) y de dispersión.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa link-slash >}} El nicho estimado no siempre coincide con dónde vive realmente la especie.
+:::
+
+::: {.mm-tag}
+RELACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa link >}} La distribución real es un subconjunto del nicho, limitado por la dispersión y factores bióticos.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa frog >}} "¿Qué rango de temperatura y precipitación tolera esta rana?" — eso es un **modelo de nicho ecológico**.
+:::
+
+::: {.mm-example}
+{{< fa map-pin >}} "¿En qué puntos del mapa de Costa Rica se espera encontrarla?" — eso es un **modelo de distribución de especies**.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿CÓMO EVITAR LA CONFUSIÓN EN TU METODOLOGÍA?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[ACLARÁ QUÉ MODELÁS]{.pill}
+
+Nicho y distribución no son sinónimos, aunque el mismo algoritmo (MaxEnt, GAM, random forest) genere ambas salidas. Especificá cuál estás estimando y por qué.
+:::
+
+::: {.mm-def .orange}
+[REVISÁ EL DIAGRAMA BAM]{.pill}
+
+El diagrama BAM (Bióticos, Abióticos, Movimiento) resume esto. Si tu modelo solo usa clima, estás estimando nicho — no asumas que eso ya es la distribución real.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El nicho ecológico describe el espacio ambiental donde la especie podría vivir; la distribución de especies proyecta eso al mapa geográfico real — y ambos pueden diferir por límites de dispersión e interacciones bióticas.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,0 +1,214 @@
+---
+title: "Correlación vs. causalidad"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Que dos variables se muevan juntas no significa que una produzca a la otra]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **correlación** cuantifica el grado en que dos variables tienden a variar conjuntamente, ya sea en la misma dirección o en direcciones opuestas. No informa por sí sola si una causa a la otra.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+La **causalidad** es una relación en la que el cambio en una variable produce, genera o provoca el cambio en otra. Implica un mecanismo, no solo un patrón.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa arrows-left-right >}} El grado en que dos variables cambian conjuntamente.
+:::
+
+::: {.mm-tag}
+QUÉ MIDE
+:::
+
+::: {.mm-cell .orange}
+{{< fa bolt >}} Que el cambio en una variable produce el cambio en otra.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} "¿Estas variables se mueven juntas?"
+:::
+
+::: {.mm-tag}
+PREGUNTA
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-question >}} "¿Una de ellas produce el cambio en la otra?"
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa shuffle >}} Es simétrica: A se asocia con B tanto como B con A.
+:::
+
+::: {.mm-tag}
+DIRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa right-long >}} Tiene una dirección causal: la causa antecede y produce el efecto.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa chart-line >}} Coeficiente de correlación (r de Pearson, rho de Spearman), entre -1 y 1.
+:::
+
+::: {.mm-tag}
+MÉTRICA
+:::
+
+::: {.mm-cell .orange}
+{{< fa flask >}} No existe una única medida; la evidencia causal depende principalmente del diseño del estudio y del conjunto de la evidencia.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa database >}} Se obtiene incluso con datos puramente observacionales.
+:::
+
+::: {.mm-tag}
+DISEÑO
+:::
+
+::: {.mm-cell .orange}
+{{< fa vial-circle-check >}} Se puede inferir con mayor solidez mediante experimentos controlados y aleatorizados.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa triangle-exclamation >}} Puede deberse a una variable confusora, causalidad inversa, sesgos o simplemente al azar.
+:::
+
+::: {.mm-tag}
+EXPLICACIONES ALTERNATIVAS
+:::
+
+::: {.mm-cell .orange}
+{{< fa shield-halved >}} Un buen diseño busca precisamente descartar esas explicaciones.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa eye >}} Permite hacer predicciones útiles, aunque no exista una relación causal.
+:::
+
+::: {.mm-tag}
+PREDICCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa bullseye >}} Permite predecir qué ocurrirá si intervenimos sobre esa variable.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa ban >}} Cambiar A no implica que B cambie.
+:::
+
+::: {.mm-tag}
+INTERVENCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa sliders >}} Si modificamos la causa, esperamos modificar el efecto.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa ice-cream >}} **Ejemplo clásico:** las ventas de helado y los ahogamientos suben juntos en verano. El helado no causa ahogamientos: una tercera variable, la temperatura, aumenta tanto el consumo de helado como la cantidad de personas que nadan. Esto es una **variable confusora**.
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa mug-hot >}} "Los países que más chocolate consumen per cápita tienen más premios Nobel" — es una **correlación** llamativa, pero no prueba que el chocolate cause genialidad.
+:::
+
+::: {.mm-example}
+{{< fa syringe >}} En un ensayo clínico aleatorizado, quienes reciben la vacuna enferman menos que el grupo placebo — la aleatorización aporta evidencia de **causalidad**.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿CUÁNDO SE PUEDE HABLAR DE CAUSALIDAD?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[SOLO CON DATOS OBSERVACIONALES]{.pill}
+
+Es posible controlar estadísticamente algunos factores de confusión conocidos mediante modelos como la regresión. Sin embargo, siempre pueden existir factores no medidos que expliquen la relación observada. Por ello, los estudios observacionales pueden aportar evidencia compatible con una relación causal, pero rara vez permiten demostrarla por sí solos.
+:::
+
+::: {.mm-def .orange}
+[CON DISEÑO EXPERIMENTAL]{.pill}
+
+La aleatorización reparte de forma equilibrada las variables confusoras, tanto conocidas como desconocidas, entre los grupos. Esto permite atribuir la diferencia observada al tratamiento: es el estándar más sólido para establecer causalidad.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass-chart >}} **No siempre es posible experimentar:** en ecología, epidemiología o ciencias sociales, muchas preguntas no admiten aleatorización (¿fumar causa cáncer? ¿el cambio climático afecta la distribución de una especie?). En estos casos se acumula evidencia observacional usando criterios como los de **Bradford Hill** (temporalidad, plausibilidad biológica, consistencia entre estudios, gradiente dosis-respuesta) para evaluar una relación causal sin necesidad de un experimento.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La correlación describe un patrón; la causalidad intenta explicar por qué ocurre ese patrón. Una correlación, por sí sola, no demuestra una relación causal: la diferencia la marca el diseño del estudio y la calidad de la evidencia.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

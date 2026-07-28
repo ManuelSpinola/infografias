@@ -1,0 +1,234 @@
+---
+title: "Investigación cualitativa vs. cuantitativa"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos formas de acercarse a un fenómeno de estudio]{}
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **investigación cualitativa** busca comprender significados, experiencias y procesos mediante el análisis e interpretación de información no numérica.
+:::
+
+::: {.mm-def .orange}
+[DEFINICIÓN]{.pill}
+
+La **investigación cuantitativa** busca medir variables y analizar relaciones mediante datos numéricos, utilizando herramientas estadísticas para describir, explicar o predecir fenómenos.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+DIFERENCIAS CLAVE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa comments >}} Comprender significados, experiencias y procesos.
+:::
+
+::: {.mm-tag}
+ENFOQUE
+:::
+
+::: {.mm-cell .orange}
+{{< fa ruler >}} Medir variables y analizar relaciones entre ellas.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} "¿Cómo? ¿Por qué? ¿Qué significa esto para los participantes?"
+:::
+
+::: {.mm-tag}
+PREGUNTA
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-simple >}} "¿Cuánto? ¿Con qué frecuencia? ¿Existe una relación?"
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa magnifying-glass >}} Exploratoria e interpretativa: el significado emerge del análisis.
+:::
+
+::: {.mm-tag}
+LÓGICA
+:::
+
+::: {.mm-cell .orange}
+{{< fa list-check >}} Confirmatoria o explicativa: se parte de una pregunta o hipótesis a contrastar.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa seedling >}} Pueden surgir o refinarse durante el estudio.
+:::
+
+::: {.mm-tag}
+HIPÓTESIS
+:::
+
+::: {.mm-cell .orange}
+{{< fa flag-checkered >}} Suelen formularse antes de recolectar los datos.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} No toda investigación cuantitativa necesita una hipótesis: muchos estudios descriptivos u observacionales (comunes en ecología, donde rara vez se puede manipular o poner a prueba una hipótesis) buscan describir o estimar un fenómeno, sin contrastar una predicción específica.
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa align-left >}} Texto: narrativas, transcripciones, notas de campo.
+:::
+
+::: {.mm-tag}
+TIPO DE DATOS
+:::
+
+::: {.mm-cell .orange}
+{{< fa hashtag >}} Números: variables medibles y codificables.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa user-check >}} Selección intencional de participantes que aporten información relevante, hasta alcanzar profundidad suficiente.
+:::
+
+::: {.mm-tag}
+MUESTRA
+:::
+
+::: {.mm-cell .orange}
+{{< fa people-group >}} Selección orientada a obtener estimaciones válidas para la población, frecuentemente mediante muestreo probabilístico.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa arrows-spin >}} El diseño puede ajustarse conforme avanza el estudio.
+:::
+
+::: {.mm-tag}
+DISEÑO
+:::
+
+::: {.mm-cell .orange}
+{{< fa map >}} El diseño suele definirse antes de iniciar la recolección de datos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa layer-group >}} Codificación y análisis temático de los datos.
+:::
+
+::: {.mm-tag}
+ANÁLISIS
+:::
+
+::: {.mm-cell .orange}
+{{< fa calculator >}} Pruebas estadísticas y modelos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa microphone >}} Entrevistas a profundidad, grupos focales, etnografía, observación participante, análisis documental.
+:::
+
+::: {.mm-tag}
+MÉTODOS TÍPICOS
+:::
+
+::: {.mm-cell .orange}
+{{< fa clipboard-list >}} Encuestas estructuradas, experimentos, censos, estudios observacionales y longitudinales.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa lightbulb >}} Interpretación rica, categorías, teoría que emerge de los datos.
+:::
+
+::: {.mm-tag}
+RESULTADO
+:::
+
+::: {.mm-cell .orange}
+{{< fa square-poll-vertical >}} Evidencia estadística sobre relaciones entre variables.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa comment-dots >}} "¿Cómo viven los pacientes con diabetes su proceso de adaptación a la enfermedad?" — se responde con **entrevistas a profundidad**.
+:::
+
+::: {.mm-example}
+{{< fa chart-line >}} "¿Cuál es la prevalencia de diabetes en la población y qué factores se asocian a ella?" — se responde con una **encuesta a gran escala**.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿Y SI NECESITO AMBOS?
+:::
+
+::: {.mm-example}
+{{< fa people-arrows >}} **Métodos mixtos:** cuando la pregunta de investigación lo exige, es válido combinar ambos enfoques — por ejemplo, una encuesta cuantitativa para medir la magnitud de un problema, seguida de entrevistas cualitativas para entender por qué ocurre. La combinación debe responder a la pregunta de investigación, no usarse únicamente porque "combinar métodos siempre es mejor".
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} **No existe un enfoque "mejor":** la investigación cualitativa y la cuantitativa responden preguntas diferentes, usan criterios distintos de calidad y pueden complementarse en un mismo estudio. Ninguna es "menos científica" que la otra. Las diferencias de esta infografía son tendencias generales, no reglas absolutas: existen estudios cualitativos confirmatorios y estudios cuantitativos exploratorios.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Lo cuantitativo mide y analiza relaciones; lo cualitativo comprende e interpreta significados. Ambos enfoques son científicos, y la elección depende de la pregunta de investigación, no de cuál "suena más riguroso".
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,0 +1,128 @@
+---
+title: "¿Qué es un valor de p?"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Qué te dice, qué no te dice, y cómo interpretarlo sin errores]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El **valor de p** es la probabilidad de obtener un resultado **tan o más extremo** que el observado, **si la hipótesis nula fuera cierta** y se cumplieran los supuestos del análisis.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+Es una medida de **qué tan inusuales** serían tus datos (o unos más extremos) si en realidad no hubiera ningún efecto o diferencia.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa dice >}} **Analogía:** tirás una moneda 20 veces y obtenés 15 caras. Si la moneda no fuera sesgada (50% de probabilidad de cara en cada lanzamiento), el valor de p responde a la pregunta: ¿qué tan probable sería obtener 15 caras o más? Si esa probabilidad es muy baja, los datos observados son poco compatibles con la hipótesis de que la moneda no es sesgada.
+:::
+
+::: {.mm-banner .purple}
+P PEQUEÑO VS. P GRANDE
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa arrow-down >}} Los datos son poco compatibles con la hipótesis nula.
+:::
+
+::: {.mm-tag}
+SIGNIFICADO
+:::
+
+::: {.mm-cell .orange}
+{{< fa arrow-up >}} Los datos son compatibles con la hipótesis nula.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa toggle-on >}} Suele rechazarse la hipótesis nula (cuando p < α, por ejemplo 0.05).
+:::
+
+::: {.mm-tag}
+DECISIÓN TÍPICA
+:::
+
+::: {.mm-cell .orange}
+{{< fa toggle-off >}} No se rechaza la hipótesis nula: no hay evidencia suficiente en su contra.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa triangle-exclamation >}} No implica que el efecto sea grande, ni que sea importante en la práctica.
+:::
+
+::: {.mm-tag}
+OJO
+:::
+
+::: {.mm-cell .orange}
+{{< fa triangle-exclamation >}} No implica que la hipótesis nula sea cierta, ni que no exista efecto alguno.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-exclamation >}} **Un p grande no demuestra que no hay efecto:** puede deberse a que realmente no existe, o a que el estudio tiene poca información (por ejemplo, un tamaño de muestra pequeño) para detectarlo.
+:::
+
+::: {.mm-banner .gray}
+LO QUE SÍ DICE / LO QUE NO DICE
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[SÍ DICE]{.pill}
+
+Qué tan **compatibles** son tus datos observados con la hipótesis nula, asumiendo que esta es cierta.
+:::
+
+::: {.mm-def .orange}
+[NO DICE]{.pill}
+
+No es la probabilidad de que H₀ sea verdadera, no mide el **tamaño del efecto**, y no indica si el resultado es relevante en la práctica.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-xmark >}} **Error frecuente:** "p = 0.03 → H₀ tiene 3% de probabilidad de ser verdadera."
+
+{{< fa circle-check >}} **Correcto:** "p = 0.03 → si H₀ fuera verdadera, hay 3% de probabilidad de obtener este resultado o uno más extremo."
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El valor de p mide qué tan compatibles son tus datos con la hipótesis nula — no si esta es verdadera, ni qué tan grande es el efecto observado. Por sí solo, no permite establecer la importancia científica o práctica de un resultado. Reportalo, cuando corresponda, junto con el tamaño del efecto y su intervalo de confianza.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,0 +1,190 @@
+---
+title: "Cómo redactar objetivos de investigación"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Objetivo general y objetivos específicos, paso a paso]{}
+:::
+
+::: {.mm-banner .gray}
+¿SIEMPRE HACE FALTA UN OBJETIVO GENERAL?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[CASO MÁS COMÚN]{.pill}
+
+En tesis, proyectos formales o artículos, sí conviene: el objetivo general marca el propósito global y los específicos lo desglosan en pasos concretos.
+:::
+
+::: {.mm-def .orange}
+[EXCEPCIÓN]{.pill}
+
+En proyectos muy breves o acotados, a veces basta con objetivos específicos, sin uno general que resultaría redundante.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+ESTRUCTURA DE LA ORACIÓN
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[NÚCLEO OBLIGATORIO]{.pill}
+
+{{< fa play >}} **Verbo en infinitivo** — la acción que se va a realizar.
+
+{{< fa bullseye >}} **Qué** — el objeto sobre el que recae esa acción. Si ya es específico, el objetivo puede quedar completo solo con esto.
+:::
+
+::: {.mm-def .orange}
+[SOLO CUANDO SEA NECESARIO]{.pill}
+
+{{< fa gears >}} **Cómo** — el enfoque, método o fuente de información, únicamente cuando sea indispensable para comprender el objetivo. No todo objetivo tiene que terminar en "mediante..." o "utilizando...".
+
+{{< fa location-dot >}} **Dónde / cuándo / para qué** — solo cuando haga falta para delimitar el estudio.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa lightbulb >}} Con método explícito (el "qué" es ambiguo sin él): Determinar el nivel de estrés laboral **mediante encuestas** en el personal del hospital X.
+:::
+
+::: {.mm-example}
+{{< fa lightbulb >}} Sin método (el "qué" ya es suficientemente específico): Evaluar el efecto de la temperatura y la precipitación en la ocurrencia de tal especie.
+:::
+
+::: {.mm-banner .gray}
+OBJETIVO VS. ACTIVIDAD: UNA CONFUSIÓN FRECUENTE
+:::
+
+::: {.mm-example}
+{{< fa circle-question >}} **La prueba:** preguntate ¿esto genera un resultado o conocimiento nuevo (una relación, una distribución, una comparación), o solo describe una tarea para llegar ahí? Si se puede completar sin responder nada, es una actividad, no un objetivo.
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[ES UNA ACTIVIDAD]{.pill}
+
+"Obtener los registros de la especie X para Costa Rica."
+
+"Aplicar una encuesta a los empleados de la empresa."
+
+Son pasos operativos: describen una tarea, no un resultado. Pueden completarse sin haber generado ningún conocimiento nuevo.
+:::
+
+::: {.mm-def .orange}
+[ES UN OBJETIVO]{.pill}
+
+"Determinar la distribución geográfica de la especie X en Costa Rica a partir de sus registros."
+
+"Determinar el nivel de satisfacción laboral mediante una encuesta."
+
+Usan esa actividad como insumo (el "cómo") para llegar a un resultado concreto (el "qué").
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-check >}} **La prueba del resultado:** al terminar el estudio, ¿podés responder el objetivo con una frase? {{< fa check >}} "La temperatura aumenta la probabilidad de ocurrencia." {{< fa check >}} "La satisfacción promedio fue de 7.2 sobre 10." {{< fa xmark >}} "Se aplicó una encuesta." {{< fa xmark >}} "Se recopilaron datos." Si la respuesta describe una tarea realizada y no un hallazgo, el objetivo estaba mal planteado.
+:::
+
+::: {.mm-banner .gray}
+VERBOS SEGÚN EL NIVEL DEL OBJETIVO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[OBJETIVO GENERAL]{.pill}
+
+Verbos que expresan el propósito global del estudio. Ej: analizar, evaluar, determinar, diseñar, proponer.
+:::
+
+::: {.mm-def .orange}
+[OBJETIVOS ESPECÍFICOS]{.pill}
+
+Verbos que describen resultados parciales necesarios para alcanzar el objetivo general. Ej: identificar, describir, comparar, medir, clasificar, calcular.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} El mismo verbo puede aparecer en ambos niveles: "Evaluar el efecto de la temperatura y la precipitación..." (general) y "Evaluar el efecto de la temperatura en la ocurrencia..." (específico) son igualmente válidos. Lo que define el nivel es el alcance, no el verbo en sí.
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[USÁ]{.pill}
+
+{{< fa check >}} Verbos que producen conocimiento: **determinar**, **evaluar**, **identificar**, **estimar**, **comparar**, **cuantificar**.
+:::
+
+::: {.mm-def .orange}
+[EVITÁ]{.pill}
+
+{{< fa xmark >}} Verbos que describen una tarea, no un resultado: **recopilar**, **recolectar**, **aplicar**, **realizar**, **elaborar**.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO APLICADO
+:::
+
+::: {.mm-example}
+{{< fa bullseye >}} **General:** Determinar el nivel de estrés laboral en el personal del hospital X.
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} **Específico 1:** Identificar las principales fuentes de estrés reportadas por el personal.
+:::
+
+::: {.mm-example}
+{{< fa chart-simple >}} **Específico 2:** Medir el nivel de estrés mediante una escala validada.
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} **Específico 3:** Comparar el nivel de estrés entre las distintas áreas del hospital.
+:::
+
+::: {.mm-example}
+{{< fa puzzle-piece >}} **¿Son realmente independientes?** Cada objetivo específico debería producir un resultado propio. Si eliminar uno de ellos no cambia el estudio, probablemente no era un objetivo sino una actividad, o es el mismo objetivo repartido en pedazos.
+:::
+
+::: {.mm-banner .gray}
+ERRORES COMUNES
+:::
+
+::: {.mm-def .orange}
+[EVITALOS]{.pill}
+
+{{< fa xmark >}} **1.** Repetir el mismo verbo con el mismo alcance en el general y en un específico.
+
+{{< fa xmark >}} **2.** Confundir el objetivo con la metodología o con una actividad (ej. "aplicar una encuesta").
+
+{{< fa xmark >}} **3.** Objetivos específicos que no suman al general, o que son el mismo objetivo dividido.
+
+{{< fa xmark >}} **4.** Incluir varios verbos independientes en un mismo objetivo. Si cada verbo representa un resultado distinto, probablemente deban ser objetivos separados — pero un verbo compuesto ("identificar y cuantificar los factores...") es válido cuando ambas acciones forman parte del mismo resultado.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El objetivo general dice qué se quiere lograr en conjunto; los específicos, con qué pasos concretos se llega ahí. Usá siempre un verbo en infinitivo que produzca conocimiento, agregá método y contexto solo si hacen falta, y verificá que cada objetivo específico aporte un resultado propio.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

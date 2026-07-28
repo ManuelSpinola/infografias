@@ -1,0 +1,114 @@
+---
+title: "Machine learning (aprendizaje automático)"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Predecir a partir de los datos, más que explicar por qué ocurren]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El machine learning usa algoritmos que **aprenden patrones a partir de los datos** para predecir o clasificar, sin que una persona programe explícitamente esas reglas.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+En vez de partir de una hipótesis para probarla (frecuentista) o de un modelo probabilístico explícito (bayesiano), el ML prioriza **qué tan bien predice** un modelo sobre datos nuevos, aunque su funcionamiento interno sea difícil de interpretar.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link >}} **Conexión:** muchos modelos de ML son excelentes detectando patrones (ver la infografía *Patrón vs. mecanismo*), pero no siempre explican el mecanismo que los genera.
+:::
+
+::: {.mm-banner .purple}
+TIPOS PRINCIPALES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[APRENDIZAJE SUPERVISADO]{.pill}
+
+El modelo aprende de datos ya etiquetados (ej. fotos marcadas como "gato" / "no gato") para predecir la etiqueta de datos nuevos. Incluye regresión y clasificación.
+:::
+
+::: {.mm-def .orange}
+[APRENDIZAJE NO SUPERVISADO]{.pill}
+
+El modelo busca estructura en datos sin etiquetas (ej. agrupar clientes con comportamientos similares). Incluye *clustering* y reducción de dimensionalidad.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa gamepad >}} También existe el **aprendizaje por refuerzo**, donde un agente aprende a partir de recompensas y castigos que recibe por sus acciones (ej. un programa que aprende a jugar ajedrez).
+:::
+
+::: {.mm-banner .gray}
+CÓMO SE EVALÚA UN MODELO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[ENTRENAMIENTO Y VALIDACIÓN]{.pill}
+
+Los datos se dividen en un conjunto de **entrenamiento** (para ajustar el modelo) y uno de **prueba** (para evaluar qué tan bien predice datos que nunca vio).
+:::
+
+::: {.mm-def .orange}
+[SOBREAJUSTE (OVERFITTING)]{.pill}
+
+Ocurre cuando el modelo memoriza el ruido de los datos de entrenamiento en vez de aprender el patrón real: predice muy bien ahí, pero mal ante datos nuevos.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa ruler >}} **Métricas comunes según el problema:** exactitud, precisión y sensibilidad para clasificación; error cuadrático medio para regresión; validación cruzada (*cross-validation*) para estimar qué tan bien generaliza el modelo a datos nuevos.
+:::
+
+::: {.mm-banner .purple}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS]{.pill}
+
+Maneja bien relaciones complejas o no lineales y datos de alta dimensión, escala con grandes volúmenes de datos, y prioriza la capacidad predictiva.
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+Muchos modelos son difíciles de interpretar ("cajas negras"), pueden reproducir sesgos presentes en los datos de entrenamiento, y un buen desempeño predictivo no implica comprender el mecanismo causal.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El machine learning prioriza la predicción por sobre la explicación: aprende patrones directamente de los datos y se evalúa por qué tan bien generaliza a datos nuevos, no por si sus supuestos estadísticos son correctos. Es una herramienta poderosa, pero complementaria —no sustituta— de la inferencia estadística clásica.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,0 +1,168 @@
+---
+title: "Críticas al uso e interpretación del valor de p"
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Mitos, problemas de interpretación y alternativas al valor de p]{}
+:::
+
+::: {.mm-banner .gray}
+UNA HISTORIA DE MALENTENDIDO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FISHER, 1935]{.pill}
+
+Propuso el valor de p como una **medida continua de la compatibilidad de los datos con H₀**, no como una regla automática de decisión. El 5% era una guía práctica, no un umbral rígido.
+:::
+
+::: {.mm-def .orange}
+[NEYMAN Y PEARSON]{.pill}
+
+Desarrollaron un marco de **decisión binaria** con un nivel de significancia α fijo. Ese α no tenía que ser 0.05 — podía ajustarse al contexto.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link-slash >}} **La fusión problemática:** la práctica científica combinó ambas visiones. El valor p fisheriano se comenzó a interpretar con la lógica binaria de Neyman-Pearson, y el 0.05 de Fisher se volvió un umbral universal — algo que ninguno de los dos propuso así.
+:::
+
+::: {.mm-banner .purple}
+MITOS MÁS COMUNES
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Mito: p < 0.05 significa que el efecto es real.
+:::
+
+::: {.mm-tag}
+REALIDAD
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Solo indica que los datos son poco compatibles con H₀; no demuestra por sí solo que el efecto exista.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Mito: p < 0.05 significa que la hipótesis nula es falsa.
+:::
+
+::: {.mm-tag}
+REALIDAD
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} No demuestra que H₀ sea falsa; solo mide compatibilidad de los datos con H₀.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Mito: p < 0.05 significa que el resultado es importante.
+:::
+
+::: {.mm-tag}
+REALIDAD
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Significancia estadística no implica relevancia práctica ni tamaño del efecto.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Mito: p > 0.05 significa que no hay efecto.
+:::
+
+::: {.mm-tag}
+REALIDAD
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Puede haber efecto; el estudio pudo carecer de poder estadístico para detectarlo.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+PROBLEMAS DE INTERPRETACIÓN Y DE USO DEL VALOR P
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PROBLEMAS DE INTERPRETACIÓN]{.pill}
+
+**Dicotomía significativo / no significativo:** se trata como un sí o no absoluto, cuando refleja un grado de evidencia continuo.
+
+**Sensibilidad al tamaño de muestra:** con muestras grandes, diferencias triviales resultan "significativas"; con muestras chicas, efectos reales pasan desapercibidos.
+:::
+
+::: {.mm-def .orange}
+[PROBLEMAS DE PRÁCTICA CIENTÍFICA]{.pill}
+
+**P-hacking:** repetir análisis hasta lograr significancia, inflando la tasa de falsos positivos.
+
+**Publicación selectiva:** solo se publican resultados significativos, sesgando la literatura.
+
+**Crisis de reproducibilidad:** la dependencia excesiva de umbrales de significancia ha sido uno de los factores asociados a la crisis de reproducibilidad.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa scale-unbalanced >}} **La dicotomía en acción:** dos estudios con p = 0.049 y p = 0.051 ofrecen prácticamente la misma evidencia, aunque uno se etiquete como "significativo" y el otro no.
+:::
+
+::: {.mm-banner .purple}
+ALTERNATIVAS Y BUENAS PRÁCTICAS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[TAMAÑO DEL EFECTO + IC 95%]{.pill}
+
+Reportar la magnitud del efecto junto con su intervalo de confianza comunica **tamaño e incertidumbre** a la vez. Ej: "el salario promedio de los hombres fue 2500 (IC 95%: 2200–2700) USD más alto que el de las mujeres."
+:::
+
+::: {.mm-def .orange}
+[FACTOR DE BAYES Y ENFOQUE BAYESIANO]{.pill}
+
+El **factor de Bayes (BF₁₀)** mide cuántas veces los datos son más probables bajo H₁ que bajo H₀. El enfoque bayesiano combina los datos con información previa para obtener una distribución posterior sobre los parámetros y permite cuantificar directamente la incertidumbre sobre ellos.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} **Cómo leer el BF₁₀:** 1–3 evidencia débil a favor de H₁ · 3–10 moderada · 10–30 fuerte · más de 30 muy fuerte.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El valor de p no es la probabilidad de que H₀ sea cierta, ni mide el tamaño ni la importancia de un efecto. Su mal uso —umbrales rígidos, p-hacking, publicación selectiva— ha sido uno de los factores asociados a la crisis de reproducibilidad. Complementarlo con el tamaño del efecto y su IC 95%, y cuando sea posible con herramientas bayesianas, da una imagen más completa y honesta de la evidencia. El valor de p sigue siendo una herramienta útil, siempre que se interprete correctamente y se complemente con otras medidas de evidencia.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

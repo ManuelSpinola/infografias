@@ -1,2 +1,9 @@
 _site/
 .quarto/
+
+/.quarto/
+**/*.quarto_ipynb
+.Rproj.user
+
+# Local Netlify folder
+.netlify

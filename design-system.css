@@ -1,0 +1,329 @@
+/* =========================================================
+   SISTEMA DE DISEÑO — Infografías
+   Un solo archivo compartido por todas las piezas del sitio.
+   ========================================================= */
+
+:root {
+  --blue:   #4E79A7;
+  --orange: #F28E2B;
+  --gray:   #6B7280;
+  --yellow: #EDC948;
+  --purple: #B07AA1;
+  --una-red: #A31E32;
+  --blue-bright: #2F80ED;
+}
+
+/* Suaviza el renderizado de fuentes — sin esto, algunos navegadores
+   (sobre todo en Mac/Chrome) muestran el texto más "grueso" de lo real */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Título que genera Quarto desde el YAML (title:) */
+#title-block-header,
+#title-block-header .title {
+  text-align: center;
+}
+
+/* Subtítulo tipo "pill" debajo del título */
+.mm-subtitle { text-align: center; margin-bottom: 1.5rem; }
+
+.mm-subtitle span {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: var(--blue);
+  border-radius: 999px;
+  padding: 6px 20px;
+}
+
+/* Grilla de dos columnas (definiciones, ejemplos) */
+.mm-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 700px) {
+  .mm-grid2 { grid-template-columns: 1fr; }
+}
+
+/* Tarjeta de definición */
+.mm-def { border-radius: 14px; padding: 1.1rem 1.4rem; }
+.mm-def.blue   { background: #EBF1F8; }
+.mm-def.orange { background: #FDEFE1; }
+
+.mm-def .pill {
+  display: inline-block;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.mm-def.blue .pill   { background: var(--blue); }
+.mm-def.orange .pill { background: var(--orange); }
+
+.mm-def p { font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+/* Banner de sección (título corto de bloque) */
+.mm-banner {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 7px;
+  margin: 1.2rem 0 0.8rem 0;
+  color: white;
+}
+.mm-banner.gray   { background: var(--gray); }
+.mm-banner.purple { background: var(--purple); }
+
+/* Fila de comparación (dos celdas + etiqueta central) */
+.mm-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.87rem;
+}
+.mm-row:last-child { border-bottom: none; }
+
+.mm-cell {
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.mm-cell.blue   { background: #EBF1F8; }
+.mm-cell.orange { background: #FDEFE1; }
+
+.mm-tag {
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #8a6d1a;
+  background: #FDF3D8;
+  border-radius: 6px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+/* Callout de ejemplo / analogía */
+.mm-example {
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.87rem;
+  line-height: 1.6;
+  background: #F1ECFA;
+}
+
+/* Resumen final */
+.mm-summary {
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  background: #FDF6DE;
+}
+.mm-summary .pill {
+  background: var(--yellow);
+  color: #5b4b12;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.mm-summary p { font-size: 0.92rem; color: #5b4b12; margin: 0; }
+
+/* Crédito de autoría (pie de página de cada infografía) */
+.mm-credito {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--gray);
+  margin-top: 1.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #eee;
+}
+
+.mm-credito a {
+  color: var(--gray);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   PORTADA DEL SITIO (index)
+   ========================================================= */
+
+.home-hero { text-align: center; margin: 1.5rem 0 2.5rem 0; }
+
+.home-hero .eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
+.home-hero p {
+  color: var(--gray);
+  font-size: 1rem;
+  max-width: 620px;
+  margin: 0.4rem auto 0 auto;
+  line-height: 1.6;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.home-card {
+  border-radius: 16px;
+  padding: 1.3rem 1.5rem;
+  background: white;
+  border-top: 4px solid var(--accent, var(--blue));
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.home-card.accent-purple { --accent: var(--purple); }
+.home-card.accent-blue   { --accent: var(--blue); }
+.home-card.accent-green  { --accent: #59A14F; }
+
+.home-card .home-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent, var(--blue));
+  color: white;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.home-card h3 { margin: 0 0 4px 0; font-size: 1.15rem; font-weight: 600; }
+
+.home-card .home-count {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent, var(--blue));
+  background: color-mix(in srgb, var(--accent, var(--blue)) 14%, white);
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+}
+
+.home-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-card li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #23272F;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #F7F7F6;
+  transition: background 0.15s ease;
+}
+
+.home-card li a:hover {
+  background: color-mix(in srgb, var(--accent, var(--blue)) 12%, white);
+}
+
+.home-card .home-empty {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* =========================================================
+   NAVBAR Y SIDEBAR (marca del sitio)
+   ========================================================= */
+
+.navbar {
+  background: var(--una-red) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-title,
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important;
+  opacity: 0.8;
+}
+
+/* Encabezados de sección en el sidebar ("Metodología...", "Estadística...").
+   Se usa :has() para aplicar el bold SOLO a los contenedores que tienen
+   el botón de despliegue (el toggle), y así no afecta a los links hijos
+   individuales, que comparten la misma estructura de HTML. */
+#quarto-sidebar .sidebar-section-title,
+#quarto-sidebar .sidebar-item-container:has(> a[data-bs-toggle="collapse"]) > a {
+  font-weight: 700;
+}
+
+/* Color por defecto de los encabezados de sección (antes del hover) */
+#quarto-sidebar .sidebar-item-container a[data-bs-toggle="collapse"] {
+  color: var(--una-red) !important;
+}
+
+/* Hover de los encabezados de sección */
+#quarto-sidebar .sidebar-item-container a[data-bs-toggle="collapse"]:hover {
+  color: var(--blue-bright) !important;
+}
+
+/* Links individuales dentro de cada sección (no los encabezados) */
+#quarto-sidebar .sidebar-section > .sidebar-item > .sidebar-item-container {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+#quarto-sidebar .sidebar-section > .sidebar-item > .sidebar-item-container > a {
+  font-weight: 400;
+}
+
+/* Link activo (la página que estás viendo) */
+#quarto-sidebar .sidebar-item.active > .sidebar-item-container {
+  border-left: 3px solid var(--una-red);
+  background: color-mix(in srgb, var(--una-red) 8%, white);
+  border-radius: 6px;
+  padding-left: 8px;
+}
+
+#quarto-sidebar .sidebar-item.active > .sidebar-item-container a {
+  color: var(--una-red) !important;
+  font-weight: 600;
+}
+
+/* Hover sobre cualquier link del sidebar */
+#quarto-sidebar .sidebar-item-container a:hover {
+  color: var(--blue-bright) !important;
+}

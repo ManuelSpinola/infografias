@@ -1,11 +1,50 @@
 ---
-title: "R_website_infografias"
+title: "Infografías"
+css: /design-system.css
+title-block-banner: "#f8ecec"
+title-block-banner-color: "#A31E32"
 ---
 
-This is a Quarto website.
+::: {.home-hero}
+[COLECCIÓN VISUAL]{.eyebrow}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Infografías sobre metodología de la investigación, estadística y ciencia de datos, y modelado ecológico — pensadas para explicar de un vistazo conceptos e ideas que suelen prestarse a confusión.
+:::
 
-```{r}
-1 + 1
-```
+::: {.home-grid}
+
+::: {.home-card .accent-purple}
+<div class="home-icon">{{< fa compass-drafting >}}</div>
+
+### Metodología de la investigación
+
+[5 infografías]{.home-count}
+
+- [{{< fa arrow-right >}} Método vs. Metodología](infografias/metodo_vs_metodologia.qmd)
+- [{{< fa arrow-right >}} Investigación cualitativa vs. cuantitativa](infografias/cualitativa_vs_cuantitativa.qmd)
+- [{{< fa arrow-right >}} Objetivos de investigación](infografias/objetivos_investigacion.qmd)
+- [{{< fa arrow-right >}} Correlación vs. causalidad](infografias/correlacion_vs_causalidad.qmd)
+- [{{< fa arrow-right >}} Patrón vs. mecanismo](infografias/patron_vs_mecanismo.qmd)
+:::
+
+::: {.home-card .accent-blue}
+<div class="home-icon">{{< fa chart-simple >}}</div>
+
+### Estadística y Ciencia de Datos
+
+[1 infografía]{.home-count}
+
+- [{{< fa arrow-right >}} Prueba de hipótesis vs. estimación de parámetros](infografias/prueba_hipotesis_vs_estimacion.qmd)
+:::
+
+::: {.home-card .accent-green}
+<div class="home-icon">{{< fa leaf >}}</div>
+
+### Modelado ecológico
+
+[1 infografía]{.home-count}
+
+- [{{< fa arrow-right >}} Nicho ecológico vs. distribución de especies](infografias/nicho_vs_distribucion.qmd)
+:::
+
+:::
