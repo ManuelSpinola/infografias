@@ -1,5 +1,14 @@
 ---
 title: "Estadística frecuentista"
+description: "Qué significa interpretar la probabilidad desde el enfoque frecuentista, sus herramientas principales, y sus fortalezas y limitaciones."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
 css: /design-system.css
 ---
 
@@ -18,19 +27,19 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [DEFINICIÓN]{.pill}
 
-La estadística frecuentista interpreta la **probabilidad como la frecuencia relativa** con la que ocurriría un evento si el experimento se repitiera muchas veces bajo las mismas condiciones.
+La estadística frecuentista interpreta la **probabilidad como el límite** al que tiende la frecuencia relativa de un evento cuando un experimento se repite un gran número de veces bajo las mismas condiciones.
 :::
 
 ::: {.mm-def .orange}
 [EN PALABRAS SIMPLES]{.pill}
 
-No habla de qué tan creíble es una hipótesis, sino de qué tan seguido ocurrirían estos datos (u otros iguales o más extremos) si repitiéramos el estudio una y otra vez.
+La incertidumbre se interpreta a partir de lo que ocurriría si el mismo procedimiento se repitiera muchas veces. En este enfoque, el parámetro es considerado fijo; la incertidumbre proviene del proceso de muestreo.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa dice >}} **Analogía:** decir que un dado tiene 1/6 de probabilidad de caer en 3 significa que, si lo tirás miles de veces, cerca de 1 de cada 6 tiros dará 3 — no que hay "1/6 de creencia" de que salga 3 en este tiro puntual.
+{{< fa ruler-vertical >}} **Ejemplo:** imaginá que querés estimar la estatura promedio de los estudiantes de una universidad. Si pudieras repetir el proceso de seleccionar una muestra aleatoria cientos de veces, obtendrías estimaciones ligeramente distintas. La estadística frecuentista estudia cómo se comportan esos resultados cuando el procedimiento se repite muchas veces.
 :::
 
 ::: {.mm-banner .purple}
@@ -48,7 +57,7 @@ Parte de una hipótesis nula (H₀) y usa el **valor de p** para medir qué tan 
 ::: {.mm-def .orange}
 [ESTIMACIÓN E INTERVALOS DE CONFIANZA]{.pill}
 
-Calcula el valor más probable de un parámetro junto con un rango (IC) que, en un muestreo repetido, contendría el valor verdadero un % determinado de las veces (ej. 95%).
+Obtiene una estimación puntual del parámetro junto con un intervalo de confianza (IC) que, en un muestreo repetido, contendría el valor verdadero un % determinado de las veces (ej. 95%).
 :::
 
 :::
@@ -66,13 +75,13 @@ FORTALEZAS Y LIMITACIONES
 ::: {.mm-def .blue}
 [FORTALEZAS]{.pill}
 
-No requiere especificar creencias previas, se apoya en procedimientos estandarizados y ampliamente aceptados, y su cómputo suele ser simple y rápido.
+No requiere especificar creencias previas, se apoya en procedimientos estandarizados y ampliamente aceptados, y su cómputo suele ser simple y rápido. Tiene además un sólido fundamento matemático y una amplia tradición de uso en investigación científica.
 :::
 
 ::: {.mm-def .orange}
 [LIMITACIONES]{.pill}
 
-No permite hablar directamente de la probabilidad de una hipótesis, muchos métodos requieren muestras suficientemente grandes, y su mal uso —umbrales rígidos, dicotomización— generó años de malas prácticas.
+No permite hablar directamente de la probabilidad de una hipótesis, la interpretación de muchos procedimientos depende de sus supuestos y, en algunos casos, de tamaños de muestra adecuados, y su mal uso —umbrales rígidos, dicotomización— generó años de malas prácticas.
 :::
 
 :::
@@ -80,7 +89,7 @@ No permite hablar directamente de la probabilidad de una hipótesis, muchos mét
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-La estadística frecuentista responde si los datos son compatibles con una hipótesis, apoyándose en el comportamiento a largo plazo de un procedimiento repetido. Es la base de las pruebas de hipótesis, los valores de p y los intervalos de confianza — herramientas poderosas cuando se interpretan correctamente.
+La estadística frecuentista fundamenta la inferencia en el comportamiento que tendrían los procedimientos si el muestreo se repitiera muchas veces. Sobre esa base construye pruebas de hipótesis, intervalos de confianza y otros métodos de inferencia — herramientas poderosas cuando se interpretan correctamente.
 :::
 
 ::: {.mm-credito}

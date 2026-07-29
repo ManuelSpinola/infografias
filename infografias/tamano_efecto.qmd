@@ -1,0 +1,163 @@
+---
+title: "Tamaño del efecto"
+description: "Qué es el tamaño del efecto no estandarizado, cómo se reporta junto al valor de p, y su relación con las versiones estandarizadas (d de Cohen)."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Cuánto cambia algo, en sus unidades originales]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El **tamaño del efecto no estandarizado** expresa la magnitud de una diferencia o relación en las **unidades originales** de la variable (ej. kg, mmHg, puntos, días) — por ejemplo, una diferencia de medias, un coeficiente de regresión, o una razón de riesgos (riesgo relativo).
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+Responde "¿cuánto?", no solo "¿hay diferencia?". Dice cuánto cambia la variable de interés, en las unidades en que la mediste.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link >}} **Conexión:** el valor de p no mide el tamaño del efecto (ver la infografía *¿Qué es un valor de p?*) — por eso se reportan juntos: uno indica qué tan compatibles son los datos con la hipótesis nula, mientras que el otro indica cuánto vale el efecto estimado.
+:::
+
+::: {.mm-example}
+{{< fa heart-pulse >}} **Ejemplo:** "este fármaco reduce la presión arterial en 8 mmHg (IC 95%: 5 a 11 mmHg)" es un tamaño del efecto no estandarizado — directamente interpretable si conocés la escala clínica de esa variable, sin necesidad de convertirla a otra unidad. Reportarlo junto con su intervalo de confianza, como aquí, es la buena práctica: comunica tanto la magnitud como la precisión de la estimación.
+:::
+
+::: {.mm-banner .purple}
+EJEMPLOS SEGÚN EL ANÁLISIS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DIFERENCIA DE MEDIAS]{.pill}
+
+La diferencia entre dos grupos, expresada en las unidades originales de la variable (ej. "5 kg más de peso corporal, IC 95%: 2 a 8 kg").
+:::
+
+::: {.mm-def .orange}
+[COEFICIENTE DE REGRESIÓN]{.pill}
+
+Cuánto cambia, en promedio, la variable de respuesta por cada unidad de cambio en el predictor, en las unidades originales de ambas variables.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Existen muchos otros tipos de tamaño del efecto (razón de riesgos, odds ratio, eta cuadrado, entre otros) — estos son solo los más comunes; cuál se reporta depende del análisis realizado.
+:::
+
+::: {.mm-example}
+{{< fa file-lines >}} **Ejemplo completo:** un estudio compara el rendimiento de un cultivo con y sin un nuevo fertilizante.
+
+{{< fa circle-question >}} **¿Hay evidencia de un efecto?** t(58) = 2.41, **p = 0.019**
+
+{{< fa ruler >}} **¿Cuánto vale el efecto?** diferencia de medias = **340 kg/ha**
+
+{{< fa arrows-up-down >}} **¿Con qué precisión?** IC 95%: **60 a 620 kg/ha**
+
+Los tres elementos juntos dan una imagen completa del resultado: hay evidencia de una diferencia real, se estima en 340 kg/ha, y ese valor podría razonablemente oscilar entre 60 y 620 kg/ha.
+
+{{< fa file-signature >}} **Así se reportaría en un artículo o tesis (estilo APA 7):**
+
+`El rendimiento del cultivo fue, en promedio, 340 kg/ha mayor con el fertilizante que sin él (IC del 95% [60, 620] kg/ha), t(58) = 2.41, p = .019.`
+:::
+
+::: {.mm-banner .gray}
+NO ESTANDARIZADO VS. ESTANDARIZADO
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa ruler >}} Mismas unidades que la variable original (ej. kg, mmHg, puntos). Fácil de interpretar si conocés la escala.
+:::
+
+::: {.mm-tag}
+UNIDADES
+:::
+
+::: {.mm-cell .orange}
+{{< fa scale-balanced >}} Expresado en desviaciones estándar, sin unidades (ej. la *d* de Cohen). Permite comparar entre estudios o variables distintas.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa stethoscope >}} Útil cuando las unidades tienen un significado práctico directo (ej. mmHg, días de hospitalización).
+:::
+
+::: {.mm-tag}
+CUÁNDO USARLO
+:::
+
+::: {.mm-cell .orange}
+{{< fa layer-group >}} Útil en metaanálisis, o para comparar efectos medidos en escalas distintas.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Cohen propuso valores de referencia (0.2 = pequeño, 0.5 = mediano, 0.8 = grande) para cuando no hay una escala práctica clara — pero son guías aproximadas, no umbrales rígidos. El propio Cohen advirtió contra su uso mecánico: lo que cuenta como "grande" depende del campo y del contexto.
+:::
+
+::: {.mm-example}
+{{< fa scale-unbalanced >}} La relevancia práctica depende del contexto, no solo del tamaño numérico del efecto: una reducción de 2 mmHg puede ser muy importante en salud pública, mientras que una diferencia grande en una variable irrelevante puede no tener ninguna importancia práctica.
+:::
+
+::: {.mm-banner .purple}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS]{.pill}
+
+Es directamente interpretable en la escala de interés, comunica la magnitud práctica del efecto, y complementa al valor de p, que por sí solo no dice "cuánto".
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+No permite comparar directamente resultados medidos en escalas distintas o entre estudios distintos — para eso se recurre a versiones estandarizadas, como la *d* de Cohen.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El tamaño del efecto no estandarizado dice cuánto cambia una variable, en sus unidades originales — la pieza que falta cuando solo se reporta un valor de p. Cuando las unidades no tienen un significado práctico claro, o hace falta comparar entre estudios o variables, se recurre a versiones estandarizadas, como la *d* de Cohen, expresadas en desviaciones estándar en vez de unidades originales.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

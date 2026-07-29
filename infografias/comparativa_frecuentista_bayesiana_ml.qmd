@@ -1,5 +1,14 @@
 ---
 title: "Frecuentista, bayesiana y machine learning: ¿cuál usar?"
+description: "Comparación rápida de los tres paradigmas para aprender de los datos: pregunta central, vista de la probabilidad, rol del conocimiento previo, y cuándo usar cada uno."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
 css: /design-system.css
 ---
 
@@ -25,7 +34,7 @@ COMPARACIÓN RÁPIDA
 <tbody>
 <tr>
 <td><strong>Pregunta central</strong></td>
-<td>¿Son los datos compatibles con una hipótesis?</td>
+<td>¿Son los datos compatibles con una hipótesis y qué nos dicen sobre la población?</td>
 <td>¿Qué tan probable es una hipótesis, dados los datos?</td>
 <td>¿Qué tan bien predice el modelo datos nuevos?</td>
 </tr>
@@ -39,19 +48,19 @@ COMPARACIÓN RÁPIDA
 <td><strong>Rol del conocimiento previo</strong></td>
 <td>No se incorpora formalmente</td>
 <td>Se incorpora explícitamente (prior)</td>
-<td>Se incorpora indirectamente (elección de variables, arquitectura)</td>
+<td>Se incorpora indirectamente (elección de variables, arquitectura, ingeniería de características, regularización)</td>
 </tr>
 <tr>
 <td><strong>Resultado típico</strong></td>
 <td>Valor de p, intervalo de confianza</td>
 <td>Distribución posterior, intervalo de credibilidad</td>
-<td>Predicción, probabilidad estimada, métrica de desempeño</td>
+<td>Predicciones, probabilidades estimadas o métricas de desempeño</td>
 </tr>
 <tr>
 <td><strong>Tamaño de muestra</strong></td>
-<td>Suele requerir muestras moderadas o grandes para ser confiable</td>
-<td>Puede funcionar con muestras pequeñas si el prior es informativo</td>
-<td>Generalmente requiere muchos datos, sobre todo en modelos complejos</td>
+<td>Depende del método y sus supuestos; muchos procedimientos funcionan mejor con muestras moderadas o grandes</td>
+<td>Puede beneficiarse de información previa cuando los datos son limitados</td>
+<td>Los modelos más complejos suelen beneficiarse de grandes cantidades de datos</td>
 </tr>
 <tr>
 <td><strong>Interpretabilidad</strong></td>
@@ -61,7 +70,7 @@ COMPARACIÓN RÁPIDA
 </tr>
 <tr>
 <td><strong>Cuándo usarlo</strong></td>
-<td>Confirmar o descartar hipótesis con procedimientos estandarizados</td>
+<td>Inferir sobre parámetros o evaluar hipótesis mediante procedimientos estandarizados</td>
 <td>Cuantificar incertidumbre directamente o incorporar conocimiento previo</td>
 <td>Predecir o clasificar con muchos datos, sin necesidad de explicar el mecanismo</td>
 </tr>
@@ -75,7 +84,7 @@ COMPARACIÓN RÁPIDA
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-No hay un enfoque "correcto" en abstracto. La elección depende de la pregunta que querés responder (explicar vs. predecir), de si contás con conocimiento previo confiable para incorporar, y del tamaño y tipo de tus datos.
+No hay un enfoque "correcto" en abstracto. La elección depende de la pregunta que querés responder (inferir, cuantificar incertidumbre o predecir), de si contás con conocimiento previo confiable para incorporar, y del tamaño y tipo de tus datos.
 :::
 
 ::: {.mm-credito}

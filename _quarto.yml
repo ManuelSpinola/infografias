@@ -7,12 +7,12 @@ website:
   site-url: https://mspinola-infografias.netlify.app
   page-footer:
     left: |
-      Una iniciativa del ICOMVIS  
+      Una iniciativa del ICOMVIS
       ![](/imagenes/logo_icomvis_circular.png){fig-alt="ICOMVIS" width=45px}
     right: |
-      Universidad Nacional, Costa Rica  
+      Universidad Nacional, Costa Rica
       ![](/imagenes/logo_UNA.jpg){fig-alt="UNA" width=65px}
-  
+
   navbar:
     left:
       - href: index.qmd
@@ -29,6 +29,10 @@ website:
         contents:
           - text: "Método vs. metodología de investigación"
             href: infografias/metodo_vs_metodologia.qmd
+          - text: "El método científico"
+            href: infografias/metodo_cientifico.qmd
+          - text: "Hipótesis en ciencia"
+            href: infografias/hipotesis_ciencia.qmd
           - text: "Investigación cualitativa vs. cuantitativa"
             href: infografias/cualitativa_vs_cuantitativa.qmd
           - text: "Objetivos de investigación"
@@ -41,10 +45,30 @@ website:
         contents:
           - text: "Prueba de hipótesis vs. estimación"
             href: infografias/prueba_hipotesis_vs_estimacion.qmd
+          - text: "Valores de p"
+            href: infografias/valores_p.qmd
+          - text: "Críticas a los valores de p"
+            href: infografias/criticas_valores_p.qmd
+          - text: "Tamaño del efecto"
+            href: infografias/tamano_efecto.qmd
+          - text: "Estadística frecuentista"
+            href: infografias/estadistica_frecuentista.qmd
+          - text: "Estadística bayesiana"
+            href: infografias/estadistica_bayesiana.qmd
+          - text: "Machine learning"
+            href: infografias/machine_learning.qmd
+          - text: "Comparación de paradigmas"
+            href: infografias/comparativa_frecuentista_bayesiana_ml.qmd
+          - text: "Métodos de validación"
+            href: infografias/metodos_validacion.qmd
+          - text: "Pruebas estadísticas como modelos lineales"
+            href: infografias/pruebas_como_modelos.qmd
       - section: "Modelado ecológico"
         contents:
           - text: "Nicho ecológico vs. distribución de especies"
             href: infografias/nicho_vs_distribucion.qmd
+          - text: "Modelos de ocupación"
+            href: infografias/modelos_ocupacion.qmd
 
 format:
   html:

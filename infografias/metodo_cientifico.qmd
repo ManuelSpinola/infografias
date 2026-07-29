@@ -1,0 +1,217 @@
+---
+title: "El método científico"
+description: "Por qué el método científico no es una receta fija, el origen del método hipotético-deductivo, su crítica filosófica, y otras lógicas de indagación."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[No es una receta fija, y el método hipotético-deductivo no es el único camino]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El **método hipotético-deductivo** parte de una teoría, deduce predicciones contrastables, y busca someter una hipótesis a pruebas empíricas que podrían refutarla, no solo confirmarla.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No es la única manera de hacer ciencia, sino una lógica de indagación entre varias — útil cuando ya existe teoría suficiente para deducir predicciones concretas.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** la ciencia sigue siempre los mismos pasos, en el mismo orden, como una receta de cocina. **Interpretación correcta:** la investigación real avanza en ciclos y con retrocesos — un resultado inesperado obliga a replantear la pregunta, y muchas teorías nacen de observar patrones antes de tener una hipótesis que probar.
+:::
+
+<div style="margin: 1rem 0;">
+<p style="text-align:center; font-weight:600; margin-bottom:0.5rem;">{{< fa book >}} El mito: un proceso lineal</p>
+<div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.5rem; font-size:0.85rem;">
+<span>Observar</span> {{< fa arrow-right >}} <span>Preguntar</span> {{< fa arrow-right >}} <span>Hipótesis</span> {{< fa arrow-right >}} <span>Predecir</span> {{< fa arrow-right >}} <span>Contrastar con datos</span> {{< fa arrow-right >}} <span>Concluir</span>
+</div>
+</div>
+
+<div style="margin: 1rem 0;">
+<p style="text-align:center; font-weight:600; margin-bottom:0.5rem;">{{< fa arrows-rotate >}} La realidad: un proceso iterativo</p>
+<div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.5rem; font-size:0.85rem;">
+<span>Observar</span> {{< fa arrow-right >}} <span>Hipótesis</span> {{< fa arrow-right >}} <span>Contrastar con datos</span> {{< fa arrow-right >}} <span>Resultado inesperado</span> {{< fa long-arrow-alt-left >}} <span style="font-style:italic;">se replantea la pregunta</span>
+</div>
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} "Contrastar con datos" puede ser un experimento manipulativo (con grupo control), pero también una comparación, un muestreo o un análisis de datos observacionales — buena parte de la investigación, especialmente en ecología y ciencias ambientales, pone a prueba sus predicciones sin manipular experimentalmente el sistema de estudio.
+:::
+
+::: {.mm-banner .purple}
+ORIGEN Y CRÍTICA FILOSÓFICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[POPPER Y LA FALSACIÓN]{.pill}
+
+Karl Popper propuso que una teoría es científica solo si es, al menos en principio, falsable; es decir, si existe alguna observación o experimento que pudiera demostrar que es incorrecta. Así, la falsabilidad se convirtió en uno de los criterios más influyentes para distinguir ciencia de pseudociencia.
+:::
+
+::: {.mm-def .orange}
+[KUHN, LAKATOS Y FEYERABEND]{.pill}
+
+Cuestionaron que ese sea el único proceso real: Kuhn mostró que la "ciencia normal" opera dentro de paradigmas no cuestionados; Lakatos, que las teorías tienen un núcleo protegido de la refutación directa; Feyerabend llegó a argumentar que no existe un método único.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Esto no significa que "todo valga" en la práctica: significa que no hay una receta universal, y que distintas etapas y campos de la investigación requieren distintas lógicas de indagación.
+:::
+
+::: {.mm-banner .gray}
+OTRAS LÓGICAS DE INDAGACIÓN
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[INDUCCIÓN]{.pill}
+
+Parte de observaciones particulares para generar generalizaciones, hipótesis o teoría — típica de etapas exploratorias, cuando aún no hay un marco teórico del cual deducir hipótesis.
+:::
+
+::: {.mm-def .orange}
+[ABDUCCIÓN]{.pill}
+
+Parte de un hallazgo inesperado y busca la explicación más plausible — genera hipótesis nuevas, no las pone a prueba.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link >}} La teoría fundamentada (*grounded theory*) es un ejemplo de aproximación cualitativa en la que los conceptos y categorías emergen del análisis de los datos, antes de formular hipótesis a contrastar — aunque otras aproximaciones cualitativas sí parten de marcos teóricos o preguntas bien definidas (ver la infografía *Cualitativa vs. cuantitativa*).
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass >}} Ni siquiera toda investigación busca generar o poner a prueba una hipótesis. La investigación puramente descriptiva (un inventario de biodiversidad, una descripción taxonómica) o motivada por resolver un problema práctico concreto (un reporte técnico, una solución de manejo) puede ser igual de rigurosa y valiosa sin necesitar, en ningún momento, un marco hipotético.
+:::
+
+::: {.mm-banner .purple}
+HIPOTÉTICO-DEDUCTIVO VS. INDUCTIVO/ABDUCTIVO
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa flask >}} Cuando ya existe teoría o marco conceptual suficiente para deducir predicciones contrastables.
+:::
+
+::: {.mm-tag}
+CUÁNDO CONVIENE
+:::
+
+::: {.mm-cell .orange}
+{{< fa magnifying-glass >}} Cuando el fenómeno es nuevo, poco comprendido, o aún no hay teoría de la cual partir.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa book-open >}} Parte de una teoría o hipótesis ya formulada.
+:::
+
+::: {.mm-tag}
+PUNTO DE PARTIDA
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-simple >}} Parte de observaciones o datos, sin una hipótesis previa clara.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa bullseye >}} Poner a prueba (e intentar refutar) una predicción específica.
+:::
+
+::: {.mm-tag}
+META
+:::
+
+::: {.mm-cell .orange}
+{{< fa lightbulb >}} Generar hipótesis o construir teoría nueva.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa vial >}} Experimento de exclusión de herbívoros, ensayo de fertilización, modelo de ocupación que contrasta predicciones con datos de campo.
+:::
+
+::: {.mm-tag}
+EJEMPLOS
+:::
+
+::: {.mm-cell .orange}
+{{< fa people-group >}} Inventario de biodiversidad, análisis exploratorio de comunidades, teoría fundamentada.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa lightbulb >}} La generación de hipótesis requiere creatividad, conocimiento previo y observación; no existe un procedimiento mecánico para producir buenas ideas científicas — una idea que Popper, Kuhn e incluso Einstein compartieron, cada uno a su manera.
+:::
+
+::: {.mm-banner .gray}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS DEL MÉTODO HIPOTÉTICO-DEDUCTIVO]{.pill}
+
+Ofrece rigor, replicabilidad, y un criterio claro para descartar hipótesis erróneas cuando ya hay teoría de la cual partir.
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES SI SE USA COMO RECETA ÚNICA]{.pill}
+
+Exige teoría previa para funcionar; aplicado de forma rígida, ignora cómo se genera esa teoría en primer lugar, y excluye etapas exploratorias igual de necesarias.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El método hipotético-deductivo es una herramienta poderosa para poner a prueba hipótesis, no la única lógica válida para producir conocimiento científico — y ni siquiera toda investigación necesita estar orientada a una hipótesis. La inducción y la abducción son indispensables cuando aún no hay teoría de la cual deducir predicciones, y buena parte de la investigación descriptiva o aplicada es igual de válida sin pasar nunca por una. La ciencia avanza en ciclos, con retrocesos y ajustes — no como una receta fija de pasos ordenados. Pero esto no significa que cualquier procedimiento sirva: no existe un único método científico, pero sí principios compartidos — evidencia empírica, transparencia, reproducibilidad y razonamiento crítico — que distinguen la buena ciencia, sea cual sea la lógica de indagación que se use.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

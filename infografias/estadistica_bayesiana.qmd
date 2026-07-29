@@ -1,5 +1,14 @@
 ---
 title: "Estadística bayesiana"
+description: "Qué significa interpretar la probabilidad como grado de creencia, el teorema de Bayes, y cómo se reporta la incertidumbre en este enfoque."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
 css: /design-system.css
 ---
 
@@ -18,13 +27,13 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [DEFINICIÓN]{.pill}
 
-La estadística bayesiana interpreta la **probabilidad como el grado de creencia razonable** en una afirmación, dado el conocimiento disponible — y ese grado se actualiza a medida que llegan nuevos datos.
+La estadística bayesiana interpreta la **probabilidad como el grado de creencia razonable** en una afirmación, dado el conocimiento disponible, y actualiza ese grado de creencia cuando se incorpora nueva evidencia.
 :::
 
 ::: {.mm-def .orange}
 [EN PALABRAS SIMPLES]{.pill}
 
-A diferencia del enfoque frecuentista, sí permite hablar directamente de "qué tan probable es esta hipótesis", combinando lo que ya sabíamos con lo que aportan los datos.
+A diferencia del enfoque frecuentista, permite cuantificar directamente la incertidumbre sobre hipótesis o parámetros, combinando el conocimiento previo con la información aportada por los datos. En este enfoque, el parámetro no se considera un valor fijo desconocido, sino una cantidad sobre la cual existe incertidumbre que puede describirse mediante una distribución de probabilidad.
 :::
 
 :::
@@ -50,7 +59,7 @@ Qué tan bien explican los **datos observados** cada valor posible del parámetr
 :::
 
 ::: {.mm-example}
-{{< fa arrows-rotate >}} El teorema de Bayes combina el prior y la verosimilitud para producir la **distribución posterior**: una actualización de nuestras creencias que incorpora tanto lo que sabíamos antes como lo que aportan los datos nuevos.
+{{< fa arrows-rotate >}} El teorema de Bayes combina el prior y la verosimilitud para producir la **distribución posterior**: una actualización de nuestras creencias sobre el parámetro, que incorpora tanto lo que sabíamos antes como lo que aportan los datos nuevos. Esta posterior obtenida hoy puede convertirse, a su vez, en el prior del próximo estudio — así es como el conocimiento científico se acumula de forma secuencial.
 :::
 
 ::: {.mm-banner .gray}
@@ -62,13 +71,13 @@ CÓMO SE REPORTA
 ::: {.mm-def .blue}
 [INTERVALO DE CREDIBILIDAD]{.pill}
 
-Un rango con una interpretación directa de probabilidad: "hay 95% de probabilidad de que el parámetro esté en este rango", dado el modelo y los priors usados.
+Un rango con una interpretación directa de probabilidad: "hay 95% de probabilidad de que el parámetro esté en este rango", dado el modelo y el prior especificados.
 :::
 
 ::: {.mm-def .orange}
 [FACTOR DE BAYES]{.pill}
 
-Compara la evidencia relativa a favor de una hipótesis frente a otra. (Ver la infografía de críticas al valor de p para la escala de interpretación del BF₁₀.)
+Compara el apoyo relativo de los datos a favor de una hipótesis frente a otra. (Ver la infografía de críticas al valor de p para la escala de interpretación del BF₁₀.)
 :::
 
 :::
@@ -82,13 +91,13 @@ FORTALEZAS Y LIMITACIONES
 ::: {.mm-def .blue}
 [FORTALEZAS]{.pill}
 
-Permite hablar directamente de la probabilidad de una hipótesis o un parámetro, incorpora conocimiento previo de forma explícita, y cuantifica la incertidumbre de manera intuitiva.
+Permite cuantificar directamente la incertidumbre sobre hipótesis y parámetros mediante probabilidades, incorpora conocimiento previo de forma explícita, y ofrece una interpretación intuitiva de los resultados.
 :::
 
 ::: {.mm-def .orange}
 [LIMITACIONES]{.pill}
 
-El resultado depende de los priors elegidos —una fuente de subjetividad que debe justificarse— y el cómputo puede ser exigente en modelos complejos.
+El resultado depende de los priors elegidos —una fuente de subjetividad que debe justificarse—, el cómputo puede ser exigente en modelos complejos, y la especificación del modelo y de los priors requiere mayor cuidado y experiencia que en muchos análisis frecuentistas.
 :::
 
 :::

@@ -3,6 +3,13 @@ title: "Infografías"
 css: /design-system.css
 title-block-banner: "#f8ecec"
 title-block-banner-color: "#A31E32"
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
 ---
 
 ::: {.home-hero}
@@ -18,9 +25,11 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 ### Metodología de la investigación
 
-[5 infografías]{.home-count}
+[7 infografías]{.home-count}
 
 - [{{< fa arrow-right >}} Método vs. Metodología](infografias/metodo_vs_metodologia.qmd)
+- [{{< fa arrow-right >}} El método científico](infografias/metodo_cientifico.qmd)
+- [{{< fa arrow-right >}} Hipótesis en ciencia](infografias/hipotesis_ciencia.qmd)
 - [{{< fa arrow-right >}} Investigación cualitativa vs. cuantitativa](infografias/cualitativa_vs_cuantitativa.qmd)
 - [{{< fa arrow-right >}} Objetivos de investigación](infografias/objetivos_investigacion.qmd)
 - [{{< fa arrow-right >}} Correlación vs. causalidad](infografias/correlacion_vs_causalidad.qmd)
@@ -32,9 +41,18 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 ### Estadística y Ciencia de Datos
 
-[1 infografía]{.home-count}
+[10 infografías]{.home-count}
 
 - [{{< fa arrow-right >}} Prueba de hipótesis vs. estimación de parámetros](infografias/prueba_hipotesis_vs_estimacion.qmd)
+- [{{< fa arrow-right >}} Valores de p](infografias/valores_p.qmd)
+- [{{< fa arrow-right >}} Críticas a los valores de p](infografias/criticas_valores_p.qmd)
+- [{{< fa arrow-right >}} Tamaño del efecto](infografias/tamano_efecto.qmd)
+- [{{< fa arrow-right >}} Estadística frecuentista](infografias/estadistica_frecuentista.qmd)
+- [{{< fa arrow-right >}} Estadística bayesiana](infografias/estadistica_bayesiana.qmd)
+- [{{< fa arrow-right >}} Machine learning](infografias/machine_learning.qmd)
+- [{{< fa arrow-right >}} Comparación de paradigmas](infografias/comparativa_frecuentista_bayesiana_ml.qmd)
+- [{{< fa arrow-right >}} Métodos de validación](infografias/metodos_validacion.qmd)
+- [{{< fa arrow-right >}} Pruebas estadísticas como modelos lineales](infografias/pruebas_como_modelos.qmd)
 :::
 
 ::: {.home-card .accent-green}
@@ -42,9 +60,10 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 ### Modelado ecológico
 
-[1 infografía]{.home-count}
+[2 infografías]{.home-count}
 
 - [{{< fa arrow-right >}} Nicho ecológico vs. distribución de especies](infografias/nicho_vs_distribucion.qmd)
+- [{{< fa arrow-right >}} Modelos de ocupación](infografias/modelos_ocupacion.qmd)
 :::
 
 :::

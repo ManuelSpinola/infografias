@@ -1,0 +1,168 @@
+---
+title: "Modelos de ocupación"
+description: "Cómo separan los modelos de ocupación la probabilidad de presencia de una especie de la probabilidad de detectarla, y su comparación con la regresión logística."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Separar la probabilidad de que la especie esté, de la probabilidad de haberla detectado]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Los modelos de ocupación estiman la **probabilidad de que un sitio esté ocupado por una especie (ψ)**, y por separado, la **probabilidad de detectarla dado que está presente (p)**, a partir de visitas repetidas al mismo sitio.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+"No detectado" no es lo mismo que "ausente". El modelo separa dos preguntas distintas: ¿está la especie ahí?, y ¿la habríamos detectado si lo estaba?
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa binoculars >}} **Ejemplo:** visitás un estanque tres veces buscando una rana y solo la detectás en la segunda visita. Sería un error concluir que "no estaba" en la primera y la tercera — quizás sí estaba, pero no la detectaste. Los modelos de ocupación usan ese patrón de detecciones y no detecciones entre visitas repetidas para estimar ψ y p por separado.
+:::
+
+<div style="overflow-x:auto; margin: 0.5rem 0 1rem;">
+<table class="table table-bordered table-sm" style="text-align:center; max-width: 480px; margin: 0 auto;">
+<thead>
+<tr>
+<th>Sitio</th>
+<th style="background-color: var(--blue); color: white;">Visita 1</th>
+<th style="background-color: var(--blue); color: white;">Visita 2</th>
+<th style="background-color: var(--blue); color: white;">Visita 3</th>
+<th style="background-color: var(--orange); color: white;">Historia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>—</td>
+<td>{{< fa frog >}}</td>
+<td>—</td>
+<td>010</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>000</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>{{< fa frog >}}</td>
+<td>{{< fa frog >}}</td>
+<td>{{< fa frog >}}</td>
+<td>111</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} En el sitio **A**, una sola detección basta para confirmar que está ocupado, aunque p sea menor que 1. En el sitio **B**, la historia 000 es ambigua: puede estar realmente desocupado, o estar ocupado por una especie difícil de detectar — el modelo usa el patrón completo de datos, entre todos los sitios, para estimar qué tan probable es cada caso.
+:::
+
+::: {.mm-banner .purple}
+OCUPACIÓN VS. REGRESIÓN LOGÍSTICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[REGRESIÓN LOGÍSTICA]{.pill}
+
+Modela directamente "presencia" (1) vs. "ausencia" (0) observada a partir de una sola visita por sitio. Cuando se aplica así, trata las no detecciones como ausencias, por lo que no puede separar una ausencia real de una detección imperfecta.
+:::
+
+::: {.mm-def .orange}
+[MODELOS DE OCUPACIÓN]{.pill}
+
+Requieren visitas repetidas al mismo sitio y modelan ψ (ocupación) y p (detección) por separado, evitando subestimar la ocupación real cuando la detección es imperfecta.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** "si nunca detecté la especie en un sitio, el sitio no está ocupado". **Interpretación correcta:** la ausencia de detecciones puede deberse a una detección imperfecta y no a una ausencia real — por eso se necesitan visitas repetidas para distinguir ambas posibilidades.
+:::
+
+::: {.mm-banner .gray}
+DATOS Y SUPUESTOS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DATOS NECESARIOS]{.pill}
+
+Historias de detección (ej. 101 o 010) obtenidas mediante visitas repetidas a cada sitio, dentro de un período en el que se asume que la ocupación no cambia.
+:::
+
+::: {.mm-def .orange}
+[SUPUESTOS CLAVE]{.pill}
+
+**Cierre poblacional:** el sitio no cambia de ocupado a desocupado entre visitas. **Independencia:** la detección en una visita no depende de si hubo detección en otra. **Sin falsos positivos:** cuando la especie se registra, la identificación es correcta — cada vez más relevante con cámaras trampa, bioacústica y eDNA.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Tanto ψ como p pueden modelarse en función de covariables: la ocupación según variables del hábitat (ej. cobertura vegetal, altitud), y la detección según esfuerzo de muestreo, hora del día o condiciones climáticas.
+:::
+
+::: {.mm-banner .purple}
+FORTALEZAS Y LIMITACIONES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[FORTALEZAS]{.pill}
+
+Permite estimar y comparar la ocupación aun cuando la detectabilidad difiera entre sitios, especies o condiciones de muestreo, y se apoya en un marco estadístico bien establecido (MacKenzie et al., 2002).
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+Requiere visitas repetidas (mayor esfuerzo de muestreo), el supuesto de cierre poblacional puede no cumplirse en especies muy móviles, y ψ puede estimarse con poca precisión si hay pocas visitas o baja detectabilidad.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass >}} **Ocupación no es abundancia:** un sitio con ψ = 0.80 tiene alta probabilidad de tener la especie presente, pero un sitio ocupado puede tener uno o muchos individuos — el modelo estima la probabilidad de presencia, no el número de individuos.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Los modelos de ocupación estiman la probabilidad de que un sitio esté ocupado por una especie sin confundir "no detectado" con "ausente", separando estadísticamente la ocupación de la detección a partir de visitas repetidas. A diferencia de la regresión logística aplicada a una sola visita por sitio, permiten corregir el sesgo que introduce la detección imperfecta — un problema central en estudios de vida silvestre.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

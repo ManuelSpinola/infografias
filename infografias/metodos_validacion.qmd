@@ -1,0 +1,352 @@
+---
+title: "Métodos de validación de modelos"
+description: "Qué es hold-out, cross-validation y leave-one-out (LOO), en qué se diferencian de la validación externa, y su origen dentro de la estadística clásica."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Cómo saber si un modelo predice bien datos que nunca vio]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Los **métodos de validación** evalúan qué tan bien generaliza un modelo a datos que no usó para ajustarse. Esta infografía se enfoca en la **validación interna por remuestreo** — hold-out, cross-validation y leave-one-out — que reutiliza distintas particiones de la misma muestra.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+Sin validación, un modelo puede lucir excelente solo porque memorizó los datos con los que se entrenó — el problema de sobreajuste (ver la infografía *Machine learning*).
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa clock-rotate-left >}} **Contexto histórico:** el machine learning volvió estos métodos una práctica cotidiana, pero son varias décadas anteriores. El hold-out se remonta a Larson (1931) en psicometría; el leave-one-out aparece en Lachenbruch y Mickey (1968) para análisis discriminante; y Stone (1974) formalizó la validación cruzada como método general de selección de modelos. Los cursos clásicos de estadística, centrados en pruebas de hipótesis y estimación, simplemente los enfatizan menos que los cursos orientados a modelado predictivo.
+:::
+
+::: {.mm-banner .purple}
+HOLD-OUT (TRAIN/TEST SPLIT)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Se divide una sola vez el conjunto de datos en dos partes: **entrenamiento** (para ajustar el modelo) y **prueba** (para evaluarlo) — típicamente 70/30 u 80/20.
+:::
+
+::: {.mm-def .orange}
+[VENTAJAS Y LIMITACIONES]{.pill}
+
+Simple y rápido de calcular. Pero la estimación del desempeño depende de la partición elegida — con muestras pequeñas, la estimación puede ser inestable.
+:::
+
+:::
+
+<div style="margin: 0.5rem 0 1.5rem 0;">
+<div style="font-size:0.8rem; font-weight:600; color:#666; margin-bottom:0.4rem;">Datos completos, una sola partición</div>
+<div style="display:flex; width:100%; border-radius:8px; overflow:hidden; font-size:0.9rem; text-align:center; color:white; font-weight:600;">
+<div style="flex:7; background-color:var(--blue); padding:0.9rem 0;">Entrenamiento (70%)</div>
+<div style="flex:3; background-color:var(--orange); padding:0.9rem 0;">Prueba (30%)</div>
+</div>
+</div>
+
+::: {.mm-example}
+{{< fa layer-group >}} **Entrenamiento, validación y prueba:** en algunos flujos de trabajo, especialmente en machine learning, además del conjunto de prueba se usa un **conjunto de validación** aparte, para ajustar hiperparámetros antes de la evaluación final. Ese "conjunto de validación" no es sinónimo de "validación" en el sentido general de esta infografía: es simplemente una tercera partición de los datos, adicional al hold-out clásico de dos partes.
+:::
+
+::: {.mm-banner .gray}
+CROSS-VALIDATION (VALIDACIÓN CRUZADA, K-FOLD)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Los datos se dividen en *k* partes (*folds*). El modelo se entrena *k* veces, usando cada vez *k*-1 partes para entrenar y la restante para evaluar, y se promedia una métrica de desempeño (por ejemplo, RMSE, AUC, exactitud o error de clasificación) de las *k* iteraciones.
+:::
+
+::: {.mm-def .orange}
+[VENTAJAS Y LIMITACIONES]{.pill}
+
+Todas las observaciones se utilizan para entrenamiento y para evaluación, pero en iteraciones distintas — nunca se evalúa una observación en la misma iteración en que se entrenó con ella. Esto da una estimación más estable que un solo hold-out, a costa de entrenar el modelo *k* veces.
+:::
+
+:::
+
+<div style="margin: 0.5rem 0 1.5rem 0; display:flex; flex-direction:column; gap:0.35rem;">
+<div style="font-size:0.8rem; font-weight:600; color:#666; margin-bottom:0.1rem;">5-fold cross-validation: el fold de prueba (naranja) rota en cada iteración. Cada fold agrupa varias observaciones.</div>
+
+<div style="display:flex; align-items:center; gap:0.6rem;">
+<span style="width:6rem; font-size:0.78rem; color:#555; font-weight:600;">Iteración 1</span>
+<div style="display:flex; flex:1; gap:3px;">
+<div style="flex:1; background-color:var(--orange); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+</div>
+<span style="width:4rem; font-size:0.78rem; color:#555; text-align:right;">Error 1</span>
+</div>
+
+<div style="display:flex; align-items:center; gap:0.6rem;">
+<span style="width:6rem; font-size:0.78rem; color:#555; font-weight:600;">Iteración 2</span>
+<div style="display:flex; flex:1; gap:3px;">
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+</div>
+<span style="width:4rem; font-size:0.78rem; color:#555; text-align:right;">Error 2</span>
+</div>
+
+<div style="display:flex; align-items:center; gap:0.6rem;">
+<span style="width:6rem; font-size:0.78rem; color:#555; font-weight:600;">Iteración 3</span>
+<div style="display:flex; flex:1; gap:3px;">
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+</div>
+<span style="width:4rem; font-size:0.78rem; color:#555; text-align:right;">Error 3</span>
+</div>
+
+<div style="display:flex; align-items:center; gap:0.6rem;">
+<span style="width:6rem; font-size:0.78rem; color:#555; font-weight:600;">Iteración 4</span>
+<div style="display:flex; flex:1; gap:3px;">
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+</div>
+<span style="width:4rem; font-size:0.78rem; color:#555; text-align:right;">Error 4</span>
+</div>
+
+<div style="display:flex; align-items:center; gap:0.6rem;">
+<span style="width:6rem; font-size:0.78rem; color:#555; font-weight:600;">Iteración 5</span>
+<div style="display:flex; flex:1; gap:3px;">
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:4px; height:1.7rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:4px; height:1.7rem;"></div>
+</div>
+<span style="width:4rem; font-size:0.78rem; color:#555; text-align:right;">Error 5</span>
+</div>
+
+<div style="font-size:0.78rem; color:#666; margin-top:0.3rem;">Métrica final = promedio de las 5 iteraciones &nbsp;·&nbsp; <span style="color:var(--blue); font-weight:600;">■</span> entrenamiento &nbsp; <span style="color:var(--orange); font-weight:600;">■</span> prueba (fold, grupo de observaciones)</div>
+</div>
+
+::: {.mm-banner .purple}
+LEAVE-ONE-OUT (LOO)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Es el caso extremo de *k*-fold cuando *k* = *n* (el número de observaciones): en cada iteración se deja fuera una sola observación para evaluar, y se entrena con el resto.
+:::
+
+::: {.mm-def .orange}
+[VENTAJAS Y LIMITACIONES]{.pill}
+
+Usa casi todos los datos para entrenar en cada iteración (bajo sesgo), pero puede tener alta varianza como estimador del error, y es exigente computacionalmente salvo que el modelo permita atajos analíticos (ej. regresión lineal).
+:::
+
+:::
+
+<div style="margin: 0.5rem 0 1.5rem 0; display:flex; flex-direction:column; gap:0.3rem;">
+<div style="font-size:0.8rem; font-weight:600; color:#666; margin-bottom:0.1rem;">LOO con n = 20 observaciones individuales: a diferencia de los folds de k-fold, aquí cada cuadrito es una sola observación, y se deja fuera una a la vez</div>
+
+<div style="display:flex; align-items:center; gap:0.5rem;">
+<span style="width:5.2rem; font-size:0.72rem; color:#555; font-weight:600;">Iteración 1</span>
+<div style="display:flex; flex:1; gap:1.5px;">
+<div style="flex:1; background-color:var(--orange); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+</div>
+</div>
+
+<div style="display:flex; align-items:center; gap:0.5rem;">
+<span style="width:5.2rem; font-size:0.72rem; color:#555; font-weight:600;">Iteración 2</span>
+<div style="display:flex; flex:1; gap:1.5px;">
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+</div>
+</div>
+
+<div style="text-align:center; font-size:0.85rem; color:#999; letter-spacing:2px;">⋮</div>
+
+<div style="display:flex; align-items:center; gap:0.5rem;">
+<span style="width:5.2rem; font-size:0.72rem; color:#555; font-weight:600;">Iteración 20</span>
+<div style="display:flex; flex:1; gap:1.5px;">
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--blue); border-radius:2px; height:1.1rem;"></div>
+<div style="flex:1; background-color:var(--orange); border-radius:2px; height:1.1rem;"></div>
+</div>
+</div>
+
+<div style="font-size:0.78rem; color:#666; margin-top:0.3rem;">Con *n* observaciones se repite *n* veces, dejando fuera una observación distinta cada vez &nbsp;·&nbsp; <span style="color:var(--blue); font-weight:600;">■</span> entrenamiento &nbsp; <span style="color:var(--orange); font-weight:600;">■</span> observación dejada fuera</div>
+</div>
+
+::: {.mm-banner .gray}
+¿CUÁL USAR?
+:::
+
+<table class="table table-bordered table-sm">
+<thead>
+<tr>
+<th>Aspecto</th>
+<th style="background-color: var(--blue); color: white;">Hold-out</th>
+<th style="background-color: var(--purple); color: white;">Cross-validation (k-fold)</th>
+<th style="background-color: var(--orange); color: white;">Leave-one-out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Costo computacional</strong></td>
+<td>Bajo — una sola vuelta</td>
+<td>Moderado — *k* vueltas</td>
+<td>Alto — *n* vueltas, salvo atajos analíticos</td>
+</tr>
+<tr>
+<td><strong>Uso de los datos</strong></td>
+<td>Una sola partición</td>
+<td>Todos los datos, en distintas particiones</td>
+<td>Todos los datos, dejando uno fuera cada vez</td>
+</tr>
+<tr>
+<td><strong>Estabilidad de la estimación</strong></td>
+<td>Baja con muestras pequeñas</td>
+<td>Alta (buen equilibrio con *k* = 5 o 10)</td>
+<td>Bajo sesgo, pero puede tener alta varianza</td>
+</tr>
+<tr>
+<td><strong>Cuándo conviene</strong></td>
+<td>Muestras grandes, prototipos rápidos</td>
+<td>Uso general</td>
+<td>Muestras pequeñas, cuando el costo computacional lo permite</td>
+</tr>
+</tbody>
+</table>
+
+::: {.mm-banner .gray}
+VALIDACIÓN INTERNA VS. VALIDACIÓN EXTERNA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[VALIDACIÓN INTERNA]{.pill}
+
+Hold-out, cross-validation y LOO son formas de validación interna: reparticionan la **misma muestra** una y otra vez. Estiman qué tan bien generaliza el modelo dentro de las condiciones (población, sitio, período) representadas en esos datos.
+:::
+
+::: {.mm-def .orange}
+[VALIDACIÓN EXTERNA]{.pill}
+
+Evalúa el modelo con datos **genuinamente independientes** — de otro sitio, otra época o otra población, recolectados aparte. Es la prueba más exigente de que el modelo generaliza más allá de la muestra con la que se construyó.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa map-location-dot >}} **La validación cruzada en bloques sigue siendo interna:** cuando los folds se separan geográfica o temporalmente para lidiar con autocorrelación espacial o temporal (por ejemplo, en modelos de distribución de especies o de ocupación), se obtiene una estimación más realista que con folds aleatorios — pero los datos siguen procediendo del mismo estudio o proceso de muestreo. Un modelo puede validar muy bien por cross-validation interna y aun así predecir mal al aplicarse a un sitio o período genuinamente nuevo. Solo la validación externa pone a prueba esa transferencia (ver las infografías *Nicho ecológico vs. distribución de especies* y *Modelos de ocupación*).
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass-chart >}} **Un tercer sentido de "validación":** en estadística también se habla de validar los **supuestos del modelo** (normalidad de residuales, homocedasticidad, bondad de ajuste). Es una pregunta distinta a las de esta infografía — no evalúa qué tan bien predice el modelo datos nuevos, sino si se cumplen las condiciones bajo las cuales el modelo es válido.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común: fuga de información (data leakage).** Un error frecuente —incluso en artículos científicos— es realizar selección de variables, imputación, estandarización o ajuste de hiperparámetros usando todos los datos antes de dividir en particiones. Todo el preprocesamiento debe repetirse dentro de cada partición de entrenamiento; de lo contrario, la estimación del desempeño resulta demasiado optimista.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Hold-out, cross-validation y leave-one-out son formas de validación interna: estiman qué tan bien generaliza un modelo a datos no utilizados para el ajuste, pero representativos del mismo proceso de generación de datos, con distintos equilibrios entre costo computacional y estabilidad de la estimación. Son herramientas estadísticas de varias décadas de antigüedad, que la práctica moderna de modelado predictivo volvió indispensables. Pero "validación" es un término más amplio: la validación externa (datos independientes) y la validación de supuestos (diagnóstico del modelo) responden preguntas distintas, y ninguna técnica de remuestreo las sustituye.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,5 +1,14 @@
 ---
 title: "Investigación cualitativa vs. cuantitativa"
+description: "Diferencias clave entre la investigación cualitativa y cuantitativa, cuándo se necesitan métodos mixtos, y por qué ninguna es más científica que la otra."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
 css: /design-system.css
 ---
 

@@ -1,0 +1,185 @@
+---
+title: "Hipótesis en ciencia"
+description: "Qué hace que una hipótesis sea verdaderamente científica, en qué se diferencia de una predicción y de una hipótesis estadística, y por qué no toda investigación necesita partir de una."
+date: 2026-07-28
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Más que una suposición: qué la hace científica, y por qué no toda investigación necesita una]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Una **hipótesis científica** es una proposición tentativa sobre un fenómeno o una relación entre fenómenos, de la cual pueden derivarse predicciones contrastables mediante observación, experimentación o análisis de datos.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No es sinónimo de predicción, suposición u objetivo de estudio. Confundir estos términos es uno de los errores más comunes al hablar de investigación "guiada por hipótesis".
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** "hipótesis" se usa a diario como sinónimo de predicción, suposición u objetivo del estudio, y en estadística el mismo término se usa para la hipótesis nula y la alternativa. **Interpretación correcta:** estos términos cumplen funciones distintas. Una hipótesis científica propone una explicación, relación o mecanismo; una predicción expresa una consecuencia observable; y una hipótesis estadística formula una afirmación sobre parámetros o distribuciones.
+:::
+
+::: {.mm-banner .purple}
+CARACTERÍSTICAS DE UNA HIPÓTESIS CIENTÍFICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[CONTRASTABLE Y FALSABLE]{.pill}
+
+Debe producir consecuencias que puedan confrontarse con observaciones o datos y, al menos en principio, existir resultados que sean incompatibles con ella. La falsabilidad fue propuesta por Popper como un criterio influyente para distinguir las afirmaciones científicas de las no científicas.
+:::
+
+::: {.mm-def .orange}
+[BASADA EN CONOCIMIENTO PREVIO]{.pill}
+
+Suele apoyarse en observaciones, teoría existente o datos previos, lo que le da sustento lógico — aunque su origen no determina su carácter científico: puede surgir de una observación, una teoría o incluso una intuición creativa. Lo que importa es que produzca consecuencias contrastables.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Además debe ser **clara y específica** (variables bien definidas, sin ambigüedad) y **observable y medible** (los términos y relaciones deben poder observarse y medirse de forma objetiva para permitir ponerla a prueba).
+:::
+
+::: {.mm-banner .gray}
+HIPÓTESIS VS. PREDICCIÓN
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa lightbulb >}} La proposición general y subyacente que se pone a prueba.
+:::
+
+::: {.mm-tag}
+QUÉ ES
+:::
+
+::: {.mm-cell .orange}
+{{< fa bullseye >}} La consecuencia específica y observable derivada de esa proposición.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa arrow-down >}} Si la predicción no se cumple, disminuye el apoyo a la hipótesis, o bien obliga a revisar la hipótesis, los supuestos auxiliares o el diseño del estudio.
+:::
+
+::: {.mm-tag}
+SI LA PREDICCIÓN...
+:::
+
+::: {.mm-cell .orange}
+{{< fa arrow-up >}} Si se cumple, aporta apoyo provisional — pero no demuestra que la hipótesis sea verdadera.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa seedling >}} **Ejemplo:** 
+
+**Hipótesis** — "La disponibilidad de luz limita el crecimiento de las plantas herbáceas porque determina la energía disponible para la fotosíntesis". 
+
+**Predicciones derivadas**
+
+- Las plantas expuestas a mayor intensidad lumínica crecerán más, hasta un punto de saturación.
+
+- La tasa fotosintética aumentará con la intensidad lumínica.
+
+- Al reducir artificialmente la luz, disminuirá el crecimiento de las plantas.
+:::
+
+::: {.mm-banner .purple}
+HIPÓTESIS CIENTÍFICA VS. HIPÓTESIS ESTADÍSTICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[HIPÓTESIS CIENTÍFICA]{.pill}
+
+Es una proposición tentativa sobre un fenómeno del mundo real — el objeto de estudio.
+:::
+
+::: {.mm-def .orange}
+[HIPÓTESIS ESTADÍSTICA (H₀ / H₁)]{.pill}
+
+Es una afirmación formal sobre parámetros, distribuciones o relaciones estadísticas que permite evaluar los datos mediante un modelo probabilístico. Puede representar una predicción derivada de una hipótesis científica, pero no es equivalente a ella.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** "rechazar o no rechazar H₀" equivale a "probar la hipótesis científica". **Interpretación correcta:** el análisis estadístico evalúa los datos respecto de una predicción o un modelo; la interpretación de la hipótesis científica también depende del diseño, los supuestos, la calidad de la evidencia y los resultados previos (ver la infografía *¿Qué es un valor de p?*).
+:::
+
+::: {.mm-banner .gray}
+¿SIEMPRE HACE FALTA UNA HIPÓTESIS?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[CON HIPÓTESIS]{.pill}
+
+Cuando ya hay teoría o conocimiento previo suficiente para formular una proposición tentativa y deducir predicciones concretas.
+:::
+
+::: {.mm-def .orange}
+[SIN HIPÓTESIS CONFIRMATORIA: ESTUDIO EXPLORATORIO]{.pill}
+
+Cuando el conocimiento previo es limitado o el fenómeno es complejo, se puede estructurar el estudio alrededor de preguntas claras y medibles, en lugar de una hipótesis confirmatoria específica.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass >}} **Ejemplo de estudio exploratorio:** "¿qué factores ambientales influyen en la variación del crecimiento de plantas herbáceas en distintos ecosistemas?" Se recopilan datos de luz, humedad, temperatura y nutrientes, sin partir de una hipótesis confirmatoria específica. El objetivo inicial es describir patrones, identificar relaciones y generar hipótesis que puedan evaluarse posteriormente.
+:::
+
+::: {.mm-example}
+{{< fa chart-column >}} **La prevalencia real es baja:** un análisis detallado de 268 artículos de ecología y evolución, junto con una búsqueda en Web of Science de más de 302 000 artículos (Betts et al., 2021), encontró que la proporción de estudios con una hipótesis explícita es baja —entre 6.7% y 26%, según el criterio usado— y se mantuvo prácticamente sin cambios entre 1990 y 2015.
+:::
+
+::: {.mm-example}
+{{< fa chart-column >}} **Un desglose por tipo de estudio:** en una muestra de 100 artículos analizada por Betini, Avgar y Fryxell (2017) —centrada en cuántas hipótesis en competencia evaluaba cada estudio, no en la presencia o ausencia de hipótesis en general— 27 de cada 100 no presentaron ninguna hipótesis explícita, con una frecuencia mucho mayor entre los estudios motivados por resolver un problema práctico que entre los motivados por teoría o por patrón.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Una hipótesis científica es una proposición tentativa sobre un fenómeno, una relación o un mecanismo, de la cual pueden derivarse predicciones contrastables. No es lo mismo que una predicción, un objetivo de investigación o una hipótesis estadística. Tampoco toda investigación necesita comenzar con una hipótesis confirmatoria: los estudios descriptivos y exploratorios pueden generar conocimiento riguroso y contribuir a formular hipótesis futuras (ver la infografía *El método científico*).
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
