@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: _site
 
+lang: es
+
 website:
   title: "Infografías"
   site-url: https://mspinola-infografias.netlify.app
@@ -63,6 +65,8 @@ website:
             href: infografias/metodos_validacion.qmd
           - text: "Pruebas estadísticas como modelos lineales"
             href: infografias/pruebas_como_modelos.qmd
+          - text: "La familia de los modelos lineales"
+            href: infografias/tipos_de_modelos.qmd
       - section: "Modelado ecológico"
         contents:
           - text: "Nicho ecológico vs. distribución de especies"

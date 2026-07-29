@@ -1,0 +1,199 @@
+---
+title: "La familia de los modelos lineales"
+description: "Modelo lineal, GLS, GLM, modelos mixtos, GAM y sus combinaciones: qué supuesto relaja cada uno respecto al modelo lineal clásico, y dónde termina la familia."
+date: 2026-07-29
+lang: es
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[No son modelos distintos: son el mismo modelo, relajando un supuesto a la vez]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+El **modelo lineal** (LM) es la base de toda esta familia. Sus extensiones —GLS, GLM, modelos mixtos, GAM— no son herramientas separadas: cada una relaja o reemplaza un supuesto particular del modelo lineal clásico para adaptarse a datos que no lo cumplen.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+En vez de aprender cada modelo como algo nuevo, conviene preguntarse: ¿cuál de los supuestos del modelo lineal básico no se cumple en mis datos? Esa pregunta indica qué extensión necesito.
+:::
+
+:::
+
+<div style="text-align:center; font-size:1.1rem; font-weight:600; color:var(--purple); padding:1.1rem 1.5rem; border-top:3px solid var(--purple); border-bottom:3px solid var(--purple); margin:1.5rem 0; line-height:1.5;">
+Elegir entre estos modelos es, en el fondo, preguntarse cuál de los supuestos del modelo lineal clásico no se cumple en los datos.
+</div>
+
+::: {.mm-banner .purple}
+EL PUNTO DE PARTIDA: EL MODELO LINEAL Y SUS SUPUESTOS
+:::
+
+<div style="text-align:center; margin: 0.8rem 0 1.2rem 0;">
+<div style="display:inline-block; background-color:#495057; color:white; font-weight:700; padding:0.8rem 1.5rem; border-radius:8px; font-size:0.95rem; text-align:left;">
+<div style="text-align:center;">MODELO LINEAL (LM) — <code style="background:rgba(255,255,255,0.15); color:white;">lm(y ~ x)</code></div>
+<ul style="font-weight:400; font-size:0.82rem; margin:0.6rem 0 0 0; padding-left:1.2rem;">
+<li><strong style="color:#74c0fc;">y</strong> es continua</li>
+<li>la relación con <strong style="color:#ffa94d;">x</strong> es lineal</li>
+<li>los residuales (no <strong style="color:#74c0fc;">y</strong> en sí) son normales</li>
+<li>la varianza de los residuales es constante (homocedasticidad)</li>
+<li>las observaciones son independientes</li>
+</ul>
+</div>
+</div>
+
+<div style="text-align:center; font-size:0.85rem; color:#777; margin-bottom:0.5rem;">Cada extensión relaja o reemplaza uno de estos supuestos ↓</div>
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.8rem;">
+<div style="flex:1; min-width:140px; background-color:var(--blue); color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>GLM</strong><br>permite otras distribuciones para <strong>y</strong> (binomial, Poisson, Gamma…) mediante una función de enlace apropiada
+</div>
+<div style="flex:1; min-width:140px; background-color:var(--orange); color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>Modelo mixto (LMM)</strong><br>relaja: independencia, vía efectos aleatorios
+</div>
+<div style="flex:1; min-width:140px; background-color:#1098ad; color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>GLS</strong><br>relaja: independencia / varianza constante, vía una estructura de correlación explícita
+</div>
+<div style="flex:1; min-width:140px; background-color:var(--purple); color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>GAM</strong><br>relaja: forma lineal de la relación con <strong>x</strong>
+</div>
+</div>
+
+<div style="text-align:center; font-size:0.85rem; color:#777; margin-bottom:0.5rem;">Y estas se pueden combinar entre sí ↓</div>
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.8rem;">
+<div style="flex:1; min-width:140px; background-color:#2f9e44; color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>GLMM</strong> = GLM + LMM<br><strong>y</strong> no normal, datos agrupados
+</div>
+<div style="flex:1; min-width:140px; background-color:#ae3ec9; color:white; border-radius:8px; padding:0.65rem; text-align:center; font-size:0.8rem;">
+<strong>GAMM</strong> = GAM + mixto<br>relación no lineal, datos agrupados
+</div>
+</div>
+
+<div style="text-align:center; margin: 1.2rem 0 0.5rem 0;">
+<div style="display:inline-block; border:2px dashed #e03131; color:#e03131; font-weight:700; padding:0.6rem 1.1rem; border-radius:8px; font-size:0.85rem;">
+NLS (mínimos cuadrados no lineales) — aquí termina la familia de modelos lineales: los parámetros ya no entran de forma lineal
+</div>
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} **Una precisión importante:** el supuesto clásico del modelo lineal no es que <strong style="color:#74c0fc;">y</strong> en sí sea normal, sino que los **residuales** (la diferencia entre lo observado y lo predicho) lo sean, con varianza constante. En un GLM esto cambia de enfoque: ya no se habla de residuales normales, sino de la **distribución** que sigue <strong style="color:#74c0fc;">y</strong>, junto con la relación entre su media y su varianza y la función de enlace que conecta el predictor con esa media — un GLM cambia estas tres piezas a la vez, no solo el supuesto de normalidad.
+:::
+
+::: {.mm-banner .gray}
+LA FAMILIA DE MODELOS
+:::
+
+<table class="table table-bordered table-sm">
+<thead>
+<tr>
+<th style="background-color:#eef1f4; color:#333; border-bottom:3px solid var(--purple);">Modelo</th>
+<th style="background-color:#eef1f4; color:#333; border-bottom:3px solid var(--purple);">Qué relaja o agrega</th>
+<th style="background-color:#eef1f4; color:#333; border-bottom:3px solid var(--purple);">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong style="color:#495057;">Modelo lineal (LM)</strong><br><code>lm(y ~ x)</code></td>
+<td>Es la base: <strong style="color:#e03131;">y</strong> continua, relación lineal, residuales normales con varianza constante, observaciones independientes.</td>
+<td>Peso corporal de un ave en función de la longitud del ala.</td>
+</tr>
+<tr>
+<td><strong style="color:var(--blue);">Modelo lineal generalizado (GLM)</strong><br><code>glm(y ~ x, family = ...)</code></td>
+<td>Permite que <strong style="color:#e03131;">y</strong> siga otra distribución (conteos, proporciones, presencia/ausencia), especificando la familia de distribución, la relación media-varianza y una función de enlace apropiadas.</td>
+<td>Presencia/ausencia de una especie según el tipo de hábitat (regresión logística).</td>
+</tr>
+<tr>
+<td><strong style="color:var(--orange);">Modelo lineal mixto (LMM)</strong><br><code>lmer(y ~ x + (1|grupo))</code></td>
+<td>Agrega efectos aleatorios para datos agrupados, jerárquicos o con medidas repetidas, donde las observaciones dentro de un grupo no son independientes entre sí.</td>
+<td>Crecimiento de plántulas medido varias veces en las mismas parcelas.</td>
+</tr>
+<tr>
+<td><strong style="color:#1098ad;">Mínimos cuadrados generalizados (GLS)</strong><br><code>gls(y ~ x, correlation = ...)</code></td>
+<td>Modela la falta de independencia o de varianza constante directamente, mediante una estructura de correlación o de varianza explícita — sin necesidad de definir grupos con efectos aleatorios.</td>
+<td>Datos con autocorrelación espacial o temporal continua, sin una agrupación natural en sitios discretos.</td>
+</tr>
+<tr>
+<td><strong style="color:var(--purple);">Modelo aditivo generalizado (GAM)</strong><br><code>gam(y ~ s(x))</code></td>
+<td>Permite relaciones suaves y no lineales entre <strong style="color:#f59f00;">x</strong> e <strong style="color:#e03131;">y</strong>, en lugar de forzar una línea recta; los parámetros siguen entrando linealmente en el modelo.</td>
+<td>Abundancia de una especie en función de la temperatura, con un óptimo intermedio (forma de campana).</td>
+</tr>
+<tr>
+<td><strong style="color:#2f9e44;">Modelo lineal generalizado mixto (GLMM)</strong><br><code>glmer(y ~ x + (1|grupo), family = ...)</code></td>
+<td>Combina GLM y LMM: <strong style="color:#e03131;">y</strong> no normal, y datos agrupados o con medidas repetidas.</td>
+<td>Número de individuos detectados por sitio, visitado varias veces (ver la infografía *Modelos de ocupación*).</td>
+</tr>
+<tr>
+<td><strong style="color:#ae3ec9;">GAM mixto (GAMM)</strong><br><code>gamm(y ~ s(x) + (1|grupo))</code></td>
+<td>Combina GAM y LMM: relación no lineal entre <strong style="color:#f59f00;">x</strong> e <strong style="color:#e03131;">y</strong>, más datos agrupados o con medidas repetidas.</td>
+<td>Fenología de floración a lo largo del año, medida en las mismas parcelas durante varios años.</td>
+</tr>
+<tr>
+<td><strong style="color:#e03131;">Mínimos cuadrados no lineales (NLS)</strong><br><code>nls(y ~ a * exp(b * x))</code></td>
+<td>Frontera de la familia: el parámetro entra de forma no lineal en la ecuación, no solo la relación entre <strong style="color:#f59f00;">x</strong> e <strong style="color:#e03131;">y</strong>.</td>
+<td>Curvas de crecimiento con una tasa que se estima directamente (ej. modelo logístico o de von Bertalanffy).</td>
+</tr>
+</tbody>
+</table>
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Relajar un supuesto no elimina los demás:** cada extensión fue diseñada para resolver un incumplimiento específico de los supuestos del modelo lineal clásico — un GLM sigue necesitando observaciones independientes; un modelo mixto sigue necesitando que los efectos aleatorios sean razonablemente normales; un GAM sigue necesitando que la suavidad elegida no sobreajuste los datos.
+:::
+
+::: {.mm-example}
+{{< fa arrows-split-up-and-left >}} **LMM y GLS resuelven el mismo problema de dos formas distintas:** ambos manejan la falta de independencia, pero el modelo mixto lo hace agrupando observaciones bajo efectos aleatorios (ej. "sitio"), mientras que GLS especifica directamente cómo se correlacionan las observaciones (ej. por distancia espacial). Una tercera alternativa, más usada en estudios longitudinales grandes, son las **ecuaciones de estimación generalizadas (GEE)**: en vez de modelar efectos específicos de cada grupo, estiman un efecto promedio poblacional y ajustan los errores estándar por la correlación — útil cuando el interés está en el efecto general, no en el de cada grupo individual.
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass-chart >}} **Un caso frecuente en GLM: la sobredispersión.** En modelos de conteos (Poisson) o de proporciones (binomial), es común que los datos varíen más de lo que el modelo espera. Ignorarlo produce errores estándar demasiado optimistas — una razón más para revisar los supuestos del modelo, no solo su ajuste general (ver la infografía *Métodos de validación de modelos*).
+:::
+
+::: {.mm-example}
+{{< fa ellipsis >}} **Esta no es una lista exhaustiva:** existen muchas otras extensiones (modelos bayesianos, de supervivencia, de ecuaciones estructurales, multinivel más complejos, entre otros), pero la mayoría pueden entenderse como variaciones de estas mismas ideas: qué distribución sigue <strong style="color:#e03131;">y</strong>, qué tan independientes son las observaciones, y qué forma tiene la relación con <strong style="color:#f59f00;">x</strong>.
+:::
+
+::: {.mm-banner .purple}
+EJEMPLO PARA ENTENDERLO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-example}
+{{< fa magnifying-glass >}} **El problema:** se visita un conjunto de sitios varias veces para registrar si una especie está presente o ausente. La respuesta es binaria (no continua) y cada sitio aporta varias visitas correlacionadas entre sí (no independientes).
+:::
+
+::: {.mm-example}
+{{< fa layer-group >}} **La solución:** ninguna extensión por separado alcanza. Se necesita un GLMM: la parte "GLM" maneja la respuesta binaria, y la parte "mixta" maneja las visitas repetidas dentro de cada sitio — exactamente la lógica detrás de los modelos de ocupación.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El modelo lineal, GLS, GLM, los modelos mixtos, GAM y sus combinaciones no son alternativas independientes: son la misma idea de modelo, extendida paso a paso para relajar un supuesto distinto —la distribución de <strong style="color:var(--blue);">y</strong>, la independencia de las observaciones, o la forma de la relación con <strong style="color:#f59f00;">x</strong>—. Mientras los coeficientes entren linealmente en el predictor del modelo, sigue perteneciendo a esta familia, aunque su estimación requiera métodos numéricos; cuando el parámetro mismo entra de forma no lineal en la ecuación (NLS), se sale de ella.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
