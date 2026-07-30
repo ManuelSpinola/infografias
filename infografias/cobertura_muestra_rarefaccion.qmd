@@ -1,0 +1,134 @@
+---
+title: "Cobertura de muestra: rarefacción y extrapolación"
+description: "Qué es la cobertura de muestra, cómo el estimador de Good-Turing/Chao-Jost la calcula a partir de especies raras, y cómo las curvas de rarefacción y extrapolación (implementadas en iNEXT) comparan comunidades de forma más justa que comparar riqueza cruda con igual tamaño de muestra."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Comparar dos sitios por su número de especies observadas es como comparar dos exámenes con distinto número de preguntas]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **cobertura de muestra** es la proporción de individuos de toda la comunidad que pertenecen a especies ya detectadas en la muestra — una medida de qué tan "completo" está el muestreo, distinta de cuántos individuos se contaron.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+En vez de preguntar "¿cuántos individuos muestreé?", la cobertura pregunta "¿qué fracción de la comunidad ya alcancé a ver?".
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** comparar la riqueza de dos sitios con el mismo tamaño de muestra (n individuos) es una comparación justa. **Interpretación correcta:** si un sitio es más diverso que otro, la misma n puede representar una fracción mucho menor de su comunidad real. Comparar por tamaño de muestra no garantiza comparar en igualdad de condiciones — comparar por cobertura sí.
+:::
+
+::: {.mm-banner .purple}
+CÓMO SE ESTIMA LA COBERTURA
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Se basa en una idea de I.J. Good (1953, a partir de trabajo de Alan Turing): cuantas más especies "raras" —vistas una sola vez (*singletons*) o dos veces (*doubletons*)— aparecen en la muestra, más incompleta está la cobertura, porque esas especies raras son la señal de que probablemente hay más especies sin detectar todavía.
+:::
+
+<div style="text-align:center; margin: 0.8rem 0 0.3rem 0;">
+<div style="display:inline-block; background-color:#495057; color:white; font-weight:700; padding:0.7rem 1.3rem; border-radius:8px; font-size:0.9rem;">
+Ĉ ≈ 1 − f₁ / n
+</div>
+</div>
+
+<div style="text-align:center; font-size:0.72rem; color:var(--gray); margin-bottom:1rem;">
+f₁ = número de especies vistas una sola vez · n = tamaño de la muestra
+</div>
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} Esta es la versión simplificada de Good-Turing. El estimador que realmente usan Chao y Jost (2012) es más preciso porque también incorpora f₂ (especies vistas exactamente dos veces), pero la intuición central es la misma: entre más especies raras hay en la muestra, menos completa es la cobertura.
+:::
+
+::: {.mm-banner .gray}
+RAREFACCIÓN Y EXTRAPOLACIÓN
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[RAREFACCIÓN (interpolación)]{.pill}
+
+Recalcula la diversidad esperada en submuestras más pequeñas que la ya obtenida — permite comparar sitios con distinto esfuerzo de muestreo reduciéndolos a un nivel común.
+:::
+
+::: {.mm-def .orange}
+[EXTRAPOLACIÓN (predicción)]{.pill}
+
+Proyecta la curva más allá de los datos observados, prediciendo cuántas especies aparecerían con más esfuerzo de muestreo — con más incertidumbre cuanto más lejos se extrapola.
+:::
+
+:::
+
+<div style="text-align:center; margin: 1.2rem 0;">
+<svg viewBox="0 0 320 170" style="width:100%; max-width:420px; display:block; margin:0 auto;">
+  <line x1="30" y1="140" x2="305" y2="140" stroke="#ccc" stroke-width="1"/>
+  <line x1="30" y1="15" x2="30" y2="140" stroke="#ccc" stroke-width="1"/>
+  <line x1="190" y1="28" x2="305" y2="28" stroke="#ddd" stroke-width="1" stroke-dasharray="2,3"/>
+  <polyline points="30,134 70,95 110,68 150,53 190,45" fill="none" stroke="var(--blue)" stroke-width="3"/>
+  <circle cx="190" cy="45" r="4.5" fill="var(--blue)"/>
+  <polyline points="190,45 230,37 270,32 305,29" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="7,5"/>
+  <text x="45" y="158" font-size="10" fill="var(--gray)">rarefacción</text>
+  <text x="222" y="158" font-size="10" fill="var(--gray)">extrapolación</text>
+  <text x="4" y="22" font-size="10" fill="var(--gray)">riqueza</text>
+  <text x="292" y="152" font-size="10" fill="var(--gray)">n</text>
+</svg>
+<div style="font-size:0.72rem; color:var(--gray);">Curva de acumulación de especies — línea sólida: datos observados; línea punteada: proyección</div>
+</div>
+
+::: {.mm-example}
+{{< fa chart-line >}} Estandarizar por cobertura en vez de por tamaño de muestra evita comparaciones engañosas: dos comunidades con el mismo esfuerzo de muestreo (misma n) pueden tener coberturas muy distintas si una es mucho más diversa que la otra — comparar su riqueza cruda subestima injustamente a la más diversa.
+:::
+
+::: {.mm-banner .purple}
+iNEXT
+:::
+
+::: {.mm-example}
+{{< fa laptop-code >}} `iNEXT` es el paquete de R (Hsieh, Ma y Chao) que implementa estas curvas de rarefacción-extrapolación de forma "sin costuras" para los tres órdenes de números de Hill —riqueza, Shannon, Simpson— con intervalos de confianza calculados por bootstrap (ver *Números de Hill*). Hoy es una de las herramientas más usadas para comparar diversidad entre comunidades de forma rigurosa.
+:::
+
+::: {.mm-banner .gray}
+LÍMITES DE ESTE ENFOQUE
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} Este marco no modela una probabilidad de detección explícita por visita —a diferencia de los modelos de ocupación (ver *Modelos de ocupación*)—, así que no requiere diseños de muestreo con visitas repetidas. Pero eso también es su límite: no separa formalmente "presente pero no detectado" de "ausente", y la extrapolación pierde confiabilidad más allá de, aproximadamente, el doble del tamaño de la muestra observada.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La cobertura de muestra mide qué fracción de la comunidad ya fue detectada, no cuántos individuos se contaron, y permite comparar comunidades de forma más justa que igualando el tamaño de muestra. Las curvas de rarefacción (interpolación) y extrapolación (predicción), implementadas en herramientas como iNEXT, construyen sobre el marco de números de Hill para estimar diversidad real a partir de muestras incompletas — una solución distinta, aunque relacionada, a la que ofrecen los modelos de ocupación (ver *MSOM y cobertura de muestra: un origen común*).
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

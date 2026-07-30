@@ -1,0 +1,198 @@
+---
+title: "MSOM y cobertura de muestra: un origen común"
+description: "Los modelos de ocupación multiespecie y los estimadores de cobertura de muestra no nacieron por separado: ambos se ramifican de la misma analogía entre individuos y especies en modelos de captura-recaptura, y comparten a James Nichols en su origen temprano."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos herramientas que hoy se ven como mundos aparte nacieron de la misma idea — y comparten incluso al mismo autor en su origen]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[LA ANALOGÍA FUNDACIONAL]{.pill}
+
+Burnham & Overton (1978, 1979) propusieron una analogía: estimar cuántas especies hay en una comunidad es matemáticamente equivalente a estimar cuántos individuos hay en una población, si se trata a cada especie como un "individuo" que puede ser "capturado" (detectado) o no, a través de varias muestras.
+:::
+
+::: {.mm-def .orange}
+[DE AHÍ SE RAMIFICAN DOS CAMINOS]{.pill}
+
+Esa misma analogía dio origen, por caminos distintos, tanto a los estimadores de cobertura de muestra (Chao, Jost) como a los modelos de ocupación multiespecie (MacKenzie, Royle) — y ambos caminos comparten a un mismo autor en su origen: James Nichols.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** MSOM y cobertura de muestra son dos escuelas completamente independientes, desarrolladas por comunidades de investigación que no se hablan entre sí. **Interpretación correcta:** comparten una raíz metodológica común —los modelos de captura-recaptura para poblaciones cerradas con heterogeneidad—, y el propio James Nichols participó en el desarrollo temprano de ambas ramas.
+:::
+
+<div style="text-align:center; margin: 1.3rem 0;">
+
+<div style="display:inline-block; background-color:#495057; color:white; border-radius:8px; padding:0.7rem 1.1rem; font-size:0.78rem; font-weight:700; max-width:300px;">
+Modelos de captura-recaptura con heterogeneidad<br><span style="font-weight:400; font-size:0.68rem;">Otis et al. 1978 · Burnham &amp; Overton 1978, 1979</span>
+</div>
+
+<div style="font-size:1.3rem; color:var(--gray); line-height:1;">↓</div>
+
+<div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-top:0.3rem;">
+
+<div style="text-align:center; max-width:210px;">
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.74rem; font-weight:700;">Chao (1987)</div>
+<div style="font-size:1.1rem; color:var(--gray); line-height:1.3;">↓</div>
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.74rem; font-weight:700;">Boulinier, <u>Nichols</u>, Sauer, Hines &amp; Pollock (1998)</div>
+<div style="font-size:1.1rem; color:var(--gray); line-height:1.3;">↓</div>
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.74rem; font-weight:700;">Chao &amp; Jost (2012) · Chao et al. (2014)<br><span style="font-weight:400; font-size:0.66rem;">cobertura de muestra / iNEXT</span></div>
+</div>
+
+<div style="text-align:center; max-width:210px;">
+<div style="background-color:var(--orange); color:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.74rem; font-weight:700;">MacKenzie, <u>Nichols</u>, Lachman, Droege, Royle &amp; Langtimm (2002)</div>
+<div style="font-size:1.1rem; color:var(--gray); line-height:1.3;">↓</div>
+<div style="background-color:var(--orange); color:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.74rem; font-weight:700;">Royle, Dorazio y colaboradores<br><span style="font-weight:400; font-size:0.66rem;">modelos de ocupación multiespecie (MSOM)</span></div>
+</div>
+
+</div>
+
+<div style="font-size:0.72rem; color:var(--gray); margin-top:0.9rem;">James Nichols aparece en el origen temprano de ambas ramas</div>
+
+</div>
+
+::: {.mm-banner .purple}
+RAMA 1 — DE CHAO A LA COBERTURA DE MUESTRA
+:::
+
+::: {.mm-example}
+{{< fa route >}} Chao (1987) adaptó los modelos de heterogeneidad de captura-recaptura para estimar riqueza de especies. Boulinier, Nichols, Sauer, Hines & Pollock (1998) formalizaron explícitamente la analogía "especies como individuos", usando modelos como Mh y Mth para corregir la riqueza observada por detectabilidad heterogénea entre especies. Ese linaje evolucionó hacia los estimadores de cobertura de muestra de Chao y Jost (2012) y las curvas de rarefacción-extrapolación de Chao et al. (2014), implementadas en iNEXT (ver *Cobertura de muestra: rarefacción y extrapolación*).
+:::
+
+::: {.mm-banner .purple}
+RAMA 2 — DE LA OCUPACIÓN AL MSOM
+:::
+
+::: {.mm-example}
+{{< fa route >}} MacKenzie, Nichols, Lachman, Droege, Royle & Langtimm (2002) —de nuevo con Nichols como coautor— formalizaron el modelo de ocupación de una sola especie (ver *Modelos de ocupación*), modelando explícitamente una probabilidad de detección por visita mediante diseños de muestreo con réplicas. Royle, Dorazio y colaboradores extendieron después ese mismo marco a modelos de ocupación multiespecie (MSOM), que estiman la riqueza y los patrones espaciales de ocurrencia de toda una comunidad a la vez — una extensión que todavía no tiene su propia infografía en el sitio.
+:::
+
+::: {.mm-banner .gray}
+¿EN QUÉ SE DIFERENCIAN HOY?
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa repeat >}} Requiere visitas repetidas al mismo sitio durante un período de "cierre" (sin cambios en la comunidad).
+:::
+
+::: {.mm-tag}
+DISEÑO DE MUESTREO
+:::
+
+::: {.mm-cell .orange}
+{{< fa layer-group >}} No requiere visitas repetidas — funciona con una sola muestra bien tomada, aunque también admite datos de incidencia con réplicas.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa sliders >}} Modela explícitamente una probabilidad de detección (p) por especie y por visita, separando el proceso ecológico del proceso de observación.
+:::
+
+::: {.mm-tag}
+QUÉ MODELA
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-simple >}} Infiere lo no detectado a partir de la forma de la distribución de abundancias — cuántas especies raras aparecen en la muestra.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa list-check >}} Probabilidad de ocupación por especie y por sitio, y riqueza estimada a partir de esas probabilidades.
+:::
+
+::: {.mm-tag}
+SALIDA PRINCIPAL
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-line >}} Curvas de rarefacción/extrapolación y números de Hill estimados a un nivel de cobertura común.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa toolbox >}} `unmarked`, `PRESENCE`, `ubms` (R / Bayes).
+:::
+
+::: {.mm-tag}
+HERRAMIENTAS
+:::
+
+::: {.mm-cell .orange}
+{{< fa toolbox >}} `iNEXT`, `SpadeR`, `vegan`.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+¿DAN LA MISMA RESPUESTA?
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} No siempre. Estudios que comparan ambos enfoques con los mismos datos de campo han encontrado que los estimadores de cobertura pueden ser más variables que los MSOM, sobre todo cuando una fracción importante de la comunidad son especies raras o difíciles de detectar. Ninguno de los dos es "el correcto" en abstracto — la elección depende de qué tan factible es un diseño con visitas repetidas, y de qué tan grave es el problema de especies raras en el sistema de estudio.
+:::
+
+::: {.mm-banner .gray}
+¿CUÁL CONVIENE USAR?
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[USA MSOM SI...]{.pill}
+
+Puedes hacer visitas repetidas en un período corto de cierre poblacional, te interesa la distribución espacial de especies individuales (no solo un número total), o trabajas con especies de manejo/conservación donde la precisión por especie importa.
+:::
+
+::: {.mm-def .orange}
+[USA COBERTURA DE MUESTRA SI...]{.pill}
+
+El diseño de muestreo no permite visitas repetidas, te interesa comparar la diversidad total entre muchos sitios o comunidades, o trabajas con grupos taxonómicos muy diversos (insectos, plantas) donde modelar cada especie por separado no es viable.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+MSOM y los estimadores de cobertura de muestra no son dos tradiciones que se desarrollaron en aislamiento — ambas nacen de la misma analogía entre individuos y especies en modelos de captura-recaptura, y comparten a James Nichols en su origen temprano. Divergieron hacia objetivos distintos: la cobertura de muestra hacia una estimación no paramétrica y asintótica de la diversidad total, y el MSOM hacia un modelo jerárquico explícito de dónde y con qué probabilidad ocurre cada especie. Conocer ese origen común ayuda a entender por qué, pese a sus diferencias actuales, comparten tanto vocabulario y lógica estadística.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

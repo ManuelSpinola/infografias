@@ -94,6 +94,8 @@ website:
             contents:
               - text: "Límites de los índices clásicos de diversidad"
                 href: infografias/limites_indices_diversidad_clasicos.qmd
+              - text: "Riqueza observada vs. riqueza estimada"
+                href: infografias/riqueza_observada_vs_estimada.qmd
               - text: "Números de Hill"
                 href: infografias/numeros_de_hill.qmd
               - text: "Diversidad alfa, beta y gamma"
@@ -102,6 +104,10 @@ website:
                 href: infografias/particion_alfa_beta_gamma.qmd
               - text: "Diversidad funcional"
                 href: infografias/diversidad_funcional.qmd
+              - text: "Cobertura de muestra: rarefacción y extrapolación"
+                href: infografias/cobertura_muestra_rarefaccion.qmd
+              - text: "MSOM y cobertura de muestra: un origen común"
+                href: infografias/msom_vs_cobertura_muestra.qmd
 
 format:
   html:
