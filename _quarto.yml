@@ -26,6 +26,7 @@ website:
     style: "floating"
     search: true
     background: light
+    collapse-level: 3
     contents:
       - section: "Metodología de la investigación"
         contents:
