@@ -1,0 +1,203 @@
+---
+title: "Corredores biológicos: conectividad estructural vs. funcional"
+description: "Qué es un corredor biológico, por qué la continuidad física de un paisaje no garantiza que las especies lo usen para moverse, y la diferencia entre conectividad estructural y funcional."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Que dos bosques se toquen en el mapa no significa que las especies puedan cruzar entre ellos]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+Un **corredor biológico** es un elemento o conjunto de elementos del paisaje —una franja continua, una secuencia de parches ("*stepping stones*") o un mosaico de usos del suelo de baja resistencia— que favorece el movimiento, la dispersión y el flujo génico entre poblaciones que, de otro modo, permanecerían aisladas.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No basta con ver una franja verde en el mapa: lo importante es si la especie realmente puede usarla para desplazarse.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** un corredor biológico es cualquier franja continua de vegetación que aparece conectada en un mapa. **Interpretación correcta:** un corredor solo cumple su función si la especie de interés efectivamente lo percibe y lo usa como ruta de movimiento — la continuidad física no garantiza la continuidad funcional.
+:::
+
+::: {.mm-banner .purple}
+CONECTIVIDAD ESTRUCTURAL VS. FUNCIONAL
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa map >}} **Independiente de la especie:** la configuración física del paisaje — qué tan conectados están los fragmentos de hábitat en el mapa.
+:::
+
+::: {.mm-tag}
+QUÉ ES
+:::
+
+::: {.mm-cell .orange}
+{{< fa paw >}} Qué tan conectado está el paisaje desde la perspectiva de una especie particular. Depende de su comportamiento, capacidad de dispersión y percepción del paisaje.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa ruler-combined >}} Métricas de paisaje: distancia entre parches, área de hábitat, forma de los fragmentos.
+:::
+
+::: {.mm-tag}
+CÓMO SE MIDE
+:::
+
+::: {.mm-cell .orange}
+{{< fa route >}} Datos de movimiento real: telemetría, modelos de movimiento, genética de poblaciones, tasas de dispersión observadas.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa triangle-exclamation >}} Dos parches pueden verse conectados en el mapa sin que ninguna especie los use como corredor.
+:::
+
+::: {.mm-tag}
+LIMITACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa users-viewfinder >}} Es específica de cada especie: un corredor funcional para un ave puede no serlo para un anfibio o un mamífero terrestre.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa image >}} Un análisis de cobertura muestra franjas de vegetación remanente entre dos parques nacionales.
+:::
+
+::: {.mm-tag}
+EJEMPLO
+:::
+
+::: {.mm-cell .orange}
+{{< fa signal >}} Datos de collares GPS confirman que los jaguares efectivamente cruzan por esas franjas — o revelan que evitan ciertos tramos por presencia humana.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} La conectividad funcional depende tanto de la especie como del tipo de movimiento que interese: la dispersión de juveniles, la migración estacional y el flujo génico entre generaciones pueden requerir corredores distintos, incluso para la misma especie. Un mismo paisaje puede ser un excelente corredor para un jaguar, una barrera casi infranqueable para una salamandra, y un obstáculo irrelevante para un ave migratoria — no existen "corredores universales".
+:::
+
+<div style="margin:1.2rem 0; text-align:center;">
+
+<div style="display:flex; align-items:center; justify-content:center; margin-bottom:0.5rem;">
+<div style="width:72px; height:72px; background-color:#59A14F; border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.65rem; font-weight:700; text-align:center; padding:4px;">PARCHE A</div>
+<div style="width:100px; height:24px; background-color:#59A14F; opacity:0.5;"></div>
+<div style="width:72px; height:72px; background-color:#59A14F; border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-size:0.65rem; font-weight:700; text-align:center; padding:4px;">PARCHE B</div>
+</div>
+<div style="font-size:0.7rem; font-weight:700; color:var(--gray); margin-bottom:1.1rem;">CONECTIVIDAD ESTRUCTURAL — se ven conectados en el mapa</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1.4rem; flex-wrap:wrap;">
+
+<div>
+<div style="font-size:1.3rem; color:#495057;">{{< fa paw >}}</div>
+<div style="font-size:0.68rem; color:var(--gray); margin:2px 0;">Jaguar</div>
+<div style="font-size:0.85rem; color:#2f9e44; font-weight:700;">{{< fa check >}} lo usa</div>
+</div>
+
+<div>
+<div style="font-size:1.3rem; color:#495057;">{{< fa frog >}}</div>
+<div style="font-size:0.68rem; color:var(--gray); margin:2px 0;">Salamandra</div>
+<div style="font-size:0.85rem; color:#e03131; font-weight:700;">{{< fa xmark >}} barrera</div>
+</div>
+
+<div>
+<div style="font-size:1.3rem; color:#495057;">{{< fa dove >}}</div>
+<div style="font-size:0.68rem; color:var(--gray); margin:2px 0;">Ave migratoria</div>
+<div style="font-size:0.85rem; color:var(--gray); font-weight:700;">{{< fa minus >}} irrelevante</div>
+</div>
+
+</div>
+
+<div style="font-size:0.7rem; font-weight:700; color:var(--gray); margin-top:0.9rem;">CONECTIVIDAD FUNCIONAL — depende de a qué especie se le pregunte</div>
+
+</div>
+
+::: {.mm-banner .gray}
+CÓMO SE IDENTIFICAN LOS CORREDORES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[MODELOS DE COSTO MÍNIMO]{.pill}
+
+Identifican la ruta de menor "resistencia" al movimiento entre dos puntos, según la resistencia al movimiento que ofrece cada tipo de cobertura del paisaje para la especie de interés.
+:::
+
+::: {.mm-def .orange}
+[TEORÍA DE CIRCUITOS]{.pill}
+
+Modela el paisaje como una red eléctrica, lo que permite identificar múltiples rutas potenciales y no solo la de menor costo — útil cuando el movimiento no sigue una sola ruta óptima.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Ambos modelos requieren definir antes una "superficie de resistencia" — qué tan difícil es para la especie moverse por cada tipo de cobertura —, un paso que introduce supuestos importantes y debe basarse en datos de la especie, no solo en intuición.
+:::
+
+::: {.mm-banner .gray}
+LA MATRIZ TAMBIÉN IMPORTA
+:::
+
+::: {.mm-example}
+{{< fa layer-group >}} Un corredor no funciona de forma aislada: la facilidad con que una especie se desplaza también depende de la **matriz** que lo rodea — el mosaico de usos del suelo entre los fragmentos de hábitat (potreros, cafetales, plantaciones, zonas urbanas, humedales). Algunos usos son relativamente permeables para una especie; otros son barreras casi infranqueables. Dos corredores con la misma geometría pueden funcionar de manera muy distinta según la matriz que los rodea.
+:::
+
+::: {.mm-banner .purple}
+POR QUÉ IMPORTAN LOS CORREDORES
+:::
+
+::: {.mm-example}
+{{< fa link >}} Los corredores biológicos son una de las principales estrategias para reducir los efectos de la fragmentación del hábitat, ya que pueden facilitar el flujo génico entre poblaciones y permitir el desplazamiento de las especies frente a cambios ambientales, en vez de que estas queden atrapadas en parches cada vez más aislados (ver también *Diversidad genética y viabilidad poblacional*).
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Un corredor biológico no es solo una franja verde en el mapa: solo cumple su función si la especie de interés efectivamente lo usa para moverse. La conectividad estructural (la configuración física del paisaje) y la conectividad funcional (cómo la percibe y usa una especie) no son lo mismo, y diseñar corredores efectivos requiere datos sobre el comportamiento real de las especies, no solo sobre la cobertura del suelo.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

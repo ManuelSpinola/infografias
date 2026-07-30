@@ -1,0 +1,241 @@
+---
+title: "Diversidad genética y viabilidad poblacional"
+description: "Qué es la diversidad genética y por qué es la materia prima de la adaptación, la diferencia entre tamaño censal (N) y tamaño efectivo poblacional (Ne), y cómo la deriva génica y la depresión endogámica aceleran su pérdida en poblaciones pequeñas."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[La materia prima de la adaptación — y por qué las poblaciones pequeñas la pierden primero]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **diversidad genética** es la variación en el material hereditario (alelos y genotipos) presente dentro de una especie o población. Es el nivel de biodiversidad menos visible a simple vista, pero determina la capacidad de las poblaciones para responder evolutivamente a cambios ambientales.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+Es como un banco de opciones evolutivas: cuantas más variantes genéticas existan en una población, más probable es que alguna resulte útil frente a una enfermedad nueva, un cambio de clima o un depredador distinto.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** si una población tiene muchos individuos, tiene automáticamente alta diversidad genética. **Interpretación correcta:** el tamaño poblacional (N) y la diversidad genética están relacionados, pero no son lo mismo — lo que determina con mayor precisión la pérdida de diversidad genética es el **tamaño efectivo poblacional (Ne)**, casi siempre menor que N.
+:::
+
+::: {.mm-banner .purple}
+TAMAÑO EFECTIVO (Ne) VS. TAMAÑO CENSAL (N)
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa users >}} N = conteo directo de todos los individuos vivos en la población.
+:::
+
+::: {.mm-tag}
+QUÉ MIDE
+:::
+
+::: {.mm-cell .orange}
+{{< fa dna >}} Ne = número de individuos que efectivamente aportan genes a la siguiente generación, en condiciones ideales.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa crosshairs >}} N baja por mortalidad, cacería o pérdida de hábitat — factores demográficos directos.
+:::
+
+::: {.mm-tag}
+CÓMO SE REDUCE
+:::
+
+::: {.mm-cell .orange}
+{{< fa shuffle >}} Ne baja además por razón de sexos desigual, varianza en éxito reproductivo y fluctuaciones poblacionales en el tiempo.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa binoculars >}} N se estima con conteos directos o muestreos poblacionales.
+:::
+
+::: {.mm-tag}
+ESTIMACIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa magnifying-glass-chart >}} Ne se estima con datos genéticos o demográficos más detallados, y suele ser menor que N.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} En muchas especies, Ne representa entre el 10 % y el 50 % de N, aunque esta proporción puede variar ampliamente según la biología y la historia demográfica de la población.
+:::
+
+::: {.mm-banner .gray}
+DERIVA GÉNICA Y PÉRDIDA DE VARIABILIDAD
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES LA DERIVA GÉNICA]{.pill}
+
+Cambios aleatorios en las frecuencias alélicas de una población de una generación a otra, por puro azar — no por selección. Su efecto es más fuerte cuanto más pequeña es la población.
+:::
+
+::: {.mm-def .orange}
+[CONSECUENCIA]{.pill}
+
+Con el tiempo, la deriva génica conduce a la pérdida o fijación de alelos, reduciendo progresivamente la diversidad genética disponible — un proceso que se acelera en poblaciones pequeñas o aisladas.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa dna >}} Dos procesos relacionados aceleran esta pérdida en casos extremos: un **cuello de botella genético** (una caída abrupta en el tamaño poblacional) y el **efecto fundador** (una nueva población iniciada por muy pocos individuos) — ambos reducen de forma abrupta la variabilidad genética disponible, sin importar qué tan grande sea la población después de recuperarse en número.
+:::
+
+<div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin:1.2rem 0; flex-wrap:wrap;">
+
+<div style="text-align:center;">
+<div style="font-size:0.7rem; font-weight:700; color:var(--gray); margin-bottom:8px;">ANTES</div>
+<div style="display:flex; flex-wrap:wrap; gap:4px; max-width:100px; justify-content:center;">
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--orange);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--purple);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--yellow);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--gray);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue-bright);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--una-red);"></div>
+</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px;">7 variantes genéticas</div>
+</div>
+
+<div style="font-size:1.3rem; color:var(--gray);">{{< fa arrow-right >}}</div>
+
+<div style="text-align:center;">
+<div style="font-size:0.7rem; font-weight:700; color:#e03131; margin-bottom:8px;">CUELLO DE BOTELLA</div>
+<div style="display:flex; gap:4px; justify-content:center;">
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--orange);"></div>
+</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px;">solo 2 sobreviven</div>
+</div>
+
+<div style="font-size:1.3rem; color:var(--gray);">{{< fa arrow-right >}}</div>
+
+<div style="text-align:center;">
+<div style="font-size:0.7rem; font-weight:700; color:var(--gray); margin-bottom:8px;">DESPUÉS</div>
+<div style="display:flex; flex-wrap:wrap; gap:4px; max-width:100px; justify-content:center;">
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--orange);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--orange);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--orange);"></div>
+<div style="width:14px;height:14px;border-radius:50%;background-color:var(--blue);"></div>
+</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px;">N se recupera, pero solo con 2 variantes</div>
+</div>
+
+</div>
+
+<div style="text-align:center; font-size:0.78rem; color:var(--gray); margin-bottom:1rem;">
+El tamaño poblacional (N) puede recuperarse por completo — la diversidad genética perdida, no.
+</div>
+
+::: {.mm-banner .purple}
+DEPRESIÓN ENDOGÁMICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+Reproducción entre individuos emparentados, más frecuente en poblaciones pequeñas donde hay pocas parejas reproductivas disponibles.
+:::
+
+::: {.mm-def .orange}
+[CONSECUENCIA]{.pill}
+
+Aumenta la probabilidad de expresar alelos recesivos dañinos, reduciendo la sobrevivencia, fertilidad o crecimiento de la descendencia — la llamada depresión endogámica.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} La endogamia no es automáticamente letal: su efecto depende de la carga genética particular de cada especie. Algunas poblaciones aisladas persisten por generaciones con endogamia moderada, mientras otras colapsan rápidamente — no existe un umbral universal.
+:::
+
+::: {.mm-banner .purple}
+FLUJO GÉNICO: CÓMO SE MANTIENE LA DIVERSIDAD
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+El movimiento de genes entre poblaciones, a través de la dispersión de individuos o de gametos (por ejemplo, polen).
+:::
+
+::: {.mm-def .orange}
+[POR QUÉ IMPORTA]{.pill}
+
+Introduce nuevos alelos, reduce la probabilidad de endogamia y contrarresta parcialmente la pérdida de diversidad genética causada por la deriva génica.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa route >}} A diferencia de los procesos anteriores, el flujo génico es la principal vía por la que una población puede recuperar diversidad genética perdida — por eso mantener poblaciones conectadas, por ejemplo mediante corredores biológicos, es una de las estrategias de conservación genética más efectivas (ver *Corredores biológicos: conectividad estructural vs. funcional*).
+:::
+
+::: {.mm-banner .gray}
+POR QUÉ IMPORTA PARA LA VIABILIDAD POBLACIONAL
+:::
+
+::: {.mm-example}
+{{< fa heart-pulse >}} La diversidad genética es uno de los factores que influyen en la viabilidad de una población, y que suelen incorporarse en los análisis de viabilidad poblacional (PVA) junto con el tamaño poblacional, la demografía y las amenazas ambientales — aunque no todo PVA la incluye explícitamente, ya que algunos son puramente demográficos.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La diversidad genética representa la variación heredable disponible dentro de una población y constituye la base de su capacidad adaptativa. Su pérdida depende principalmente del tamaño efectivo poblacional (Ne), más que del número total de individuos (N), y se acelera por deriva génica, cuellos de botella, efecto fundador y endogamia — mientras que el flujo génico entre poblaciones conectadas es la principal vía para contrarrestar esa pérdida. Mantener poblaciones grandes y conectadas ayuda a conservar este componente fundamental de la biodiversidad (ver también *Niveles de biodiversidad*).
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

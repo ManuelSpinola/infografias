@@ -45,34 +45,62 @@ website:
             href: infografias/patron_vs_mecanismo.qmd
       - section: "Estadística y ciencia de datos"
         contents:
-          - text: "Prueba de hipótesis vs. estimación"
-            href: infografias/prueba_hipotesis_vs_estimacion.qmd
-          - text: "Valores de p"
-            href: infografias/valores_p.qmd
-          - text: "Críticas a los valores de p"
-            href: infografias/criticas_valores_p.qmd
-          - text: "Tamaño del efecto"
-            href: infografias/tamano_efecto.qmd
-          - text: "Estadística frecuentista"
-            href: infografias/estadistica_frecuentista.qmd
-          - text: "Estadística bayesiana"
-            href: infografias/estadistica_bayesiana.qmd
-          - text: "Machine learning"
-            href: infografias/machine_learning.qmd
-          - text: "Comparación de paradigmas"
-            href: infografias/comparativa_frecuentista_bayesiana_ml.qmd
-          - text: "Métodos de validación"
-            href: infografias/metodos_validacion.qmd
-          - text: "Pruebas estadísticas como modelos lineales"
-            href: infografias/pruebas_como_modelos.qmd
-          - text: "La familia de los modelos lineales"
-            href: infografias/tipos_de_modelos.qmd
+          - section: "Inferencia"
+            contents:
+              - text: "Prueba de hipótesis vs. estimación"
+                href: infografias/prueba_hipotesis_vs_estimacion.qmd
+              - text: "Valores de p"
+                href: infografias/valores_p.qmd
+              - text: "Críticas a los valores de p"
+                href: infografias/criticas_valores_p.qmd
+              - text: "Tamaño del efecto"
+                href: infografias/tamano_efecto.qmd
+          - section: "Paradigmas estadísticos"
+            contents:
+              - text: "Estadística frecuentista"
+                href: infografias/estadistica_frecuentista.qmd
+              - text: "Estadística bayesiana"
+                href: infografias/estadistica_bayesiana.qmd
+              - text: "Machine learning"
+                href: infografias/machine_learning.qmd
+              - text: "Comparación de paradigmas"
+                href: infografias/comparativa_frecuentista_bayesiana_ml.qmd
+          - section: "Modelos"
+            contents:
+              - text: "Métodos de validación"
+                href: infografias/metodos_validacion.qmd
+              - text: "Pruebas estadísticas como modelos lineales"
+                href: infografias/pruebas_como_modelos.qmd
+              - text: "La familia de los modelos lineales"
+                href: infografias/tipos_de_modelos.qmd
       - section: "Modelado ecológico"
         contents:
           - text: "Nicho ecológico vs. distribución de especies"
             href: infografias/nicho_vs_distribucion.qmd
           - text: "Modelos de ocupación"
             href: infografias/modelos_ocupacion.qmd
+      - section: "Conservación de la biodiversidad"
+        contents:
+          - text: "Conservación biológica: qué es y qué no es"
+            href: infografias/conservacion_biologica_definicion.qmd
+          - text: "Niveles de biodiversidad"
+            href: infografias/niveles_biodiversidad.qmd
+          - text: "Diversidad genética y viabilidad poblacional"
+            href: infografias/diversidad_genetica_viabilidad.qmd
+          - text: "Corredores biológicos: conectividad estructural vs. funcional"
+            href: infografias/corredores_biologicos_conectividad.qmd
+          - section: "Medición de la biodiversidad"
+            contents:
+              - text: "Límites de los índices clásicos de diversidad"
+                href: infografias/limites_indices_diversidad_clasicos.qmd
+              - text: "Números de Hill"
+                href: infografias/numeros_de_hill.qmd
+              - text: "Diversidad alfa, beta y gamma"
+                href: infografias/diversidad_alfa_beta_gamma.qmd
+              - text: "¿Gamma = alfa + beta o alfa × beta?"
+                href: infografias/particion_alfa_beta_gamma.qmd
+              - text: "Diversidad funcional"
+                href: infografias/diversidad_funcional.qmd
 
 format:
   html:

@@ -1,0 +1,100 @@
+---
+title: "¿Gamma = alfa + beta, o alfa × beta?"
+description: "Cómo se combinan matemáticamente la diversidad alfa y beta para producir gamma: la partición multiplicativa de Whittaker, la alternativa aditiva, y por qué solo los números de Hill resuelven la disputa de forma consistente."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos escuelas llevan décadas en desacuerdo sobre cómo combinar alfa y beta — y la respuesta depende de qué "diversidad" se esté usando]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PARTICIÓN MULTIPLICATIVA]{.pill}
+
+Whittaker (1960, 1972) propuso originalmente que la diversidad regional es el **producto** de la diversidad promedio de los sitios y su grado de diferenciación: γ = α × β.
+:::
+
+::: {.mm-def .orange}
+[PARTICIÓN ADITIVA]{.pill}
+
+Otros autores, entre ellos Lande (1996), defendieron en cambio que gamma es la **suma** de alfa y beta: γ = α + β.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** ambas fórmulas son solo formas equivalentes de expresar la misma relación, y usar una u otra es cuestión de preferencia. **Interpretación correcta:** no son equivalentes — dan valores distintos y responden a definiciones distintas de qué es beta (una proporción en un caso, una diferencia en el otro), y solo una de ellas se sostiene de forma consistente según qué índice de diversidad se use.
+:::
+
+::: {.mm-banner .purple}
+EL PROBLEMA: LOS ÍNDICES CRUDOS NO SE COMPORTAN IGUAL
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Si alfa, beta y gamma se calculan con índices clásicos como Shannon o Simpson, ninguna de las dos particiones (aditiva ni multiplicativa) se cumple de forma confiable en todos los casos — el resultado depende de detalles como si los sitios tienen el mismo tamaño de muestra o el mismo peso estadístico (ver *Límites de los índices clásicos de diversidad*).
+:::
+
+::: {.mm-banner .gray}
+LA SOLUCIÓN DE JOST: TRABAJAR EN NÚMEROS DE HILL
+:::
+
+::: {.mm-example}
+{{< fa dna >}} Jost (2006) demostró que, cuando alfa, beta y gamma se expresan como números de Hill —números efectivos de especies, no como los índices crudos— la relación multiplicativa (γ = α × β) se cumple de forma consistente, sin importar el orden q que se use ni el peso relativo de cada sitio (ver *Números de Hill: la diversidad verdadera detrás de los índices clásicos*). Esto convierte a la partición multiplicativa, y no a la aditiva, en la que tiene una base matemática sólida.
+:::
+
+::: {.mm-banner .purple}
+QUÉ SIGNIFICA BETA EN NÚMEROS DE HILL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[NO ES UNA DIFERENCIA]{.pill}
+
+En este marco, beta = γ / α — no una resta, sino una razón. Beta indica cuántas comunidades "efectivamente distintas" hay dentro de la región.
+:::
+
+::: {.mm-def .orange}
+[SE INTERPRETA COMO UN CONTEO]{.pill}
+
+Un beta de 1 significa que todos los sitios son idénticos en composición (no hay recambio real). Un beta de 3, en una región con 3 sitios, significa que los tres son completamente distintos entre sí.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+LOS ÍNDICES DE SIMILITUD SON UN CASO PARTICULAR
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Jost también mostró que índices de similitud muy usados —Sørensen, Jaccard, Morisita-Horn, el índice de Horn— pueden derivarse de forma consistente a partir de este mismo marco de números de Hill, en vez de tratarse como fórmulas sueltas y desconectadas entre sí.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La disputa entre partición aditiva y multiplicativa no es una cuestión de gustos: depende de si beta se está expresando como una diferencia o como una razón, y de si el cálculo se hace con índices crudos o con números de Hill. Solo en números de Hill la partición multiplicativa (γ = α × β) se cumple de forma consistente — lo que convierte a beta en un número interpretable de "comunidades efectivamente distintas" dentro de una región.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

@@ -1,0 +1,160 @@
+---
+title: "Diversidad funcional: qué hacen las especies, no solo cuántas hay"
+description: "Qué es la diversidad funcional, sus tres componentes (riqueza, equidad y divergencia funcional), la redundancia funcional como seguro ecológico, en qué se distingue de la diversidad filogenética, y por qué importa para el funcionamiento de los ecosistemas."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Dos comunidades con exactamente la misma riqueza de especies pueden funcionar de forma completamente distinta]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **diversidad funcional** es la variedad de rasgos —morfológicos, fisiológicos o de comportamiento— que determinan cómo las especies usan los recursos e interactúan con su ambiente, presentes en una comunidad.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No mide cuántas especies hay, sino qué tan distintas son en lo que hacen: qué comen, cómo se mueven, cuándo están activas, qué papel cumplen en el ecosistema.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** más especies siempre significa más diversidad funcional. **Interpretación correcta:** dos comunidades pueden tener exactamente la misma riqueza de especies y una diversidad funcional muy distinta, según qué tan parecidos o distintos sean los rasgos de esas especies entre sí.
+:::
+
+<div style="display:flex; justify-content:center; gap:2rem; margin:1.2rem 0; flex-wrap:wrap;">
+
+<div style="text-align:center;">
+<div style="position:relative; width:130px; height:130px; border:2px solid var(--gray); border-radius:8px; background:#fafafa; margin:0 auto;">
+<div style="position:absolute; left:15%; top:70%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+<div style="position:absolute; left:22%; top:78%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+<div style="position:absolute; left:28%; top:65%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+<div style="position:absolute; left:18%; top:58%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+<div style="position:absolute; left:32%; top:72%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+<div style="position:absolute; left:25%; top:82%; width:12px; height:12px; border-radius:50%; background:var(--blue);"></div>
+</div>
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:8px;">COMUNIDAD A<br><span style="font-weight:400;">6 especies, rasgos muy similares</span></div>
+</div>
+
+<div style="text-align:center;">
+<div style="position:relative; width:130px; height:130px; border:2px solid var(--gray); border-radius:8px; background:#fafafa; margin:0 auto;">
+<div style="position:absolute; left:8%; top:8%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+<div style="position:absolute; left:75%; top:12%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+<div style="position:absolute; left:45%; top:42%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+<div style="position:absolute; left:12%; top:75%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+<div style="position:absolute; left:78%; top:68%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+<div style="position:absolute; left:48%; top:85%; width:12px; height:12px; border-radius:50%; background:var(--orange);"></div>
+</div>
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:8px;">COMUNIDAD B<br><span style="font-weight:400;">6 especies, rasgos muy distintos</span></div>
+</div>
+
+</div>
+
+<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:1rem;">
+Misma riqueza de especies (6) — diversidad funcional muy distinta
+</div>
+
+::: {.mm-banner .purple}
+QUÉ ES UN RASGO FUNCIONAL
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Cualquier característica medible de un organismo que influye en su desempeño o en su papel ecológico: tamaño corporal, tipo de dieta, modo de dispersión, horario de actividad, forma de las hojas, profundidad de raíces, tipo de locomoción, entre muchos otros. Qué rasgos medir depende de la pregunta ecológica que se quiera responder — no existe un set fijo de rasgos "correctos" para toda comunidad.
+:::
+
+::: {.mm-banner .gray}
+TRES COMPONENTES PRINCIPALES
+:::
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
+
+<div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
+<strong>Riqueza funcional</strong><br>Cuánto "espacio de rasgos" ocupa la comunidad — el rango de combinaciones de rasgos presentes.
+</div>
+
+<div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
+<strong>Equidad funcional</strong><br>Qué tan regularmente se distribuyen las especies y sus abundancias dentro de ese espacio de rasgos.
+</div>
+
+<div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
+<strong>Divergencia funcional</strong><br>Qué tan alejadas están las especies más abundantes del centro del espacio de rasgos.
+</div>
+
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} En la práctica, estos índices se calculan ubicando a las especies en un "espacio de rasgos" —generalmente mediante un análisis de ordenación como PCoA— y midiendo propiedades geométricas de esa nube de puntos: su volumen (riqueza), su regularidad (equidad) y su dispersión respecto al centro (divergencia).
+:::
+
+::: {.mm-banner .purple}
+REDUNDANCIA FUNCIONAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[ALTA REDUNDANCIA]{.pill}
+
+Varias especies cumplen roles funcionales muy similares. Si una se pierde, otras pueden compensar su función — actúa como un "seguro ecológico" ante perturbaciones.
+:::
+
+::: {.mm-def .orange}
+[BAJA REDUNDANCIA]{.pill}
+
+Cada especie cumple un rol único, difícil de reemplazar. Perder una sola especie puede significar la pérdida completa de una función ecológica, sin importar cuántas otras especies queden.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} Una comunidad con alta riqueza de especies pero baja redundancia funcional puede ser más vulnerable de lo que parece: perder una sola especie clave —aunque la riqueza total casi no cambie— puede eliminar una función ecológica completa.
+:::
+
+::: {.mm-banner .gray}
+DIVERSIDAD FUNCIONAL VS. FILOGENÉTICA
+:::
+
+::: {.mm-example}
+{{< fa dna >}} No son lo mismo, aunque suelen ir de la mano. Especies filogenéticamente distantes normalmente son también funcionalmente distintas — pero no siempre: la evolución convergente puede producir especies muy alejadas evolutivamente que cumplen roles casi idénticos, y especies cercanamente emparentadas a veces divergen mucho en sus rasgos funcionales (ver *Límites de los índices clásicos de diversidad*, donde el ejemplo del jaguar, puma y ocelote trata ambas dimensiones como si se movieran juntas — una simplificación razonable para ese ejemplo puntual, pero no una regla general).
+:::
+
+::: {.mm-banner .purple}
+POR QUÉ IMPORTA
+:::
+
+::: {.mm-example}
+{{< fa leaf >}} La diversidad funcional suele predecir mejor que la riqueza de especies varios procesos del ecosistema —productividad, ciclado de nutrientes, resistencia a invasiones, resiliencia ante perturbaciones—, porque estos procesos dependen de qué hacen los organismos, no solo de cuántas especies distintas hay.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La diversidad funcional mide la variedad de rasgos presentes en una comunidad, no cuántas especies la componen. Se descompone en riqueza, equidad y divergencia funcional, y se relaciona con la redundancia funcional —cuántas especies cumplen roles similares—, que actúa como amortiguador ante la pérdida de especies. Es un complemento a la diversidad taxonómica y filogenética, no un sustituto: cada una responde una pregunta distinta sobre la biodiversidad de un sitio.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

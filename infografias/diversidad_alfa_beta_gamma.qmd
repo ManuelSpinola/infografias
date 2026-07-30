@@ -1,0 +1,152 @@
+---
+title: "Diversidad alfa, beta y gamma: tres escalas de un mismo paisaje"
+description: "Qué son la diversidad alfa (dentro de un sitio), beta (la diferencia entre sitios) y gamma (de toda la región), por qué existe la escala beta desde el punto de vista ecológico, y por qué importa para la conservación."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[La misma diversidad regional puede venir de sitios muy parecidos entre sí, o de sitios muy distintos]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[EL PROBLEMA QUE RESUELVEN]{.pill}
+
+Un solo número de diversidad describe un sitio aislado. Pero casi nunca nos interesa un sitio solo — comparamos varios sitios dentro de un paisaje o región, y ahí es necesario distinguir tres escalas distintas.
+:::
+
+::: {.mm-def .orange}
+[LAS TRES ESCALAS]{.pill}
+
+**Alfa (α):** dentro de un sitio. **Beta (β):** el recambio de especies entre sitios. **Gamma (γ):** la diversidad total de toda la región, sumando todos los sitios.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** la diversidad beta es simplemente "la diversidad entre sitios", un número más de riqueza. **Interpretación correcta:** beta no cuenta especies — mide qué tan distintas son las comunidades entre sí. Un valor bajo indica comunidades muy similares; un valor alto indica un fuerte recambio en la composición de especies.
+:::
+
+<div style="text-align:center; margin:1.2rem 0;">
+<div style="font-size:0.72rem; font-weight:700; color:white; background-color:var(--purple); border-radius:8px; padding:0.5rem 1rem; display:inline-block; margin-bottom:1rem;">DIVERSIDAD GAMMA (γ) — TODA LA REGIÓN</div>
+<div style="display:flex; justify-content:center; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; font-size:0.75rem; width:85px; text-align:center;">SITIO 1<br><strong style="font-size:1rem;">α</strong></div>
+<div style="font-size:0.95rem; color:var(--gray); font-weight:700;">β</div>
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; font-size:0.75rem; width:85px; text-align:center;">SITIO 2<br><strong style="font-size:1rem;">α</strong></div>
+<div style="font-size:0.95rem; color:var(--gray); font-weight:700;">β</div>
+<div style="background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; font-size:0.75rem; width:85px; text-align:center;">SITIO 3<br><strong style="font-size:1rem;">α</strong></div>
+</div>
+<div style="font-size:0.7rem; color:var(--gray); margin-top:10px;">α = diversidad dentro de cada sitio · β = qué tan distintos son los sitios entre sí</div>
+</div>
+
+::: {.mm-banner .purple}
+DIVERSIDAD ALFA (α)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+La diversidad dentro de un sitio, hábitat o muestra individual — el mismo tipo de medida que ya conoces: riqueza, Shannon, Simpson, o su versión en números de Hill (ver *Límites de los índices clásicos de diversidad*).
+:::
+
+::: {.mm-def .orange}
+[EJEMPLO]{.pill}
+
+La riqueza de aves registrada en un solo punto de conteo, o el número de especies de mariposas en una sola parcela de bosque.
+:::
+
+:::
+
+::: {.mm-banner .purple}
+DIVERSIDAD BETA (β)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+El grado de diferencia en la composición de especies entre sitios — no cuántas especies hay, sino qué tan distintas son las listas de especies de un sitio a otro. Esa diferencia puede deberse al recambio de especies (*turnover*), a que unas comunidades son subconjuntos de otras (*nestedness*), o a una combinación de ambos.
+:::
+
+::: {.mm-def .orange}
+[CÓMO SE INTERPRETA]{.pill}
+
+Beta baja: los sitios comparten casi las mismas especies (comunidad homogénea). Beta alta: cada sitio tiene un conjunto de especies muy distinto (alto recambio espacial).
+:::
+
+:::
+
+::: {.mm-banner .gray}
+¿POR QUÉ CAMBIA BETA?
+:::
+
+::: {.mm-example}
+{{< fa seedling >}} Las comunidades difieren entre sí por varias razones ecológicas: cambios en las condiciones ambientales, la historia del paisaje, el aislamiento entre sitios, las perturbaciones, o simplemente procesos aleatorios de colonización y extinción local. Beta no es solo un número — refleja procesos ecológicos concretos que actúan sobre el paisaje.
+:::
+
+::: {.mm-banner .purple}
+DIVERSIDAD GAMMA (γ)
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+La diversidad total de toda la región o paisaje, considerando todos los sitios en conjunto — la diversidad que se observaría si se combinaran todas las muestras en una sola.
+:::
+
+::: {.mm-def .orange}
+[EJEMPLO]{.pill}
+
+La riqueza total de aves de un parque nacional completo, sumando todos los puntos de conteo dentro de él.
+:::
+
+:::
+
+::: {.mm-banner .gray}
+CÓMO SE RELACIONAN
+:::
+
+::: {.mm-example}
+{{< fa link >}} Whittaker propuso originalmente que la diversidad regional puede entenderse como el resultado de combinar la diversidad promedio de los sitios (alfa) y el grado en que esos sitios difieren entre sí (beta). La forma matemática exacta de esa relación depende del índice de diversidad utilizado, y es un tema con desarrollo propio (ver *¿Gamma = alfa + beta o alfa × beta?*).
+:::
+
+::: {.mm-banner .purple}
+POR QUÉ IMPORTA PARA LA CONSERVACIÓN
+:::
+
+::: {.mm-example}
+{{< fa map-location-dot >}} Dos regiones pueden tener exactamente la misma diversidad gamma por razones opuestas: una con sitios muy similares entre sí (beta baja, alfa promedio alta) y otra con sitios muy distintos (beta alta, alfa promedio baja). Esto importa para la conservación: si beta es alta, proteger un solo sitio grande no basta — se necesita una red de sitios distintos para capturar toda la diversidad regional.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Alfa describe la diversidad dentro de un sitio; beta, el grado de diferencia entre sitios; y gamma, la diversidad total de una región. Considerar las tres escalas permite entender cómo se distribuye realmente la biodiversidad y tomar mejores decisiones de conservación.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

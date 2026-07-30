@@ -1,0 +1,166 @@
+---
+title: "Niveles de biodiversidad: genética, de especies, de ecosistemas"
+description: "Los tres niveles de la biodiversidad —genética, de especies y de ecosistemas—, por qué cada uno importa para la conservación, cómo se anidan entre sí, y el malentendido de reducir la biodiversidad a la riqueza de especies."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[No es solo contar especies — son tres niveles anidados que interactúan entre sí]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **biodiversidad** (o diversidad biológica) es la variedad de la vida en todos sus niveles de organización. Tradicionalmente se describe mediante tres niveles anidados: diversidad genética, diversidad de especies y diversidad de ecosistemas.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+No basta con contar cuántas especies hay en un lugar. La variación genética dentro de las especies y la diversidad de ecosistemas donde viven son igualmente importantes para mantener la capacidad de adaptación y la resiliencia de la biodiversidad.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** biodiversidad significa, sobre todo, cuántas especies hay en un lugar (riqueza de especies). **Interpretación correcta:** la riqueza de especies es solo uno de los tres niveles — un sitio puede tener muchas especies pero poca diversidad genética dentro de ellas, o pocas especies pero ecosistemas muy heterogéneos. Los tres niveles cuentan, y no siempre se mueven juntos.
+:::
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
+<div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.85rem;">
+<strong>Diversidad genética</strong><br>variación de genes dentro de una especie o población
+</div>
+<div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.85rem;">
+<strong>Diversidad de especies</strong><br>número y variedad de especies en un área (riqueza + equidad)
+</div>
+<div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.85rem;">
+<strong>Diversidad de ecosistemas</strong><br>variedad de hábitats, comunidades y paisajes
+</div>
+</div>
+
+::: {.mm-banner .purple}
+NIVEL 1 — DIVERSIDAD GENÉTICA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+La variación en el material genético dentro de una especie o población: diferencias entre individuos, poblaciones y la variabilidad alélica disponible.
+:::
+
+::: {.mm-def .orange}
+[POR QUÉ IMPORTA]{.pill}
+
+Es la materia prima de la adaptación. Una población con alta diversidad genética tiene más probabilidad de contar con individuos capaces de sobrevivir ante enfermedades, cambio climático o nuevos depredadores.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa dna >}} Las poblaciones pequeñas o aisladas tienden a perder diversidad genética con el tiempo por deriva génica y endogamia — un tema que se profundiza en la infografía *Diversidad genética y viabilidad poblacional*.
+:::
+
+::: {.mm-banner .purple}
+NIVEL 2 — DIVERSIDAD DE ESPECIES
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+El número de especies presentes en un área (riqueza) y qué tan uniformemente se distribuyen sus abundancias (equidad). Dos comunidades con la misma riqueza pueden tener diversidad muy distinta si una está dominada por pocas especies.
+:::
+
+::: {.mm-def .orange}
+[POR QUÉ IMPORTA]{.pill}
+
+Cada especie cumple funciones distintas en un ecosistema —polinización, depredación, descomposición—. Perder especies puede debilitar procesos ecológicos completos, no solo reducir un número.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} La diversidad de especies también se describe en distintas escalas espaciales: diversidad alfa (dentro de un sitio), beta (el cambio entre sitios) y gamma (de toda una región) — juntas dan una imagen más completa que contar especies en un solo punto.
+:::
+
+::: {.mm-banner .purple}
+NIVEL 3 — DIVERSIDAD DE ECOSISTEMAS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ ES]{.pill}
+
+La variedad de ecosistemas, hábitats y comunidades biológicas presentes en una región, junto con las interacciones ecológicas que los caracterizan — desde bosques y humedales hasta arrecifes y páramos.
+:::
+
+::: {.mm-def .orange}
+[POR QUÉ IMPORTA]{.pill}
+
+Cada tipo de ecosistema alberga especies y procesos que no se replican en otros. Proteger solo un tipo de ecosistema, aunque tenga muchas especies, deja fuera la variedad que sostiene la resiliencia de una región completa.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa map >}} Este nivel es el que conecta más directamente con la escala de paisaje — ver las infografías *Nicho ecológico vs. distribución de especies*, *Modelos de ocupación* y *Corredores biológicos y conectividad* para cómo se modela dónde y cómo persisten y se conectan las especies dentro de este mosaico de ecosistemas.
+:::
+
+::: {.mm-banner .gray}
+LOS TRES NIVELES ESTÁN ANIDADOS
+:::
+
+<div style="background-color:var(--purple); border-radius:14px; padding:1.4rem; text-align:center; margin:1rem 0;">
+<div style="color:white; font-weight:700; font-size:0.8rem; letter-spacing:0.03em; margin-bottom:0.9rem;">DIVERSIDAD DE ECOSISTEMAS</div>
+<div style="background-color:var(--orange); border-radius:12px; padding:1.1rem 1.4rem; display:inline-block; min-width:70%;">
+<div style="color:white; font-weight:700; font-size:0.8rem; letter-spacing:0.03em; margin-bottom:0.9rem;">DIVERSIDAD DE ESPECIES</div>
+<div style="background-color:var(--blue); border-radius:10px; padding:0.8rem 1.2rem; display:inline-block; color:white; font-weight:700; font-size:0.8rem; letter-spacing:0.03em;">
+DIVERSIDAD GENÉTICA
+</div>
+</div>
+</div>
+
+::: {.mm-example}
+{{< fa sitemap >}} No son categorías independientes: los genes varían dentro de los individuos, los individuos forman poblaciones y especies, y las especies conforman las comunidades y ecosistemas. Cambios en un nivel pueden repercutir en los demás — perder diversidad genética puede debilitar la capacidad de una especie para persistir, y perder especies puede simplificar procesos ecosistémicos completos.
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass >}} **Un ejemplo:** un bosque fragmentado puede seguir teniendo muchas especies (alta diversidad de especies), pero si las poblaciones quedan aisladas en parches pequeños, pierden diversidad genética con el tiempo. Y si el fragmento restante representa un solo tipo de hábitat, se pierde diversidad de ecosistemas a escala de paisaje. Los tres niveles pueden responder de manera distinta al mismo proceso de cambio.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Esta infografía presenta la clasificación clásica de la biodiversidad en tres niveles —la utilizada, por ejemplo, por el Convenio sobre la Diversidad Biológica y en la mayoría de los cursos introductorios—. En ecología moderna también se usan otras dimensiones, como la diversidad funcional, la diversidad filogenética y la diversidad de paisajes, que complementan —más que reemplazan— esta visión clásica.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La biodiversidad no consiste únicamente en contar especies. Comprende tres niveles anidados —genético, de especies y de ecosistemas— que se influyen mutuamente. Evaluar o conservar solo uno de ellos ofrece una visión incompleta de la biodiversidad y de la capacidad de los sistemas naturales para adaptarse y mantenerse en el tiempo (ver también *Conservación biológica: qué es y qué no es*).
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

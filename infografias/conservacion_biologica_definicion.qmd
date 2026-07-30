@@ -1,0 +1,189 @@
+---
+title: "Conservación biológica: qué es y qué no es"
+description: "Qué es y qué no es la conservación biológica: su doble naturaleza como ciencia empírica y normativa, malentendidos comunes, y en qué se diferencia del manejo de vida silvestre."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[No es un movimiento, ni significa "no tocar nada" — es una disciplina científica]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DEFINICIÓN]{.pill}
+
+La **conservación biológica** (o biología de la conservación) es una disciplina científica multidisciplinaria que estudia las causas de la pérdida de biodiversidad y desarrolla estrategias para prevenirla y restaurarla, integrando conocimientos de la ecología, la genética, el manejo de recursos naturales, la economía y las ciencias sociales.
+:::
+
+::: {.mm-def .orange}
+[EN PALABRAS SIMPLES]{.pill}
+
+Es un campo científico que reúne conocimientos de muchas disciplinas para responder una pregunta urgente: ¿cómo conservar la biodiversidad en un mundo que cambia constantemente?
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa layer-group >}} **¿Qué busca conservar la disciplina?** La biodiversidad incluye tres niveles: diversidad genética, diversidad de especies y diversidad de ecosistemas. La conservación moderna también busca mantener los procesos ecológicos que conectan estos niveles entre sí.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} El biólogo Michael Soulé, considerado uno de los fundadores de la disciplina, la describió en 1985 como una **"ciencia de crisis"**: al igual que la medicina de emergencia, a veces debe actuar con la mejor evidencia disponible, aunque sea incompleta, porque esperar información perfecta puede significar perder la oportunidad de conservar una población o un ecosistema. Esto no implica menor rigor: significa actuar bajo incertidumbre con la mejor evidencia posible, no sin evidencia.
+:::
+
+::: {.mm-banner .purple}
+UNA CIENCIA EMPÍRICA Y NORMATIVA A LA VEZ
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[DIMENSIÓN EMPÍRICA]{.pill}
+
+Como cualquier ciencia, formula y pone a prueba hipótesis: ¿qué está causando la pérdida de una población?, ¿qué intervención reduce realmente el riesgo de extinción local?, ¿qué tan efectivo es un corredor biológico? Se apoya en datos, no en supuestos.
+:::
+
+::: {.mm-def .orange}
+[DIMENSIÓN NORMATIVA]{.pill}
+
+A diferencia de muchas ciencias consideradas "puras", reconoce explícitamente un principio de valor: que la diversidad biológica es valiosa y que su pérdida es indeseable. Ese principio no reemplaza la evidencia — la orienta hacia una meta.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} Esta doble naturaleza no la hace menos rigurosa: significa que, además de responder "¿qué está pasando y por qué?", también debe responder "¿qué deberíamos hacer al respecto?" — una pregunta que sí requiere valores, no solo datos.
+:::
+
+::: {.mm-banner .gray}
+QUÉ NO ES — MALENTENDIDOS COMUNES
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** conservar significa dejar que la naturaleza siga siempre su curso sin intervención humana. **Interpretación correcta:** la intervención activa —control de especies invasoras, restauración de hábitat, manejo de poblaciones, reintroducciones— suele ser necesaria, sobre todo en ecosistemas ya alterados por actividad humana.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** conservar es proteger animales carismáticos (jaguares, tapires, aves coloridas). **Interpretación correcta:** el objeto de conservación es la biodiversidad y los procesos ecológicos en su conjunto — incluye especies poco vistosas (insectos, hongos, microorganismos), la variabilidad genética dentro de las poblaciones, y servicios ecosistémicos completos.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** conservar y usar los recursos naturales son objetivos opuestos. **Interpretación correcta:** el uso sostenible —cosecha regulada, manejo forestal comunitario, turismo de bajo impacto— puede ser parte de la estrategia de conservación, no su contrario; la disyuntiva real está entre uso sostenible y sobreexplotación, no entre uso y conservación. El uso sostenible solo es compatible con la conservación cuando mantiene la viabilidad de las poblaciones y de los procesos ecológicos en el largo plazo.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** conservación biológica es sinónimo de ambientalismo o activismo. **Interpretación correcta:** el activismo puede apoyarse en hallazgos de la conservación biológica, pero esta última es una disciplina científica con sus propios métodos y estándares de evidencia — no un movimiento político.
+:::
+
+::: {.mm-banner .purple}
+CONSERVACIÓN BIOLÓGICA Y MANEJO DE VIDA SILVESTRE
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} No son dos campos independientes, sino una relación jerárquica: el manejo de vida silvestre puede considerarse una disciplina aplicada dentro del marco más amplio de la conservación biológica. Comparten fundamentos científicos, pero difieren en su escala y en sus objetivos inmediatos.
+:::
+
+<div style="background-color:var(--purple); border-radius:14px; padding:1.4rem; text-align:center; margin:1rem 0;">
+<div style="color:white; font-weight:700; font-size:0.8rem; letter-spacing:0.03em; margin-bottom:4px;">CONSERVACIÓN BIOLÓGICA</div>
+<div style="color:rgba(255,255,255,0.85); font-size:0.7rem; margin-bottom:1rem;">ecología · genética · ciencias sociales · economía · política ambiental</div>
+<div style="background-color:var(--blue); border-radius:10px; padding:0.9rem 1.3rem; display:inline-block; min-width:55%;">
+<div style="color:white; font-weight:700; font-size:0.8rem; letter-spacing:0.03em; margin-bottom:4px;">MANEJO DE VIDA SILVESTRE</div>
+<div style="color:rgba(255,255,255,0.85); font-size:0.7rem;">poblaciones específicas de fauna</div>
+</div>
+</div>
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa globe >}} Biodiversidad y procesos ecológicos en múltiples escalas: genes, especies, ecosistemas, paisajes.
+:::
+
+::: {.mm-tag}
+ENFOQUE
+:::
+
+::: {.mm-cell .orange}
+{{< fa paw >}} Poblaciones específicas de fauna (a veces flora), con frecuencia de interés cinegético, económico o de conflicto humano-fauna.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa scale-balanced >}} Integra ecología, genética, ciencias sociales, economía y política ambiental.
+:::
+
+::: {.mm-tag}
+ALCANCE
+:::
+
+::: {.mm-cell .orange}
+{{< fa clipboard-list >}} Más aplicado: monitoreo poblacional, cacería regulada, control de daños, planes de manejo específicos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa seedling >}} Frenar la pérdida de biodiversidad y mantener procesos ecológicos viables a largo plazo.
+:::
+
+::: {.mm-tag}
+META
+:::
+
+::: {.mm-cell .orange}
+{{< fa chart-line >}} Mantener poblaciones de una o varias especies dentro de un rango deseado (sostenible, cinegético o de control).
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa dna >}} Diseñar un corredor biológico para mantener flujo génico entre poblaciones fragmentadas.
+:::
+
+::: {.mm-tag}
+EJEMPLO
+:::
+
+::: {.mm-cell .orange}
+{{< fa crosshairs >}} Establecer cuotas de cacería sostenible para una población de venado.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link >}} No son campos opuestos ni excluyentes: se retroalimentan constantemente — el manejo de vida silvestre aplica principios de la conservación biológica, y esta última se apoya en datos de monitoreo poblacional que genera el manejo de vida silvestre en el campo.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La conservación biológica es una disciplina científica multidisciplinaria que busca comprender y reducir la pérdida de biodiversidad. Combina evidencia científica con un objetivo explícito de conservación, integra conocimientos de múltiples disciplinas y emplea desde la protección estricta hasta el manejo activo y el uso sostenible, según lo indiquen la evidencia y el contexto.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

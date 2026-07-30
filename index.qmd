@@ -16,7 +16,7 @@ lang: es
 ::: {.home-hero}
 [COLECCIÓN VISUAL]{.eyebrow}
 
-Infografías sobre metodología de la investigación, estadística y ciencia de datos, y modelado ecológico — pensadas para explicar de un vistazo conceptos e ideas que suelen prestarse a confusión.
+Infografías sobre metodología de la investigación, estadística y ciencia de datos, modelado ecológico, y conservación de la biodiversidad — pensadas para explicar de un vistazo conceptos e ideas que suelen prestarse a confusión.
 :::
 
 ::: {.home-grid}
@@ -44,14 +44,22 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 [11 infografías]{.home-count}
 
+*Inferencia*
+
 - [{{< fa arrow-right >}} Prueba de hipótesis vs. estimación de parámetros](infografias/prueba_hipotesis_vs_estimacion.qmd)
 - [{{< fa arrow-right >}} Valores de p](infografias/valores_p.qmd)
 - [{{< fa arrow-right >}} Críticas a los valores de p](infografias/criticas_valores_p.qmd)
 - [{{< fa arrow-right >}} Tamaño del efecto](infografias/tamano_efecto.qmd)
+
+*Paradigmas estadísticos*
+
 - [{{< fa arrow-right >}} Estadística frecuentista](infografias/estadistica_frecuentista.qmd)
 - [{{< fa arrow-right >}} Estadística bayesiana](infografias/estadistica_bayesiana.qmd)
 - [{{< fa arrow-right >}} Machine learning](infografias/machine_learning.qmd)
 - [{{< fa arrow-right >}} Comparación de paradigmas](infografias/comparativa_frecuentista_bayesiana_ml.qmd)
+
+*Modelos*
+
 - [{{< fa arrow-right >}} Métodos de validación](infografias/metodos_validacion.qmd)
 - [{{< fa arrow-right >}} Pruebas estadísticas como modelos lineales](infografias/pruebas_como_modelos.qmd)
 - [{{< fa arrow-right >}} La familia de los modelos lineales](infografias/tipos_de_modelos.qmd)
@@ -66,6 +74,24 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 - [{{< fa arrow-right >}} Nicho ecológico vs. distribución de especies](infografias/nicho_vs_distribucion.qmd)
 - [{{< fa arrow-right >}} Modelos de ocupación](infografias/modelos_ocupacion.qmd)
+:::
+
+::: {.home-card .accent-orange}
+<div class="home-icon">{{< fa paw >}}</div>
+
+### Conservación de la biodiversidad
+
+[9 infografías]{.home-count}
+
+- [{{< fa arrow-right >}} Conservación biológica: qué es y qué no es](infografias/conservacion_biologica_definicion.qmd)
+- [{{< fa arrow-right >}} Niveles de biodiversidad](infografias/niveles_biodiversidad.qmd)
+- [{{< fa arrow-right >}} Diversidad genética y viabilidad poblacional](infografias/diversidad_genetica_viabilidad.qmd)
+- [{{< fa arrow-right >}} Corredores biológicos: conectividad estructural vs. funcional](infografias/corredores_biologicos_conectividad.qmd)
+- [{{< fa arrow-right >}} Límites de los índices clásicos de diversidad](infografias/limites_indices_diversidad_clasicos.qmd)
+- [{{< fa arrow-right >}} Números de Hill](infografias/numeros_de_hill.qmd)
+- [{{< fa arrow-right >}} Diversidad alfa, beta y gamma](infografias/diversidad_alfa_beta_gamma.qmd)
+- [{{< fa arrow-right >}} ¿Gamma = alfa + beta o alfa × beta?](infografias/particion_alfa_beta_gamma.qmd)
+- [{{< fa arrow-right >}} Diversidad funcional](infografias/diversidad_funcional.qmd)
 :::
 
 :::

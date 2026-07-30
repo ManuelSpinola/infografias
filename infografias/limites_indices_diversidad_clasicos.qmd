@@ -1,0 +1,208 @@
+---
+title: "Límites de los índices clásicos de diversidad"
+description: "Por qué la riqueza de especies, Shannon-Wiener y Simpson tratan a todas las especies como unidades equivalentes, cómo la detectabilidad imperfecta sesga las estimaciones, y qué alternativas existen para cada problema."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Para un índice clásico, 2 jaguares + 2 pumas + 2 ocelotes "valen" lo mismo que 2 ratas + 2 perros + 2 gatos]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ MIDEN]{.pill}
+
+Los índices clásicos de diversidad —riqueza de especies, el índice de Shannon-Wiener, el índice de Simpson— resumen una comunidad biológica en un solo número, combinando cuántas especies hay (riqueza) y qué tan repartidas están sus abundancias (equidad).
+:::
+
+::: {.mm-def .orange}
+[QUÉ ASUMEN]{.pill}
+
+Para calcularlos se asume, implícitamente, que todos los individuos detectados representan fielmente lo que hay en el sitio, y que cada especie aporta el mismo tipo de "unidad" de diversidad, sin importar cuán distinta sea de las demás.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** un valor de diversidad más alto siempre indica un sitio ecológicamente más valioso. **Interpretación correcta:** el valor de un índice depende de qué asume y qué ignora — dos comunidades muy distintas en composición pueden arrojar exactamente el mismo número.
+:::
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
+<div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
+<strong>1. Detectabilidad</strong><br>los datos asumen que lo detectado es lo que hay
+</div>
+<div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
+<strong>2. Equivalencia entre especies</strong><br>todas cuentan igual, sin importar cuán distintas sean
+</div>
+<div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
+<strong>3. Linealidad</strong><br>los valores del índice no son comparables de forma directa
+</div>
+</div>
+
+<div style="text-align:center; font-size:0.75rem; color:var(--gray); margin-bottom:1rem;">Tres limitaciones independientes — resolver una no resuelve las otras</div>
+
+<div style="display:flex; justify-content:center; align-items:center; gap:1.4rem; flex-wrap:wrap; margin:1.2rem 0;">
+
+<div style="text-align:center;">
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-bottom:8px;">COMUNIDAD A</div>
+<div style="display:flex; flex-direction:column; gap:4px; align-items:center;">
+<span style="background:#B45309; color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 jaguares</span>
+<span style="background:#B45309; color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 pumas</span>
+<span style="background:#B45309; color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 ocelotes</span>
+</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px; max-width:140px;">3 especies de felinos silvestres, emparentados entre sí</div>
+</div>
+
+<div style="font-size:1.4rem; color:var(--gray);">=</div>
+
+<div style="text-align:center;">
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-bottom:8px;">COMUNIDAD B</div>
+<div style="display:flex; flex-direction:column; gap:4px; align-items:center;">
+<span style="background:var(--blue); color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 ratas</span>
+<span style="background:var(--orange); color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 perros</span>
+<span style="background:var(--purple); color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 gatos</span>
+</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px; max-width:140px;">3 especies pertenecientes a linajes evolutivos muy distintos, dos de ellas domésticas</div>
+</div>
+
+</div>
+
+<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:1rem;">
+Misma riqueza (3), misma equidad, mismo valor de Shannon-Wiener y de Simpson
+</div>
+
+::: {.mm-banner .purple}
+PROBLEMA 1 — LA DETECTABILIDAD IMPERFECTA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[EL SUPUESTO]{.pill}
+
+Los índices clásicos se calculan a partir del número de especies e individuos efectivamente detectados durante un muestreo — asumiendo, implícitamente, que lo detectado es lo que hay.
+:::
+
+::: {.mm-def .orange}
+[LA REALIDAD]{.pill}
+
+La probabilidad de detección casi nunca es 1: varía según la especie (una especie críptica o nocturna es más difícil de detectar que una conspicua), el método de muestreo, el observador y las condiciones ambientales.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Si dos sitios tienen la misma riqueza real, pero en uno las especies son más difíciles de detectar, el sitio que aparece "menos diverso" en los datos puede en realidad no serlo — la diferencia observada puede deberse a la detectabilidad, no a la ecología del sitio.
+:::
+
+::: {.mm-banner .gray}
+UNA SOLUCIÓN PARCIAL: ESTIMAR LA RIQUEZA CON DETECTABILIDAD
+:::
+
+::: {.mm-example}
+{{< fa magnifying-glass-chart >}} Los modelos de ocupación multiespecie permiten estimar la probabilidad de detección de cada especie por separado y, con ella, corregir la riqueza observada hacia una riqueza estimada más cercana a la real (ver *Modelos de ocupación*). Esto reduce el sesgo introducido por especies difíciles de detectar — pero no lo elimina del todo.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} Incluso estos modelos siguen dependiendo de que el diseño de muestreo sea adecuado y de que exista suficiente información para estimar la detectabilidad — por ejemplo, no corrigen identificaciones erróneas (falsos positivos), ni funcionan bien con especies extremadamente raras.
+:::
+
+::: {.mm-banner .purple}
+PROBLEMA 2 — TODAS LAS ESPECIES CUENTAN IGUAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[EL SUPUESTO]{.pill}
+
+La riqueza, Shannon-Wiener y Simpson tratan a cada especie como una unidad intercambiable: todas las especies tienen exactamente el mismo peso matemático, sin importar qué tan distinta sea taxonómica, funcional o evolutivamente de las demás.
+:::
+
+::: {.mm-def .orange}
+[LA CONSECUENCIA]{.pill}
+
+Tres especies de felinos silvestres cercanamente emparentados "valen" lo mismo, según estos índices, que tres especies tan distintas entre sí como una rata, un perro y un gato — el número no distingue entre una comunidad taxonómicamente compacta y una muy heterogénea.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Este mismo punto ciego también ignora el valor de conservación: una comunidad con tres especies silvestres amenazadas puntúa exactamente igual que una con tres especies comunes, exóticas o domésticas — el índice no distingue relevancia ecológica ni de conservación, solo cuenta presencias.
+:::
+
+::: {.mm-banner .gray}
+ALTERNATIVAS QUE SÍ CONSIDERAN LAS DIFERENCIAS ENTRE ESPECIES
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa gears >}} Qué tan distintas son las especies en sus rasgos funcionales: tamaño corporal, dieta, modo de forrajeo, rol en el ecosistema.
+:::
+
+::: {.mm-tag}
+QUÉ PONDERA
+:::
+
+::: {.mm-cell .orange}
+{{< fa dna >}} Qué tan distantes son las especies en el árbol evolutivo — cuánto tiempo de evolución independiente separa a cada par de especies.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa paw >}} Jaguar, puma y ocelote: diversidad funcional relativamente baja — más baja que la de un conjunto formado por un murciélago, un colibrí y un tapir.
+:::
+
+::: {.mm-tag}
+EJEMPLO
+:::
+
+::: {.mm-cell .orange}
+{{< fa sitemap >}} Jaguar, puma y ocelote: baja diversidad filogenética — comparten un ancestro común relativamente reciente.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa link >}} Ninguna de estas alternativas reemplaza a la riqueza o a Shannon-Wiener — las complementan. Un análisis completo suele reportar varias, porque cada una responde una pregunta distinta: ¿cuántas especies hay?, ¿qué tan repartidas están?, ¿qué tan diferentes son entre sí? (ver *Diversidad funcional: qué hacen las especies, no solo cuántas hay*).
+:::
+
+::: {.mm-banner .gray}
+¿POR QUÉ SIGUEN SIENDO TAN USADOS?
+:::
+
+::: {.mm-example}
+{{< fa circle-check >}} Porque son fáciles de calcular, permiten comparar comunidades de forma sencilla y responden muy bien preguntas relacionadas con la riqueza y la equidad. Sus limitaciones no los invalidan — simplemente indican que responden solo una parte del problema, y que hay que interpretarlos dentro de sus supuestos.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Los índices clásicos presentan tres limitaciones conceptualmente independientes: dependen de la detectabilidad, tratan todas las especies como equivalentes, y sus valores no son lineales. Los modelos de ocupación abordan la primera (ver *Modelos de ocupación*); los índices de diversidad funcional y filogenética abordan la segunda; los números de Hill resuelven la tercera (ver *Números de Hill: la diversidad verdadera detrás de los índices clásicos*). Cada problema tiene soluciones distintas, y ninguna sustituye completamente a las demás — la pregunta de investigación debe guiar cuál, o cuáles, usar.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
