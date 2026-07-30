@@ -280,6 +280,22 @@ body {
   opacity: 0.8;
 }
 
+/* Ícono de búsqueda del navbar (lupa) — el widget de Algolia Autocomplete
+   que usa Quarto fija el color del ícono mediante la variable CSS
+   --aa-icon-color-rgb (gris por defecto: 119,119,163), NO mediante la
+   propiedad `color` heredada del botón — por eso `color: white` en el
+   botón padre no tenía ningún efecto. Hay que sobreescribir la variable,
+   y además fijar el color directamente en el SVG como refuerzo. */
+.navbar #quarto-search {
+  --aa-icon-color-rgb: 255, 255, 255;
+}
+
+.navbar #quarto-search .aa-Autocomplete svg.aa-SubmitIcon,
+.navbar .aa-DetachedSearchButton svg.aa-SubmitIcon {
+  color: white !important;
+  fill: white !important;
+}
+
 /* Encabezados de sección en el sidebar ("Metodología...", "Estadística...").
    Se usa :has() para aplicar el bold SOLO a los contenedores que tienen
    el botón de despliegue (el toggle), y así no afecta a los links hijos
