@@ -1,6 +1,6 @@
 ---
 title: "Diversidad funcional: qué hacen las especies, no solo cuántas hay"
-description: "Qué es la diversidad funcional, sus tres componentes (riqueza, equidad y divergencia funcional), la redundancia funcional como seguro ecológico, en qué se distingue de la diversidad filogenética, y por qué importa para el funcionamiento de los ecosistemas."
+description: "Qué es la diversidad funcional, sus facetas clásicas (riqueza, equidad y divergencia funcional), por qué la redundancia funcional no es una propiedad absoluta, en qué se distingue de la diversidad filogenética, y los límites de su capacidad predictiva sobre el funcionamiento de los ecosistemas."
 date: 2026-07-30
 author:
   - name: "Manuel Spínola"
@@ -16,7 +16,7 @@ lang: es
 ::: {.mm-wrap}
 
 ::: {.mm-subtitle}
-[Dos comunidades con exactamente la misma riqueza de especies pueden funcionar de forma completamente distinta]{}
+[Dos comunidades con exactamente la misma riqueza de especies pueden tener una estructura funcional completamente distinta]{}
 :::
 
 ::: {.mm-banner .gray}
@@ -28,13 +28,13 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [DEFINICIÓN]{.pill}
 
-La **diversidad funcional** es la variedad de rasgos —morfológicos, fisiológicos o de comportamiento— que determinan cómo las especies usan los recursos e interactúan con su ambiente, presentes en una comunidad.
+La **diversidad funcional** es la variedad y distribución de los rasgos morfológicos, fisiológicos, fenológicos o de comportamiento de las especies que integran una comunidad. Estos rasgos influyen en cómo los organismos responden al ambiente, utilizan los recursos e intervienen en los procesos ecológicos.
 :::
 
 ::: {.mm-def .orange}
 [EN PALABRAS SIMPLES]{.pill}
 
-No mide cuántas especies hay, sino qué tan distintas son en lo que hacen: qué comen, cómo se mueven, cuándo están activas, qué papel cumplen en el ecosistema.
+No mide solamente cuántas especies hay, sino qué tan distintas son por sus características ecológicamente relevantes: qué comen, cómo se desplazan, cuándo están activas, cómo responden al ambiente y cómo influyen en los procesos del ecosistema.
 :::
 
 :::
@@ -71,8 +71,11 @@ No mide cuántas especies hay, sino qué tan distintas son en lo que hacen: qué
 
 </div>
 
-<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:1rem;">
+<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:0.4rem;">
 Misma riqueza de especies (6) — diversidad funcional muy distinta
+</div>
+<div style="text-align:center; font-size:0.7rem; color:var(--gray); margin-bottom:1rem;">
+Cada punto representa una especie; su posición resume una combinación de rasgos.
 </div>
 
 ::: {.mm-banner .purple}
@@ -80,11 +83,19 @@ QUÉ ES UN RASGO FUNCIONAL
 :::
 
 ::: {.mm-example}
-{{< fa list-check >}} Cualquier característica medible de un organismo que influye en su desempeño o en su papel ecológico: tamaño corporal, tipo de dieta, modo de dispersión, horario de actividad, forma de las hojas, profundidad de raíces, tipo de locomoción, entre muchos otros. Qué rasgos medir depende de la pregunta ecológica que se quiera responder — no existe un set fijo de rasgos "correctos" para toda comunidad.
+{{< fa list-check >}} Cualquier característica medible de un organismo que influye en su respuesta al ambiente, en su desempeño o en sus efectos sobre los procesos ecológicos: tamaño corporal, tipo de dieta, modo de dispersión, horario de actividad, forma de las hojas, profundidad de raíces, tipo de locomoción, entre muchos otros. Qué rasgos medir depende de la pregunta ecológica que se quiera responder — no existe un set fijo de rasgos "correctos" para toda comunidad.
+:::
+
+::: {.mm-example}
+{{< fa arrows-split-up-and-left >}} Suele distinguirse entre **rasgos de respuesta** —cómo reacciona una especie a las condiciones ambientales— y **rasgos de efecto** —cómo influye esa especie sobre una función del ecosistema. La misma especie puede tener rasgos de respuesta muy distintos de sus rasgos de efecto, y esa distinción resulta clave para interpretar correctamente la redundancia funcional.
 :::
 
 ::: {.mm-banner .gray}
-TRES COMPONENTES PRINCIPALES
+TRES FACETAS CLÁSICAS
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Riqueza, equidad y divergencia funcional son un marco clásico y muy utilizado, pero no las únicas métricas que existen: también se usan la dispersión funcional, la especialización, la originalidad, la entropía funcional y otros índices basados en distancias entre especies.
 :::
 
 <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
@@ -98,13 +109,17 @@ TRES COMPONENTES PRINCIPALES
 </div>
 
 <div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
-<strong>Divergencia funcional</strong><br>Qué tan alejadas están las especies más abundantes del centro del espacio de rasgos.
+<strong>Divergencia funcional</strong><br>En qué medida las especies más abundantes se concentran hacia los extremos del espacio funcional.
 </div>
 
 </div>
 
 ::: {.mm-example}
-{{< fa circle-info >}} En la práctica, estos índices se calculan ubicando a las especies en un "espacio de rasgos" —generalmente mediante un análisis de ordenación como PCoA— y midiendo propiedades geométricas de esa nube de puntos: su volumen (riqueza), su regularidad (equidad) y su dispersión respecto al centro (divergencia).
+{{< fa circle-info >}} Muchos índices multidimensionales se calculan representando a las especies en un "espacio funcional" —con frecuencia mediante una ordenación como PCoA— y evaluando propiedades como el volumen ocupado, la distribución de las abundancias o la distancia respecto al centro. Otros índices se calculan directamente a partir de distancias o relaciones entre especies, sin pasar por esa representación geométrica.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} El resultado depende de decisiones analíticas importantes: qué rasgos elegir y cómo ponderarlos, cómo estandarizar las variables, cómo tratar los rasgos categóricos, qué medida de distancia usar, y cuántos ejes retener. Dos análisis con los mismos datos pero decisiones distintas pueden dar resultados distintos.
 :::
 
 ::: {.mm-banner .purple}
@@ -116,19 +131,27 @@ REDUNDANCIA FUNCIONAL
 ::: {.mm-def .blue}
 [ALTA REDUNDANCIA]{.pill}
 
-Varias especies cumplen roles funcionales muy similares. Si una se pierde, otras pueden compensar su función — actúa como un "seguro ecológico" ante perturbaciones.
+Varias especies presentan rasgos similares en relación con una función determinada. La pérdida de una de ellas podría ser parcialmente compensada por otras, aumentando potencialmente la estabilidad de esa función.
 :::
 
 ::: {.mm-def .orange}
 [BAJA REDUNDANCIA]{.pill}
 
-Cada especie cumple un rol único, difícil de reemplazar. Perder una sola especie puede significar la pérdida completa de una función ecológica, sin importar cuántas otras especies queden.
+Pocas especies presentan los rasgos asociados con una función determinada. Su pérdida puede reducir de manera desproporcionada esa función, especialmente si no existen otras especies capaces de desempeñarla.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} Una comunidad con alta riqueza de especies pero baja redundancia funcional puede ser más vulnerable de lo que parece: perder una sola especie clave —aunque la riqueza total casi no cambie— puede eliminar una función ecológica completa.
+{{< fa circle-info >}} La evidencia disponible indica que la redundancia puede favorecer la estabilidad y la resiliencia, pero el efecto no es universal y todavía resulta difícil separarlo de los efectos de la riqueza de especies por sí sola.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} La redundancia no es una propiedad absoluta de una especie o comunidad: depende de los rasgos seleccionados, de la función estudiada y de las condiciones ambientales. Dos especies pueden ser redundantes para la descomposición bajo condiciones normales, pero responder de forma muy distinta a una sequía. "Redundante" no equivale a "ecológicamente prescindible" ni a "intercambiable".
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} Una comunidad con muchas especies puede ser vulnerable si una función depende de una o pocas especies funcionalmente singulares. Su pérdida podría reducir esa función de manera desproporcionada, aunque la riqueza total cambie muy poco. Esto es distinto del concepto de "especie clave" (*keystone*), que se define por un efecto ecológico desproporcionado respecto de su abundancia — los dos conceptos se relacionan, pero no son equivalentes.
 :::
 
 ::: {.mm-banner .gray}
@@ -136,7 +159,7 @@ DIVERSIDAD FUNCIONAL VS. FILOGENÉTICA
 :::
 
 ::: {.mm-example}
-{{< fa dna >}} No son lo mismo, aunque suelen ir de la mano. Especies filogenéticamente distantes normalmente son también funcionalmente distintas — pero no siempre: la evolución convergente puede producir especies muy alejadas evolutivamente que cumplen roles casi idénticos, y especies cercanamente emparentadas a veces divergen mucho en sus rasgos funcionales (ver *Límites de los índices clásicos de diversidad*, donde el ejemplo del jaguar, puma y ocelote trata ambas dimensiones como si se movieran juntas — una simplificación razonable para ese ejemplo puntual, pero no una regla general).
+{{< fa dna >}} No son lo mismo, aunque pueden estar correlacionadas. Los rasgos tienen una historia evolutiva y, por ello, especies cercanas a veces se parecen funcionalmente. Sin embargo, la evolución convergente puede producir rasgos similares en linajes distantes, mientras que especies emparentadas pueden diferenciarse ampliamente por adaptación a nichos distintos. Véase también *Límites de los índices clásicos de diversidad*.
 :::
 
 ::: {.mm-banner .purple}
@@ -144,13 +167,17 @@ POR QUÉ IMPORTA
 :::
 
 ::: {.mm-example}
-{{< fa leaf >}} La diversidad funcional suele predecir mejor que la riqueza de especies varios procesos del ecosistema —productividad, ciclado de nutrientes, resistencia a invasiones, resiliencia ante perturbaciones—, porque estos procesos dependen de qué hacen los organismos, no solo de cuántas especies distintas hay.
+{{< fa leaf >}} La diversidad funcional puede explicar procesos ecosistémicos que la riqueza por sí sola no captura, porque esos procesos dependen de los rasgos y abundancias de los organismos. Sin embargo, su capacidad predictiva varía según la función estudiada, los rasgos seleccionados, la escala y el contexto ambiental — no siempre supera a la riqueza, la identidad de especies o la abundancia de rasgos dominantes.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Dos conceptos que suelen mencionarse juntos, pero no son sinónimos: **resistencia** es cuánto cambia un sistema durante una perturbación, y **resiliencia** es cuánto y con qué rapidez se recupera después.
 :::
 
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-La diversidad funcional mide la variedad de rasgos presentes en una comunidad, no cuántas especies la componen. Se descompone en riqueza, equidad y divergencia funcional, y se relaciona con la redundancia funcional —cuántas especies cumplen roles similares—, que actúa como amortiguador ante la pérdida de especies. Es un complemento a la diversidad taxonómica y filogenética, no un sustituto: cada una responde una pregunta distinta sobre la biodiversidad de un sitio.
+La diversidad funcional describe la variedad y distribución de rasgos ecológicamente relevantes dentro de una comunidad, no simplemente su número de especies. Puede analizarse mediante facetas como la riqueza, la equidad y la divergencia funcional. También permite evaluar hasta qué punto varias especies presentan rasgos similares respecto de una función determinada, aunque esta redundancia depende de los rasgos seleccionados, del proceso estudiado y de las condiciones ambientales. La diversidad funcional complementa la diversidad taxonómica y filogenética: cada una describe una dimensión distinta de la biodiversidad y ninguna, por sí sola, representa todo el funcionamiento de un ecosistema.
 :::
 
 ::: {.mm-credito}
