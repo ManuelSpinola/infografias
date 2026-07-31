@@ -1,0 +1,168 @@
+---
+title: "Detectabilidad imperfecta: separar lo que hay de lo que se ve"
+description: "Por qué la probabilidad de detección suele ser menor que 1 en el muestreo ecológico, cómo los modelos jerárquicos separan el proceso ecológico del proceso de observación, y por qué el diseño de réplicas y el supuesto de cierre varían según el método: ocupación, N-mixture, distance sampling o captura-recaptura."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Un sitio puede estar ocupado y registrar cero detecciones en todas las visitas — una no detección no demuestra ausencia]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[EL PROBLEMA]{.pill}
+
+En muchos estudios ecológicos, la probabilidad de detectar una especie o un individuo presente —p = P(detección | presente)— es menor que 1. Tratar "no detectado" como sinónimo de "ausente" suele subestimar la ocupación, la abundancia o la riqueza, y puede producir relaciones engañosas con variables ambientales.
+:::
+
+::: {.mm-def .orange}
+[LA SOLUCIÓN GENERAL]{.pill}
+
+Los modelos jerárquicos distinguen un proceso **ecológico** (el estado subyacente: presencia, abundancia, densidad) de un proceso de **observación** (cómo ese estado genera detecciones, conteos, distancias o historias de captura). Separarlos requiere información específica sobre la detección, obtenida mediante visitas repetidas u otros diseños apropiados.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** si no detecté una especie en un sitio durante el muestreo, la especie no está ahí. **Interpretación correcta:** la ausencia de detecciones es compatible tanto con ausencia real como con presencia no detectada. Para distinguir estadísticamente ambos escenarios se necesita información adicional sobre la detección, obtenida mediante visitas repetidas u otros diseños apropiados.
+:::
+
+<div style="margin: 1.4rem 0;">
+
+<div style="text-align:center; font-size:0.72rem; font-weight:700; color:var(--blue); margin-bottom:8px;">PATRÓN DE OBSERVACIÓN — lo que el observador registra (historias de detección)</div>
+
+<div style="display:flex; justify-content:center; gap:0.6rem; flex-wrap:wrap; margin-bottom:6px;">
+<div style="background:#EBF1F8; border:2px solid var(--blue); border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-weight:700; font-size:0.85rem; color:var(--blue); min-width:60px;">0,0</div>
+<div style="background:#EBF1F8; border:2px solid var(--blue); border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-weight:700; font-size:0.85rem; color:var(--blue); min-width:60px;">1,0</div>
+<div style="background:#EBF1F8; border:2px solid var(--blue); border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-weight:700; font-size:0.85rem; color:var(--blue); min-width:60px;">1,1</div>
+<div style="background:#EBF1F8; border:2px solid var(--blue); border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-weight:700; font-size:0.85rem; color:var(--blue); min-width:60px;">0,1</div>
+<div style="background:#EBF1F8; border:2px solid var(--blue); border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-weight:700; font-size:0.85rem; color:var(--blue); min-width:60px;">0,0</div>
+</div>
+
+<div style="display:flex; justify-content:center; gap:0.6rem; flex-wrap:wrap; margin:2px 0;">
+<div style="min-width:60px; text-align:center; font-size:1.1rem; color:var(--blue);">↑</div>
+<div style="min-width:60px; text-align:center; font-size:1.1rem; color:var(--blue);">↑</div>
+<div style="min-width:60px; text-align:center; font-size:1.1rem; color:var(--blue);">↑</div>
+<div style="min-width:60px; text-align:center; font-size:1.1rem; color:var(--blue);">↑</div>
+<div style="min-width:60px; text-align:center; font-size:1.1rem; color:var(--blue);">↑</div>
+</div>
+
+<div style="text-align:center; font-size:0.68rem; color:var(--gray); margin-bottom:2px;">proceso de observación (detección imperfecta)</div>
+
+<div style="text-align:center; font-size:0.66rem; font-weight:700; color:#59A14F; letter-spacing:0.03em; margin:4px 0 2px 0;">ESTADOS LATENTES HIPOTÉTICOS</div>
+
+<div style="display:flex; justify-content:center; gap:0.6rem; flex-wrap:wrap; margin:6px 0;">
+<div style="background:#EAF4EC; border:2px solid #59A14F; border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-size:1.1rem; min-width:60px;">{{< fa paw >}}</div>
+<div style="background:#EAF4EC; border:2px solid #59A14F; border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-size:1.1rem; min-width:60px;">{{< fa paw >}}</div>
+<div style="background:#EAF4EC; border:2px solid #59A14F; border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-size:1.1rem; min-width:60px;">{{< fa paw >}}</div>
+<div style="background:#EAF4EC; border:2px solid #59A14F; border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-size:1.1rem; min-width:60px;">{{< fa paw >}}</div>
+<div style="background:#f4f4f4; border:2px solid #ccc; border-radius:8px; padding:0.6rem 0.9rem; text-align:center; font-size:1.1rem; min-width:60px; color:#ccc;">{{< fa paw >}}</div>
+</div>
+
+<div style="text-align:center; font-size:0.72rem; font-weight:700; color:#59A14F; margin-top:8px;">PATRÓN DE OCUPACIÓN — el estado ecológico subyacente (no se observa directamente)</div>
+
+</div>
+
+<div style="text-align:center; font-size:0.75rem; color:var(--gray); margin-bottom:1rem; max-width:540px; margin-left:auto; margin-right:auto;">
+Si se asume que no existen falsos positivos, los sitios 2, 3 y 4 tuvieron al menos una detección y están necesariamente ocupados. Los sitios 1 y 5 comparten la misma historia observada (0,0), pero podrían proceder de estados distintos: el primero podría estar ocupado sin haber producido ninguna detección, y el segundo podría estar realmente desocupado. El estado de cada sitio no se conoce con certeza a partir de sus propios datos; el modelo usa las historias de todos los sitios para estimar la probabilidad de ocupación de los sitios sin detecciones.
+</div>
+
+::: {.mm-banner .purple}
+LOS DOS PROCESOS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PROCESO ECOLÓGICO]{.pill}
+
+El estado subyacente de interés: si un sitio está ocupado, cuántos individuos existen, o cómo se distribuyen espacialmente. No se observa por completo — debe inferirse.
+:::
+
+::: {.mm-def .orange}
+[PROCESO DE OBSERVACIÓN]{.pill}
+
+El mecanismo que transforma ese estado en datos: detecciones, conteos, distancias o historias de captura. Depende de la disponibilidad de los organismos, el método, el observador y las condiciones de muestreo.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa repeat >}} Con un diseño que aporte información sobre el proceso de detección —frecuentemente mediante visitas repetidas— pueden estimarse ambos componentes, siempre que el modelo sea identificable y haya suficientes sitios, detecciones y supuestos compatibles con el sistema. Si el estado de interés se mantiene constante entre réplicas, la variación de los datos se atribuye al proceso de observación, que puede incluir tanto la disponibilidad temporal del organismo (p = disponibilidad × perceptibilidad) como la capacidad del método para detectarlo.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} La réplica no tiene que ser siempre temporal: repetir visitas, usar varios observadores, varios intervalos o varios métodos puede aportar la misma información, siempre dentro de un diseño que modele explícitamente sus diferencias de detección — no deben tratarse como si fueran automáticamente intercambiables entre sí.
+:::
+
+::: {.mm-banner .gray}
+UNA FAMILIA DE MODELOS, SEGÚN QUÉ SE QUIERE ESTIMAR
+:::
+
+<div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
+
+<div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
+<strong>Ocupación</strong><br>Estado binario (presente/ausente). Respuesta: historia de detección (0/1) por visita. Ver <em>Modelos de ocupación</em>.
+</div>
+
+<div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
+<strong>N-mixture</strong><br>Abundancia N por sitio. Respuesta: conteos repetidos que nunca superan a N.
+</div>
+
+<div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
+<strong>Muestreo por distancias</strong><br>Usa las distancias de los individuos detectados para estimar cómo disminuye la detección al alejarse del transecto o punto, e inferir densidad o abundancia.
+</div>
+
+<div style="flex:1; min-width:160px; background-color:#59A14F; color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
+<strong>Captura-recaptura</strong><br>Individuos marcados y reobservados. La réplica son las ocasiones de recaptura.
+</div>
+
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} Todos pueden formularse mediante una arquitectura jerárquica común: un modelo para el estado ecológico y otro para los datos condicionados a ese estado. Lo que cambia es la variable latente, la fuente de información sobre detección y los supuestos necesarios — no todos separan estado y observación con el mismo tipo de réplica.
+:::
+
+::: {.mm-banner .purple}
+UN SUPUESTO CLAVE EN LOS DISEÑOS CON RÉPLICAS: CIERRE
+:::
+
+::: {.mm-example}
+{{< fa lock >}} Los modelos de ocupación de una temporada y los N-mixture cerrados suponen que el estado de interés permanece constante durante las visitas usadas como réplicas: no ocurren cambios relevantes de ocupación o abundancia. Los modelos cerrados de captura-recaptura hacen una suposición análoga — aunque existen modelos abiertos (Cormack-Jolly-Seber, Jolly-Seber) que permiten entradas, salidas y cambios entre períodos. El muestreo por distancias no requiere visitas repetidas ni este supuesto de cierre; se apoya en otros supuestos, como medir correctamente las distancias y detectar a los animales antes de que reaccionen al observador.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} El cierre no exige inmovilidad absoluta: exige que el estado definido —ocupación, uso del sitio, o número de individuos disponibles— permanezca suficientemente estable durante el período de réplicas. Un animal puede moverse dentro del área sin violar el supuesto, siempre que la variable se defina de forma coherente (por ejemplo, "uso del sitio" en vez de presencia estricta en un punto).
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} La separación entre estado y detección también depende de otros supuestos: ausencia (o modelado explícito) de falsos positivos, independencia condicional entre observaciones, correcta definición del sitio, y suficiente información para identificar ambos procesos. Los modelos N-mixture, en particular, pueden ser sensibles a la distribución elegida para N y a la heterogeneidad no modelada — no deben presentarse como una corrección automática.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+La detectabilidad imperfecta es una propiedad habitual del muestreo ecológico: una especie o un individuo puede estar presente y no ser registrado. Los modelos jerárquicos distinguen entre el estado ecológico subyacente y el proceso que produce los datos observados. Los modelos de ocupación y N-mixture suelen obtener información sobre detección mediante observaciones repetidas bajo cierre; el muestreo por distancias utiliza la distribución de las distancias observadas, y la captura-recaptura utiliza historias de encuentro individual. Todos pueden expresarse mediante una arquitectura de estado y observación, pero no comparten exactamente los mismos diseños ni supuestos. Una no detección no demuestra ausencia, y una corrección estadística solo es válida cuando el diseño aporta información suficiente y los supuestos del modelo son razonables.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

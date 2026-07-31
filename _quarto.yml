@@ -78,6 +78,8 @@ website:
         contents:
           - text: "Nicho ecológico vs. distribución de especies"
             href: infografias/nicho_vs_distribucion.qmd
+          - text: "Detectabilidad imperfecta"
+            href: infografias/detectabilidad_imperfecta.qmd
           - text: "Modelos de ocupación"
             href: infografias/modelos_ocupacion.qmd
       - section: "Conservación de la biodiversidad"
