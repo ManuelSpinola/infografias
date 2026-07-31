@@ -70,12 +70,13 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 ### Modelado ecológico
 
-[4 infografías]{.home-count}
+[5 infografías]{.home-count}
 
 - [{{< fa arrow-right >}} Nicho ecológico vs. distribución de especies](infografias/nicho_vs_distribucion.qmd)
 - [{{< fa arrow-right >}} Detectabilidad imperfecta](infografias/detectabilidad_imperfecta.qmd)
 - [{{< fa arrow-right >}} Modelos de ocupación](infografias/modelos_ocupacion.qmd)
 - [{{< fa arrow-right >}} Muestreo por distancias](infografias/muestreo_por_distancias.qmd)
+- [{{< fa arrow-right >}} Modelos de captura-recaptura](infografias/modelos_captura_recaptura.qmd)
 :::
 
 ::: {.home-card .accent-orange}

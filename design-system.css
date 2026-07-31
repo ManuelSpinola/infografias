@@ -70,6 +70,15 @@ body {
 
 .mm-def p { font-size: 0.9rem; line-height: 1.6; margin: 0; }
 
+.mm-def ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.4rem 0 0 0;
+  padding-left: 1.1rem;
+}
+.mm-def li { margin-bottom: 0.2rem; }
+.mm-def li:last-child { margin-bottom: 0; }
+
 /* Banner de sección (título corto de bloque) */
 .mm-banner {
   text-align: center;

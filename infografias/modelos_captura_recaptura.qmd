@@ -1,0 +1,177 @@
+---
+title: "Modelos de captura-recaptura: población cerrada y población abierta"
+description: "Los modelos de captura-recaptura permiten estimar parámetros poblacionales —abundancia, supervivencia, reclutamiento— a partir de la captura, marcado y recaptura repetida de individuos. Por qué el supuesto de cierre poblacional separa a los modelos de población cerrada (M0, Mt, Mb, Mh) de los modelos de población abierta (Jolly-Seber, Cormack-Jolly-Seber), y cómo el estimador de Lincoln-Petersen es el caso más simple de esta familia."
+date: 2026-07-31
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Marcar, soltar y volver a buscar: la misma historia de captura permite estimar cosas distintas según si la población cambia o no durante el estudio]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[LA IDEA]{.pill}
+
+Cada individuo capturado se marca (anillo, chip, foto-identificación, collar) y se libera. En ocasiones de muestreo posteriores se registra si vuelve a ser detectado. El resultado es una **historia de captura**: una secuencia de 1 (detectado) y 0 (no detectado), una por ocasión, para cada individuo alguna vez capturado.
+:::
+
+::: {.mm-def .orange}
+[QUÉ PERMITE ESTIMAR]{.pill}
+
+A partir de esas historias pueden estimarse abundancia, supervivencia o reclutamiento — pero no todo a la vez, ni de la misma manera. Lo que se puede estimar depende de un supuesto central: si la población permanece cerrada durante el estudio, o si está abierta a cambios.
+:::
+
+:::
+
+<div style="overflow-x:auto; margin: 0.5rem 0 1rem;">
+<table class="table table-bordered table-sm" style="text-align:center; max-width: 520px; margin: 0 auto;">
+<thead>
+<tr>
+<th>Individuo</th>
+<th style="background-color: var(--blue); color: white;">Ocasión 1</th>
+<th style="background-color: var(--blue); color: white;">Ocasión 2</th>
+<th style="background-color: var(--blue); color: white;">Ocasión 3</th>
+<th style="background-color: var(--blue); color: white;">Ocasión 4</th>
+<th style="background-color: var(--orange); color: white;">Historia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>{{< fa paw >}}</td>
+<td>—</td>
+<td>{{< fa paw >}}</td>
+<td>{{< fa paw >}}</td>
+<td>1011</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>—</td>
+<td>{{< fa paw >}}</td>
+<td>{{< fa paw >}}</td>
+<td>—</td>
+<td>0110</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>{{< fa paw >}}</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} Toda la familia de modelos que sigue —cerrados y abiertos— se construye a partir de este mismo tipo de dato. Lo que cambia entre modelos no es la historia de captura en sí, sino el supuesto sobre la población durante el período de muestreo, y por lo tanto qué parámetros son identificables a partir de ella.
+:::
+
+::: {.mm-banner .purple}
+EL SUPUESTO QUE DIVIDE A LA FAMILIA: CIERRE
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[POBLACIÓN CERRADA]{.pill}
+
+N permanece constante durante el estudio: no hay nacimientos, muertes ni migración (cierre demográfico y geográfico). Toda la variación en las historias de captura se atribuye a la probabilidad de captura p, no a cambios reales en la población. Exige estudios cortos en relación con la dinámica de la especie.
+:::
+
+::: {.mm-def .orange}
+[POBLACIÓN ABIERTA]{.pill}
+
+N puede cambiar entre ocasiones: hay nacimientos, muertes o migración, y ese cambio suele ser justamente lo que interesa estimar. Requiere estudios más prolongados y, típicamente, más de dos ocasiones de muestreo.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa lock >}} El supuesto de cierre aquí es análogo al que usan los modelos de ocupación de una temporada y los N-mixture cerrados (ver *Detectabilidad imperfecta*): mientras dure el muestreo, el estado de interés no cambia. La diferencia es qué estado se supone constante — en este caso, el número de individuos disponibles para ser capturados.
+:::
+
+::: {.mm-banner .gray}
+POBLACIÓN CERRADA: UNA FAMILIA SEGÚN QUÉ AFECTA A p
+:::
+
+::: {.mm-example}
+{{< fa route >}} Otis, Burnham, White & Anderson (1978) formalizaron esta familia según qué factor hace variar la probabilidad de captura p:
+
+- **M0** — p constante para todos los individuos y ocasiones (el modelo más simple)
+- **Mt** — p varía con el tiempo, entre ocasiones
+- **Mb** — p varía por una respuesta conductual a ser capturado (trampa-shy o trampa-happy)
+- **Mh** — p varía por heterogeneidad entre individuos
+- Combinaciones de estos factores: **Mtb, Mth, Mbh, Mtbh**
+:::
+
+::: {.mm-banner .purple}
+EL CASO MÁS SIMPLE: LINCOLN-PETERSEN
+:::
+
+::: {.mm-example}
+{{< fa calculator >}} Con solo dos ocasiones, M0 se reduce al estimador más antiguo de la familia:
+
+N̂ = (n₁ × n₂) / m₂
+
+- **n₁** — individuos marcados en la ocasión 1
+- **n₂** — individuos capturados en la ocasión 2
+- **m₂** — individuos marcados que fueron recapturados en la ocasión 2
+
+Por ejemplo: n₁ = 40, n₂ = 50, m₂ = 10 → N̂ = (40 × 50) / 10 = **200 individuos**. Con muestras pequeñas suele preferirse la corrección de Chapman, que reduce el sesgo del estimador sin cambiar su lógica.
+:::
+
+::: {.mm-banner .gray}
+POBLACIÓN ABIERTA: JOLLY-SEBER Y CORMACK-JOLLY-SEBER
+:::
+
+::: {.mm-example}
+{{< fa route >}} Jolly (1965) y Seber (1965) propusieron, de forma independiente, un modelo que permite estimar, en cada ocasión:
+
+- **N** — abundancia
+- **φ** — supervivencia aparente
+- **B** — reclutamiento (nuevos individuos que ingresan a la población)
+
+De ese modelo se derivó, condicionando la verosimilitud a la primera captura de cada individuo, una versión más simple hoy conocida como **Cormack-Jolly-Seber (CJS)** — llamada así porque retoma la formulación de supervivencia que Cormack (1964) había propuesto antes.
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** Cormack-Jolly-Seber (CJS) es lo mismo que Jolly-Seber, solo que con otro nombre. **Interpretación correcta:** CJS condiciona la verosimilitud a la primera captura de cada individuo. Eso elimina la necesidad de modelar el ingreso de nuevos individuos, pero también elimina la posibilidad de estimar N: CJS solo estima supervivencia aparente (φ) y probabilidad de recaptura (p), no abundancia — por eso se usa sobre todo en estudios centrados en supervivencia.
+:::
+
+::: {.mm-banner .purple}
+CAPTURA-RECAPTURA Y OTROS MÉTODOS CON DETECCIÓN IMPERFECTA
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Captura-recaptura comparte con ocupación, N-mixture y muestreo por distancias la misma arquitectura general: separar un estado ecológico de un proceso de observación (ver *Detectabilidad imperfecta*). Lo distintivo aquí es que la unidad de réplica es el individuo marcado, no el sitio ni la distancia — y esa misma lógica, aplicada a especies en vez de individuos, es la raíz de estimadores usados en riqueza de especies (ver *MSOM y cobertura de muestra: un origen común*).
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Toda historia de captura responde a la misma pregunta —¿quién fue detectado y cuándo?— pero lo que se puede estimar a partir de ella depende del supuesto de cierre. Si N no cambia, el interés está en cuántos individuos hay (modelos de población cerrada: M0, Mt, Mb, Mh…, con Lincoln-Petersen como su caso más simple). Si N cambia, el interés se traslada a cómo cambia (Jolly-Seber) o, más frecuentemente en la práctica, a la supervivencia por sí sola (Cormack-Jolly-Seber).
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

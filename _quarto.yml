@@ -84,6 +84,8 @@ website:
             href: infografias/modelos_ocupacion.qmd
           - text: "Muestreo por distancias"
             href: infografias/muestreo_por_distancias.qmd
+          - text: "Modelos de captura-recaptura"
+            href: infografias/modelos_captura_recaptura.qmd
       - section: "Conservación de la biodiversidad"
         contents:
           - text: "Conservación biológica: qué es y qué no es"

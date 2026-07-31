@@ -64,7 +64,7 @@ LA FUNCIÓN DE DETECCIÓN g(x)
 :::
 
 ::: {.mm-example}
-{{< fa chart-line >}} g(x) es la probabilidad de detectar un individuo, **dado que está disponible** a una distancia x de la línea o el punto — no la probabilidad de que haya animales a esa distancia. "Disponible" importa especialmente en aves: un ave presente puede no vocalizar o permanecer oculta, y en ese caso disponibilidad y perceptibilidad son procesos distintos. En el modelo convencional se supone g(0)=1 como una condición exacta del modelo, no algo que se estima a partir de los datos de distancia; cuando g(0)<1, existen extensiones con captura-recaptura y observadores múltiples.
+{{< fa chart-line >}} g(x) es la probabilidad de detectar un individuo, **dado que está disponible** a una distancia x de la línea o el punto — no la probabilidad de que haya animales a esa distancia. "Disponible" importa especialmente en aves: un ave presente puede no vocalizar o permanecer oculta, y en ese caso disponibilidad y perceptibilidad son procesos distintos. En el modelo convencional se supone g(0)=1 como una condición exacta del modelo, no algo que se estima a partir de los datos de distancia; cuando g(0)<1, existen extensiones con captura-recaptura y observadores múltiples (ver *Modelos de captura-recaptura*).
 :::
 
 <div style="text-align:center; margin: 1.2rem 0;">
@@ -80,7 +80,13 @@ LA FUNCIÓN DE DETECCIÓN g(x)
 </div>
 
 ::: {.mm-example}
-{{< fa circle-info >}} La función suele modelarse con formas como la media normal (*half-normal*) o la tasa de riesgo (*hazard-rate*) — el paquete `Distance` de R las implementa para transectos lineales y de puntos. La selección no debe basarse solo en cuál ajusta mejor: también importa la forma de la curva cerca de cero (con un "hombro" razonable), la plausibilidad biológica y la estabilidad de la densidad resultante, además del criterio estadístico (como AIC) y la bondad de ajuste.
+{{< fa circle-info >}} La función suele modelarse con formas como la media normal (*half-normal*) o la tasa de riesgo (*hazard-rate*) — el paquete `Distance` de R las implementa para transectos lineales y de puntos. La selección no debe basarse solo en cuál ajusta mejor:
+
+- La forma de la curva cerca de cero (con un "hombro" razonable)
+- La plausibilidad biológica
+- La estabilidad de la densidad resultante
+- El criterio estadístico (como AIC)
+- La bondad de ajuste
 :::
 
 ::: {.mm-banner .gray}
@@ -108,7 +114,14 @@ SUPUESTOS CLAVE
 :::
 
 ::: {.mm-example}
-{{< fa list-check >}} Los animales disponibles situados sobre la línea o el punto se detectan con certeza (g(0)=1); se registran en su ubicación inicial, antes de responder al observador, y su movimiento durante el conteo no genera un exceso de encuentros incompatible con el modelo; las distancias y tamaños de grupo se miden correctamente; los transectos o puntos se ubican de forma independiente de dónde están los animales; y cada detección corresponde a una unidad independiente, o la dependencia entre individuos se maneja tratándolos como grupos. Violar estos supuestos —animales que huyen antes de ser vistos, distancias mal estimadas, transectos ubicados donde ya se sabe que hay más animales— puede sesgar la densidad estimada.
+{{< fa list-check >}} Los animales disponibles situados sobre la línea o el punto se detectan con certeza (g(0)=1):
+
+- Se registran en su ubicación inicial, antes de responder al observador, y su movimiento durante el conteo no genera un exceso de encuentros incompatible con el modelo
+- Las distancias y tamaños de grupo se miden correctamente
+- Los transectos o puntos se ubican de forma independiente de dónde están los animales
+- Cada detección corresponde a una unidad independiente, o la dependencia entre individuos se maneja tratándolos como grupos
+
+Violar estos supuestos —animales que huyen antes de ser vistos, distancias mal estimadas, transectos ubicados donde ya se sabe que hay más animales— puede sesgar la densidad estimada.
 :::
 
 ::: {.mm-banner .purple}

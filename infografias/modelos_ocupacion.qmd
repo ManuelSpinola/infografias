@@ -123,7 +123,9 @@ Historias de detección (ej. 101 o 010) obtenidas mediante visitas repetidas a c
 ::: {.mm-def .orange}
 [SUPUESTOS CLAVE]{.pill}
 
-**Cierre poblacional:** el sitio no cambia de ocupado a desocupado entre visitas. **Independencia:** la detección en una visita no depende de si hubo detección en otra. **Sin falsos positivos:** cuando la especie se registra, la identificación es correcta — cada vez más relevante con cámaras trampa, bioacústica y eDNA.
+- **Cierre poblacional:** el sitio no cambia de ocupado a desocupado entre visitas
+- **Independencia:** la detección en una visita no depende de si hubo detección en otra
+- **Sin falsos positivos:** cuando la especie se registra, la identificación es correcta — cada vez más relevante con cámaras trampa, bioacústica y eDNA
 :::
 
 :::
