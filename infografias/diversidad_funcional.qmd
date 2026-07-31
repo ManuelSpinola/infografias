@@ -28,7 +28,7 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [DEFINICIÓN]{.pill}
 
-La **diversidad funcional** es la variedad y distribución de los rasgos morfológicos, fisiológicos, fenológicos o de comportamiento de las especies que integran una comunidad. Estos rasgos influyen en cómo los organismos responden al ambiente, utilizan los recursos e intervienen en los procesos ecológicos.
+La **diversidad funcional** describe la variedad y distribución de los rasgos ecológicamente relevantes —morfológicos, fisiológicos, fenológicos o de comportamiento— de las especies, o de los individuos, que integran una comunidad. Estos rasgos influyen en cómo los organismos responden al ambiente, utilizan los recursos e intervienen en los procesos ecológicos.
 :::
 
 ::: {.mm-def .orange}
@@ -75,7 +75,7 @@ No mide solamente cuántas especies hay, sino qué tan distintas son por sus car
 Misma riqueza de especies (6) — diversidad funcional muy distinta
 </div>
 <div style="text-align:center; font-size:0.7rem; color:var(--gray); margin-bottom:1rem;">
-Cada punto representa una especie; su posición resume una combinación de rasgos.
+Cada punto representa una especie; su posición en este espacio simplificado resume una combinación de rasgos.
 </div>
 
 ::: {.mm-banner .purple}
@@ -83,11 +83,11 @@ QUÉ ES UN RASGO FUNCIONAL
 :::
 
 ::: {.mm-example}
-{{< fa list-check >}} Cualquier característica medible de un organismo que influye en su respuesta al ambiente, en su desempeño o en sus efectos sobre los procesos ecológicos: tamaño corporal, tipo de dieta, modo de dispersión, horario de actividad, forma de las hojas, profundidad de raíces, tipo de locomoción, entre muchos otros. Qué rasgos medir depende de la pregunta ecológica que se quiera responder — no existe un set fijo de rasgos "correctos" para toda comunidad.
+{{< fa list-check >}} Una característica medible de un organismo asociada con su desempeño, su respuesta al ambiente o sus efectos sobre procesos ecológicos: tamaño corporal, tipo de dieta, modo de dispersión, horario de actividad, forma de las hojas, profundidad de raíces, tipo de locomoción, entre muchos otros. Un rasgo no es funcional por sí mismo en todo contexto — su relevancia depende de la pregunta ecológica, y no existe un set fijo de rasgos "correctos" para toda comunidad.
 :::
 
 ::: {.mm-example}
-{{< fa arrows-split-up-and-left >}} Suele distinguirse entre **rasgos de respuesta** —cómo reacciona una especie a las condiciones ambientales— y **rasgos de efecto** —cómo influye esa especie sobre una función del ecosistema. La misma especie puede tener rasgos de respuesta muy distintos de sus rasgos de efecto, y esa distinción resulta clave para interpretar correctamente la redundancia funcional.
+{{< fa arrows-split-up-and-left >}} Suele distinguirse entre **rasgos de respuesta**, que influyen en cómo las especies responden a cambios ambientales, y **rasgos de efecto**, que determinan cómo influyen sobre procesos ecosistémicos. Los dos conjuntos pueden coincidir parcialmente: un mismo rasgo puede afectar tanto la respuesta de una especie como su efecto sobre el ecosistema. Esta relación es clave para evaluar si varias especies pueden mantener una función bajo condiciones ambientales cambiantes.
 :::
 
 ::: {.mm-banner .gray}
@@ -95,13 +95,13 @@ TRES FACETAS CLÁSICAS
 :::
 
 ::: {.mm-example}
-{{< fa circle-info >}} Riqueza, equidad y divergencia funcional son un marco clásico y muy utilizado, pero no las únicas métricas que existen: también se usan la dispersión funcional, la especialización, la originalidad, la entropía funcional y otros índices basados en distancias entre especies.
+{{< fa circle-info >}} Riqueza, equidad y divergencia funcional son un marco clásico y muy utilizado, pero no las únicas métricas: la dispersión funcional (FDis) —la distancia media, ponderada o no por abundancia, de las especies al centroide del espacio funcional— es otra muy usada, con la ventaja de no estar necesariamente correlacionada con la riqueza de especies. También existen la especialización, la originalidad, la entropía funcional y otros índices basados en distancias entre especies.
 :::
 
 <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
 
 <div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
-<strong>Riqueza funcional</strong><br>Cuánto "espacio de rasgos" ocupa la comunidad — el rango de combinaciones de rasgos presentes.
+<strong>Riqueza funcional</strong><br>Cuánta extensión del espacio de rasgos ocupa la comunidad — por ejemplo, el volumen o rango de combinaciones funcionales presentes. Suele depender de la presencia y posición de las especies, no de sus abundancias.
 </div>
 
 <div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
@@ -109,7 +109,7 @@ TRES FACETAS CLÁSICAS
 </div>
 
 <div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
-<strong>Divergencia funcional</strong><br>En qué medida las especies más abundantes se concentran hacia los extremos del espacio funcional.
+<strong>Divergencia funcional</strong><br>En qué medida la abundancia se concentra en especies alejadas del centro del espacio funcional.
 </div>
 
 </div>
@@ -119,7 +119,7 @@ TRES FACETAS CLÁSICAS
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} El resultado depende de decisiones analíticas importantes: qué rasgos elegir y cómo ponderarlos, cómo estandarizar las variables, cómo tratar los rasgos categóricos, qué medida de distancia usar, y cuántos ejes retener. Dos análisis con los mismos datos pero decisiones distintas pueden dar resultados distintos.
+{{< fa triangle-exclamation >}} El resultado depende de decisiones analíticas importantes: qué rasgos elegir y cómo ponderarlos, si incorporar variación intraespecífica, cómo estandarizar las variables, cómo tratar los rasgos categóricos, qué medida de distancia usar, y cuántos ejes retener. Dos análisis con los mismos datos pero decisiones distintas pueden dar resultados distintos.
 :::
 
 ::: {.mm-banner .purple}
@@ -131,7 +131,7 @@ REDUNDANCIA FUNCIONAL
 ::: {.mm-def .blue}
 [ALTA REDUNDANCIA]{.pill}
 
-Varias especies presentan rasgos similares en relación con una función determinada. La pérdida de una de ellas podría ser parcialmente compensada por otras, aumentando potencialmente la estabilidad de esa función.
+Varias especies presentan combinaciones de rasgos capaces de contribuir de manera semejante a una función determinada. La pérdida de una de ellas podría ser parcialmente compensada por otras, aumentando potencialmente la estabilidad de esa función.
 :::
 
 ::: {.mm-def .orange}
@@ -144,6 +144,10 @@ Pocas especies presentan los rasgos asociados con una función determinada. Su p
 
 ::: {.mm-example}
 {{< fa circle-info >}} La evidencia disponible indica que la redundancia puede favorecer la estabilidad y la resiliencia, pero el efecto no es universal y todavía resulta difícil separarlo de los efectos de la riqueza de especies por sí sola.
+:::
+
+::: {.mm-example}
+{{< fa shield-heart >}} La redundancia puede actuar como un "seguro" cuando varias especies contribuyen a una función semejante, pero responden de manera diferente a las perturbaciones. Si todas reaccionan igual ante el mismo cambio ambiental —por ejemplo, una sequía—, la aparente redundancia puede ofrecer poca estabilidad real: no basta con la semejanza en los rasgos de efecto, también importa la diversidad en los rasgos de respuesta.
 :::
 
 ::: {.mm-example}
@@ -167,7 +171,7 @@ POR QUÉ IMPORTA
 :::
 
 ::: {.mm-example}
-{{< fa leaf >}} La diversidad funcional puede explicar procesos ecosistémicos que la riqueza por sí sola no captura, porque esos procesos dependen de los rasgos y abundancias de los organismos. Sin embargo, su capacidad predictiva varía según la función estudiada, los rasgos seleccionados, la escala y el contexto ambiental — no siempre supera a la riqueza, la identidad de especies o la abundancia de rasgos dominantes.
+{{< fa leaf >}} La diversidad funcional puede relacionarse más estrechamente con algunos procesos ecosistémicos que la riqueza por sí sola, porque esos procesos dependen de los rasgos y abundancias de los organismos. Sin embargo, su capacidad predictiva varía según la función estudiada, los rasgos seleccionados, la escala y el contexto ambiental — no siempre supera a la riqueza, la identidad de especies o la abundancia de rasgos dominantes.
 :::
 
 ::: {.mm-example}
@@ -177,7 +181,7 @@ POR QUÉ IMPORTA
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-La diversidad funcional describe la variedad y distribución de rasgos ecológicamente relevantes dentro de una comunidad, no simplemente su número de especies. Puede analizarse mediante facetas como la riqueza, la equidad y la divergencia funcional. También permite evaluar hasta qué punto varias especies presentan rasgos similares respecto de una función determinada, aunque esta redundancia depende de los rasgos seleccionados, del proceso estudiado y de las condiciones ambientales. La diversidad funcional complementa la diversidad taxonómica y filogenética: cada una describe una dimensión distinta de la biodiversidad y ninguna, por sí sola, representa todo el funcionamiento de un ecosistema.
+La diversidad funcional describe la variedad y distribución de rasgos ecológicamente relevantes dentro de una comunidad, no simplemente su número de especies. Puede analizarse mediante facetas como la riqueza, la equidad, la divergencia y la dispersión funcional, que responden a preguntas distintas sobre el espacio de rasgos y la distribución de las abundancias. También permite evaluar si varias especies pueden contribuir de manera semejante a una función, aunque esta redundancia depende de los rasgos seleccionados, del proceso estudiado y de las condiciones ambientales. La diversidad funcional complementa la diversidad taxonómica y filogenética: cada una representa una dimensión diferente de la biodiversidad y ninguna, por sí sola, describe todo el funcionamiento de un ecosistema.
 :::
 
 ::: {.mm-credito}

@@ -1,6 +1,6 @@
 ---
 title: "Cobertura de muestra: rarefacción y extrapolación"
-description: "Qué es la cobertura de muestra, cómo el estimador de Good-Turing/Chao-Jost la calcula a partir de especies raras, y cómo las curvas de rarefacción y extrapolación (implementadas en iNEXT) comparan comunidades de forma más justa que comparar riqueza cruda con igual tamaño de muestra."
+description: "Qué es la cobertura de muestra (la proporción de la abundancia representada por especies ya detectadas, no el porcentaje de especies descubiertas), cómo se estima a partir de especies raras, y cómo las curvas de rarefacción y extrapolación (iNEXT) permiten comparar y estimar la diversidad de comunidades a partir de muestras incompletas."
 date: 2026-07-30
 author:
   - name: "Manuel Spínola"
@@ -16,7 +16,7 @@ lang: es
 ::: {.mm-wrap}
 
 ::: {.mm-subtitle}
-[Comparar dos sitios por su número de especies observadas es como comparar dos exámenes con distinto número de preguntas]{}
+[Dos muestras con el mismo número de individuos no necesariamente representan igual de bien sus comunidades]{}
 :::
 
 ::: {.mm-banner .gray}
@@ -28,13 +28,13 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [DEFINICIÓN]{.pill}
 
-La **cobertura de muestra** es la proporción de individuos de toda la comunidad que pertenecen a especies ya detectadas en la muestra — una medida de qué tan "completo" está el muestreo, distinta de cuántos individuos se contaron.
+La **cobertura de muestra** es la proporción de la abundancia total de la comunidad que corresponde a especies ya detectadas. También puede interpretarse como la probabilidad de que el próximo individuo muestreado pertenezca a una especie ya observada.
 :::
 
 ::: {.mm-def .orange}
 [EN PALABRAS SIMPLES]{.pill}
 
-En vez de preguntar "¿cuántos individuos muestreé?", la cobertura pregunta "¿qué fracción de la comunidad ya alcancé a ver?".
+En vez de preguntar solamente "¿cuántos individuos muestreé?", la cobertura pregunta "¿qué proporción de la abundancia de la comunidad está representada por las especies que ya detecté?". No indica qué porcentaje de las especies se encontró — una muestra puede tener cobertura alta y aun así omitir muchas especies extremadamente raras.
 :::
 
 :::
@@ -62,6 +62,10 @@ f₁ = número de especies vistas una sola vez · n = tamaño de la muestra
 </div>
 
 ::: {.mm-example}
+{{< fa circle-info >}} Esta expresión corresponde a datos de abundancia (individuos contados). Para datos de incidencia —presencia/ausencia en varias unidades de muestreo— se usa una formulación equivalente basada en Q₁ y Q₂: especies detectadas en exactamente una, o en exactamente dos, unidades de muestreo.
+:::
+
+::: {.mm-example}
 {{< fa triangle-exclamation >}} Esta es la versión simplificada de Good-Turing. El estimador que realmente usan Chao y Jost (2012) es más preciso porque también incorpora f₂ (especies vistas exactamente dos veces), pero la intuición central es la misma: entre más especies raras hay en la muestra, menos completa es la cobertura.
 :::
 
@@ -74,13 +78,13 @@ RAREFACCIÓN Y EXTRAPOLACIÓN
 ::: {.mm-def .blue}
 [RAREFACCIÓN (interpolación)]{.pill}
 
-Recalcula la diversidad esperada en submuestras más pequeñas que la ya obtenida — permite comparar sitios con distinto esfuerzo de muestreo reduciéndolos a un nivel común.
+Estima la diversidad que habría sido observada con una muestra más pequeña, o con una cobertura menor que la alcanzada. Permite llevar distintas muestras hasta un nivel común de tamaño o, preferiblemente, de cobertura.
 :::
 
 ::: {.mm-def .orange}
 [EXTRAPOLACIÓN (predicción)]{.pill}
 
-Proyecta la curva más allá de los datos observados, prediciendo cuántas especies aparecerían con más esfuerzo de muestreo — con más incertidumbre cuanto más lejos se extrapola.
+Proyecta la diversidad esperada con una muestra mayor, o una cobertura superior a la observada. La incertidumbre aumenta conforme la proyección se aleja de los datos disponibles.
 :::
 
 :::
@@ -95,14 +99,14 @@ Proyecta la curva más allá de los datos observados, prediciendo cuántas espec
   <polyline points="190,45 230,37 270,32 305,29" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="7,5"/>
   <text x="45" y="158" font-size="10" fill="var(--gray)">rarefacción</text>
   <text x="222" y="158" font-size="10" fill="var(--gray)">extrapolación</text>
-  <text x="4" y="22" font-size="10" fill="var(--gray)">riqueza</text>
-  <text x="292" y="152" font-size="10" fill="var(--gray)">n</text>
+  <text x="4" y="22" font-size="10" fill="var(--gray)">diversidad</text>
+  <text x="265" y="152" font-size="10" fill="var(--gray)">cobertura (Ĉ)</text>
 </svg>
-<div style="font-size:0.72rem; color:var(--gray);">Curva de acumulación de especies — línea sólida: datos observados; línea punteada: proyección</div>
+<div style="font-size:0.72rem; color:var(--gray);">Curva de rarefacción y extrapolación basada en cobertura — línea sólida: datos observados; línea punteada: proyección</div>
 </div>
 
 ::: {.mm-example}
-{{< fa chart-line >}} Estandarizar por cobertura en vez de por tamaño de muestra evita comparaciones engañosas: dos comunidades con el mismo esfuerzo de muestreo (misma n) pueden tener coberturas muy distintas si una es mucho más diversa que la otra — comparar su riqueza cruda subestima injustamente a la más diversa.
+{{< fa chart-line >}} Estandarizar por cobertura en vez de por tamaño de muestra evita comparaciones engañosas: dos comunidades con el mismo tamaño de muestra (n) pueden tener coberturas muy distintas si una es mucho más diversa que la otra — comparar su riqueza cruda subestima injustamente a la más diversa.
 :::
 
 ::: {.mm-banner .purple}
@@ -118,13 +122,17 @@ LÍMITES DE ESTE ENFOQUE
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} Este marco no modela una probabilidad de detección explícita por visita —a diferencia de los modelos de ocupación (ver *Modelos de ocupación*)—, así que no requiere diseños de muestreo con visitas repetidas. Pero eso también es su límite: no separa formalmente "presente pero no detectado" de "ausente", y la extrapolación pierde confiabilidad más allá de, aproximadamente, el doble del tamaño de la muestra observada.
+{{< fa triangle-exclamation >}} La extrapolación siempre incorpora incertidumbre. Para la riqueza de especies (q=0), generalmente se recomienda no proyectar mucho más allá del doble del tamaño de la muestra observada, porque depende fuertemente de las especies no observadas. Las diversidades de órdenes q=1 y q=2 (ver *Números de Hill*), menos sensibles a las especies muy raras, suelen extrapolarse con mayor estabilidad.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Este enfoque estima la completitud de muestras de abundancia o incidencia, pero no modela la probabilidad de detección de cada especie en cada sitio. Por ello, no sustituye a los modelos de ocupación (ver *Modelos de ocupación*), cuyo objetivo es separar la presencia ecológica del proceso de detección mediante visitas repetidas.
 :::
 
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-La cobertura de muestra mide qué fracción de la comunidad ya fue detectada, no cuántos individuos se contaron, y permite comparar comunidades de forma más justa que igualando el tamaño de muestra. Las curvas de rarefacción (interpolación) y extrapolación (predicción), implementadas en herramientas como iNEXT, construyen sobre el marco de números de Hill para estimar diversidad real a partir de muestras incompletas — una solución distinta, aunque relacionada, a la que ofrecen los modelos de ocupación (ver *MSOM y cobertura de muestra: un origen común*).
+La cobertura de muestra mide qué proporción de la abundancia de una comunidad está representada por las especies ya detectadas, no qué porcentaje de todas las especies fue descubierto. Estandarizar las muestras por cobertura permite comparar comunidades de manera más justa que igualarlas únicamente por número de individuos. Las curvas de rarefacción y extrapolación, implementadas en herramientas como `iNEXT`, permiten comparar números de Hill a un tamaño de muestra o, preferiblemente, a una cobertura común. Este enfoque evalúa la completitud de muestras de abundancia o incidencia, pero no sustituye a los modelos de ocupación, que modelan explícitamente la detección de cada especie mediante visitas repetidas.
 :::
 
 ::: {.mm-credito}

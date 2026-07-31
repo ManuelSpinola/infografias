@@ -1,6 +1,6 @@
 ---
 title: "Riqueza observada vs. riqueza estimada"
-description: "La diferencia entre Sobs (lo que efectivamente detectaste) y Ŝ (una estimación estadística de cuánto hay realmente), por qué la riqueza observada casi siempre subestima la riqueza real, y qué consecuencias tiene confundirlas al comparar sitios o monitorear tendencias."
+description: "La diferencia entre Sobs (la riqueza de la muestra), S (la riqueza total de una comunidad delimitada) y Ŝ (una inferencia estadística sobre S) — por qué Sobs es un límite inferior bajo ciertas condiciones, y qué consecuencias tiene confundir estas cantidades al comparar sitios o monitorear tendencias."
 date: 2026-07-30
 author:
   - name: "Manuel Spínola"
@@ -28,19 +28,23 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [RIQUEZA OBSERVADA (S<sub>obs</sub>)]{.pill}
 
-El número de especies efectivamente detectadas durante un muestreo — lo que literalmente contaste y reportas al final del trabajo de campo.
+El número de especies detectadas en una muestra obtenida bajo un diseño, esfuerzo, área y período determinados. Describe exactamente la riqueza de la muestra — no necesariamente la riqueza total de la comunidad.
 :::
 
 ::: {.mm-def .orange}
-[RIQUEZA ESTIMADA (Ŝ)]{.pill}
+[RIQUEZA TOTAL (S) Y RIQUEZA ESTIMADA (Ŝ)]{.pill}
 
-Una estimación estadística del número total de especies presentes en la comunidad, incluyendo las que el muestreo no logró detectar.
+La riqueza total (S) es el número de especies pertenecientes a una comunidad previamente delimitada. Como normalmente no se observa completa, se usa un estimador (Ŝ) para inferir cuántas especies podrían estar presentes, incluidas las no detectadas.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} **Malentendido común:** la riqueza observada es la riqueza del sitio. **Interpretación correcta:** S<sub>obs</sub> es casi siempre un piso, no una medida exacta — salvo por errores de identificación, prácticamente nunca sobreestima la riqueza real, porque siempre existe la posibilidad de especies presentes que el muestreo no capturó.
+{{< fa triangle-exclamation >}} **Malentendido común:** S<sub>obs</sub> es automáticamente la riqueza total del sitio. **Interpretación correcta:** S<sub>obs</sub> es exactamente la riqueza de la muestra — responde perfectamente a esa pregunta, no es una medida defectuosa. Si no hay identificaciones erróneas, registros accidentales ni especies detectadas fuera de la comunidad definida, S<sub>obs</sub> no puede superar a S: solo puede igualarla o quedarse corta.
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} La riqueza total tampoco es un dato obvio: solo está definida después de especificar el área, el período, el grupo taxonómico y las reglas de inclusión (¿cuentan las especies migratorias, accidentales, exóticas o domésticas?). Cambiar cualquiera de esas decisiones puede cambiar S.
 :::
 
 <div style="text-align:center; margin: 1.2rem 0;">
@@ -50,40 +54,41 @@ Una estimación estadística del número total de especies presentes en la comun
   <line x1="30" y1="30" x2="305" y2="30" stroke="var(--orange)" stroke-width="1.5" stroke-dasharray="3,3"/>
   <polyline points="30,134 70,95 110,68 150,53 190,45 230,40 270,37 300,35" fill="none" stroke="var(--blue)" stroke-width="3"/>
   <circle cx="300" cy="35" r="4.5" fill="var(--blue)"/>
-  <text x="235" y="27" font-size="10" fill="var(--orange)">Ŝ (riqueza real, asíntota)</text>
+  <line x1="300" y1="35" x2="300" y2="140" stroke="var(--blue)" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="235" y="27" font-size="10" fill="var(--orange)">Ŝ (estimación de la asíntota)</text>
   <text x="150" y="158" font-size="10" fill="var(--gray)">esfuerzo de muestreo →</text>
   <text x="4" y="22" font-size="10" fill="var(--gray)">especies</text>
-  <text x="245" y="50" font-size="10" fill="var(--blue)">S obs</text>
+  <text x="210" y="50" font-size="10" fill="var(--blue)">S obs (esfuerzo actual)</text>
 </svg>
-<div style="font-size:0.72rem; color:var(--gray);">La curva de acumulación sube con el esfuerzo, pero rara vez alcanza la asíntota real</div>
+<div style="font-size:0.72rem; color:var(--gray); max-width:420px; margin:0 auto;">La curva de acumulación sube con el esfuerzo y puede aproximarse a una asíntota — pero Ŝ es una estimación de esa asíntota, no necesariamente igual a la riqueza total verdadera (S)</div>
 </div>
 
 ::: {.mm-banner .purple}
-¿POR QUÉ S<sub>obs</sub> CASI SIEMPRE SE QUEDA CORTA?
+¿POR QUÉ S<sub>obs</sub> SUELE QUEDARSE CORTA?
 :::
 
 ::: {.mm-example}
-{{< fa magnifying-glass >}} Las especies que faltan por detectar no son un subconjunto aleatorio: son, sobre todo, las raras, las crípticas o las de baja probabilidad de detección. Cada esfuerzo adicional de muestreo tiende a sumar cada vez menos especies nuevas —la curva de acumulación se aplana— pero rara vez llega a un punto donde deja de sumar por completo.
+{{< fa magnifying-glass >}} Las especies omitidas no suelen ser una muestra aleatoria de la comunidad: tienden a ser especies de baja abundancia, distribución restringida o baja detectabilidad — aunque rareza y detectabilidad no son lo mismo. Una especie puede ser abundante y difícil de detectar, o rara pero muy conspicua. En una comunidad aproximadamente cerrada y bajo un diseño comparable, cada unidad adicional de esfuerzo suele aportar menos especies nuevas — pero si la comunidad no está cerrada (hay migración, reemplazo temporal, cambios de método), la curva puede seguir sumando especies sin aplanarse del todo.
 :::
 
 ::: {.mm-banner .gray}
-CÓMO SE ESTIMA Ŝ
+CÓMO SE ESTIMA S
 :::
 
 ::: {.mm-example}
-{{< fa route >}} El sitio ya cubre dos caminos estadísticos distintos para llegar a Ŝ: los estimadores no paramétricos y las curvas de rarefacción-extrapolación basadas en cobertura de muestra (ver *Cobertura de muestra: rarefacción y extrapolación*), y los modelos jerárquicos que separan ocupación de detección (ver *Modelos de ocupación* y *MSOM y cobertura de muestra: un origen común*). Ambos caminos persiguen lo mismo — una Ŝ menos sesgada que S<sub>obs</sub> — por rutas estadísticas distintas.
+{{< fa route >}} Existen varios caminos estadísticos, relacionados pero no equivalentes. Los estimadores asintóticos intentan aproximar la riqueza total a partir de la frecuencia de especies raras. Las curvas de rarefacción y extrapolación (ver *Cobertura de muestra: rarefacción y extrapolación*) permiten comparar la riqueza esperada a un tamaño de muestra o una cobertura común, sin asumir necesariamente que se alcanzó el total. Los modelos de ocupación multiespecie (ver *Modelos de ocupación* y *MSOM y cobertura de muestra: un origen común*) estiman riqueza a partir de probabilidades de presencia corregidas por detección, y algunas extensiones (como el aumento de datos) permiten inferir especies completamente omitidas por el muestreo. Cada enfoque estima una cantidad ligeramente distinta y requiere supuestos y diseños de muestreo propios — no son rutas equivalentes hacia exactamente el mismo número.
 :::
 
 ::: {.mm-banner .purple}
-CONSECUENCIAS DE CONFUNDIRLAS
+CONSECUENCIAS DE CONFUNDIR S<sub>obs</sub> CON S
 :::
 
 ::: {.mm-example}
-{{< fa scale-unbalanced >}} Comparar dos sitios por S<sub>obs</sub> cuando tuvieron distinto esfuerzo de muestreo no es una comparación justa — el sitio con más visitas casi siempre "gana" en riqueza observada, aunque su riqueza real sea menor.
+{{< fa scale-unbalanced >}} Comparar dos sitios por S<sub>obs</sub> cuando tuvieron distinto esfuerzo de muestreo no es una comparación justa — el sitio con mayor esfuerzo tiene más oportunidades de acumular especies y puede parecer más rico, aunque su riqueza total no lo sea. Igualar el esfuerzo tampoco garantiza igual completitud, porque dos muestras del mismo tamaño pueden tener coberturas distintas — por eso puede ser preferible comparar a una cobertura común (ver *Cobertura de muestra: rarefacción y extrapolación*).
 :::
 
 ::: {.mm-example}
-{{< fa chart-line >}} Una "tendencia creciente en biodiversidad" a lo largo de los años de un programa de monitoreo puede ser, en realidad, un artefacto de que cada año se muestrea con más esfuerzo o mejores métodos — no un cambio real en la comunidad.
+{{< fa chart-line >}} Una tendencia creciente en S<sub>obs</sub> a lo largo de los años de un programa de monitoreo puede reflejar más esfuerzo, mejores equipos, mayor experiencia de los observadores o cambios de protocolo — no necesariamente un aumento real de la riqueza.
 :::
 
 ::: {.mm-example}
@@ -93,7 +98,7 @@ CONSECUENCIAS DE CONFUNDIRLAS
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-La riqueza observada (S<sub>obs</sub>) es un dato — lo que efectivamente se detectó. La riqueza estimada (Ŝ) es una inferencia estadística sobre lo que realmente hay, incluyendo lo no detectado. Tratar S<sub>obs</sub> como si fuera la riqueza real es el error más común en estudios de biodiversidad, y tiene consecuencias prácticas: sesga comparaciones entre sitios, tendencias temporales y prioridades de conservación. El resto de esta sección del sitio —cobertura de muestra, modelos de ocupación, MSOM— son distintas formas de llegar de S<sub>obs</sub> a una Ŝ más confiable.
+La riqueza observada (S<sub>obs</sub>) es el número de especies detectadas en una muestra; la riqueza total (S) es una propiedad de una comunidad previamente delimitada; y la riqueza estimada (Ŝ) es una inferencia estadística sobre ese total. Si no existen falsos positivos, S<sub>obs</sub> constituye un límite inferior, pero la distancia entre lo observado y lo total depende del esfuerzo, la abundancia de las especies y su detectabilidad. Confundir estas cantidades puede sesgar comparaciones espaciales, tendencias temporales y prioridades de conservación. Los estimadores de riqueza, la estandarización por cobertura y los modelos de ocupación ofrecen soluciones distintas, cada una con sus propios objetivos, supuestos e incertidumbre — ninguna estimación debe tratarse como automáticamente superior al dato observado, ya que también arrastra sus propios supuestos.
 :::
 
 ::: {.mm-credito}

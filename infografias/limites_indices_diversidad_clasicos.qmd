@@ -1,6 +1,6 @@
 ---
 title: "Límites de los índices clásicos de diversidad"
-description: "Por qué la riqueza de especies, Shannon-Wiener y Simpson tratan a todas las especies como unidades equivalentes, cómo la detectabilidad imperfecta sesga las estimaciones, y qué alternativas existen para cada problema."
+description: "Por qué la riqueza, Shannon-Wiener y Simpson responden preguntas distintas y limitadas sobre una comunidad: cómo el muestreo incompleto sesga las estimaciones, cómo tratan a las especies como categorías sin incorporar sus diferencias, y por qué Shannon y Gini-Simpson están en escalas no lineales."
 date: 2026-07-30
 author:
   - name: "Manuel Spínola"
@@ -28,30 +28,30 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [QUÉ MIDEN]{.pill}
 
-Los índices clásicos de diversidad —riqueza de especies, el índice de Shannon-Wiener, el índice de Simpson— resumen una comunidad biológica en un solo número, combinando cuántas especies hay (riqueza) y qué tan repartidas están sus abundancias (equidad).
+Las medidas clásicas resumen distintos aspectos de la diversidad taxonómica. La riqueza cuenta cuántas especies hay. Shannon-Wiener y Simpson combinan esa riqueza con la distribución de las abundancias relativas, dando distinta importancia a las especies raras y comunes.
 :::
 
 ::: {.mm-def .orange}
-[QUÉ ASUMEN]{.pill}
+[QUÉ NO INCORPORAN]{.pill}
 
-Para calcularlos se asume, implícitamente, que todos los individuos detectados representan fielmente lo que hay en el sitio, y que cada especie aporta el mismo tipo de "unidad" de diversidad, sin importar cuán distinta sea de las demás.
+Estos índices se calculan directamente sobre los datos observados: tratan a las especies como categorías definidas por su abundancia, sin incorporar su identidad, sus rasgos, su distancia evolutiva ni su estado de conservación. Tampoco distinguen una especie ausente de una presente pero no detectada — eso depende del diseño de muestreo, no del cálculo del índice.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} **Malentendido común:** un valor de diversidad más alto siempre indica un sitio ecológicamente más valioso. **Interpretación correcta:** el valor de un índice depende de qué asume y qué ignora — dos comunidades muy distintas en composición pueden arrojar exactamente el mismo número.
+{{< fa triangle-exclamation >}} **Malentendido común:** un valor de diversidad más alto siempre indica un sitio ecológicamente más valioso. **Interpretación correcta:** el valor de un índice depende de qué mide y qué deja fuera — dos comunidades muy distintas en composición pueden arrojar exactamente el mismo número.
 :::
 
 <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin: 1rem 0;">
 <div style="flex:1; min-width:160px; background-color:var(--blue); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
-<strong>1. Detectabilidad</strong><br>los datos asumen que lo detectado es lo que hay
+<strong>1. Muestreo y detección</strong><br>el valor observado puede estar sesgado por diferencias de detectabilidad
 </div>
 <div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
-<strong>2. Equivalencia entre especies</strong><br>todas cuentan igual, sin importar cuán distintas sean
+<strong>2. Identidad y diferencias</strong><br>las especies se tratan como categorías, sin incorporar sus diferencias
 </div>
 <div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.8rem; text-align:center; font-size:0.8rem;">
-<strong>3. Linealidad</strong><br>los valores del índice no son comparables de forma directa
+<strong>3. Escala e interpretación</strong><br>Shannon y Gini-Simpson no cambian de forma proporcional (no aplica a la riqueza)
 </div>
 </div>
 
@@ -78,7 +78,7 @@ Para calcularlos se asume, implícitamente, que todos los individuos detectados 
 <span style="background:var(--orange); color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 perros</span>
 <span style="background:var(--purple); color:white; border-radius:6px; padding:3px 12px; font-size:0.75rem;">2 gatos</span>
 </div>
-<div style="font-size:0.68rem; color:var(--gray); margin-top:6px; max-width:140px;">3 especies pertenecientes a linajes evolutivos muy distintos, dos de ellas domésticas</div>
+<div style="font-size:0.68rem; color:var(--gray); margin-top:6px; max-width:140px;">3 especies pertenecientes a linajes evolutivos distintos, dos de ellas domésticas</div>
 </div>
 
 </div>
@@ -87,16 +87,20 @@ Para calcularlos se asume, implícitamente, que todos los individuos detectados 
 Misma riqueza (3), misma equidad, mismo valor de Shannon-Wiener y de Simpson
 </div>
 
+::: {.mm-example}
+{{< fa circle-info >}} Aunque ambas listas producen los mismos índices taxonómicos, eso no significa que sean ecológica o conservacionistamente equivalentes — esos atributos simplemente quedan fuera del cálculo. El contraste además mezcla varias dimensiones a la vez (taxonómica, filogenética, funcional, origen silvestre o doméstico, valor de conservación). Un contraste biológicamente más limpio, enfocado solo en distancia evolutiva, sería comparar jaguar/puma/ocelote con tapir, mono aullador y murciélago nectarívoro — tres especies silvestres de linajes mucho más distantes entre sí que rata/perro/gato, que pese a pertenecer a órdenes distintos son todos mamíferos placentarios.
+:::
+
 ::: {.mm-banner .purple}
-PROBLEMA 1 — LA DETECTABILIDAD IMPERFECTA
+PROBLEMA 1 — MUESTREO Y DETECCIÓN
 :::
 
 ::: {.mm-grid2}
 
 ::: {.mm-def .blue}
-[EL SUPUESTO]{.pill}
+[QUÉ NO DISTINGUEN]{.pill}
 
-Los índices clásicos se calculan a partir del número de especies e individuos efectivamente detectados durante un muestreo — asumiendo, implícitamente, que lo detectado es lo que hay.
+Calculados directamente con los datos observados, estos índices no distinguen entre una especie ausente y una especie presente que no fue detectada. El valor muestral puede diferir de la diversidad real de la comunidad si la detección es incompleta o desigual entre especies.
 :::
 
 ::: {.mm-def .orange}
@@ -112,39 +116,39 @@ La probabilidad de detección casi nunca es 1: varía según la especie (una esp
 :::
 
 ::: {.mm-banner .gray}
-UNA SOLUCIÓN PARCIAL: ESTIMAR LA RIQUEZA CON DETECTABILIDAD
+RESPUESTAS SEGÚN EL DISEÑO DE MUESTREO
 :::
 
 ::: {.mm-example}
-{{< fa magnifying-glass-chart >}} Los modelos de ocupación multiespecie permiten estimar la probabilidad de detección de cada especie por separado y, con ella, corregir la riqueza observada hacia una riqueza estimada más cercana a la real (ver *Modelos de ocupación*). Esto reduce el sesgo introducido por especies difíciles de detectar — pero no lo elimina del todo.
+{{< fa magnifying-glass-chart >}} Existen varias respuestas metodológicas, según el diseño de muestreo y la pregunta: la cobertura de muestra y los estimadores de riqueza no paramétricos (ver *Cobertura de muestra: rarefacción y extrapolación*) no requieren visitas repetidas; los modelos de ocupación multiespecie sí las requieren, pero separan explícitamente presencia de detección, estimando probabilidades específicas por especie mediante una estructura jerárquica que comparte información entre ellas —lo que ayuda especialmente con especies raras (ver *Modelos de ocupación*).
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} Incluso estos modelos siguen dependiendo de que el diseño de muestreo sea adecuado y de que exista suficiente información para estimar la detectabilidad — por ejemplo, no corrigen identificaciones erróneas (falsos positivos), ni funcionan bien con especies extremadamente raras.
+{{< fa triangle-exclamation >}} Un modelo de ocupación convencional estima esto para las especies incluidas en el muestreo; inferir especies completamente no detectadas suele requerir extensiones adicionales, como el aumento de datos. Tampoco corrigen identificaciones erróneas (falsos positivos), salvo que se usen extensiones diseñadas explícitamente para modelarlos.
 :::
 
 ::: {.mm-banner .purple}
-PROBLEMA 2 — TODAS LAS ESPECIES CUENTAN IGUAL
+PROBLEMA 2 — IDENTIDAD Y DIFERENCIAS ENTRE ESPECIES
 :::
 
 ::: {.mm-grid2}
 
 ::: {.mm-def .blue}
-[EL SUPUESTO]{.pill}
+[EL PLANTEAMIENTO]{.pill}
 
-La riqueza, Shannon-Wiener y Simpson tratan a cada especie como una unidad intercambiable: todas las especies tienen exactamente el mismo peso matemático, sin importar qué tan distinta sea taxonómica, funcional o evolutivamente de las demás.
+La riqueza, Shannon-Wiener y Simpson usan a las especies como categorías equivalentes: el cálculo utiliza sus abundancias, pero no incorpora su identidad, sus rasgos, su distancia evolutiva ni su estado de conservación.
 :::
 
 ::: {.mm-def .orange}
 [LA CONSECUENCIA]{.pill}
 
-Tres especies de felinos silvestres cercanamente emparentados "valen" lo mismo, según estos índices, que tres especies tan distintas entre sí como una rata, un perro y un gato — el número no distingue entre una comunidad taxonómicamente compacta y una muy heterogénea.
+Tres especies de felinos silvestres cercanamente emparentados producen los mismos índices que tres especies tan distintas entre sí como una rata, un perro y un gato — el número no distingue entre una comunidad taxonómicamente compacta y una muy heterogénea.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa circle-info >}} Este mismo punto ciego también ignora el valor de conservación: una comunidad con tres especies silvestres amenazadas puntúa exactamente igual que una con tres especies comunes, exóticas o domésticas — el índice no distingue relevancia ecológica ni de conservación, solo cuenta presencias.
+{{< fa circle-info >}} Este mismo punto ciego también ignora el valor de conservación: una comunidad con tres especies silvestres amenazadas puntúa exactamente igual que una con tres especies comunes, exóticas o domésticas — el índice no distingue relevancia ecológica ni de conservación, solo cuenta presencias y abundancias.
 :::
 
 ::: {.mm-banner .gray}
@@ -170,7 +174,7 @@ QUÉ PONDERA
 ::: {.mm-row}
 
 ::: {.mm-cell .blue}
-{{< fa paw >}} Jaguar, puma y ocelote: diversidad funcional relativamente baja — más baja que la de un conjunto formado por un murciélago, un colibrí y un tapir.
+{{< fa paw >}} Jaguar, puma y ocelote pueden mostrar diversidad funcional relativamente baja si se consideran rasgos generales como dieta y estrategia trófica — el resultado depende de los rasgos elegidos.
 :::
 
 ::: {.mm-tag}
@@ -178,13 +182,45 @@ EJEMPLO
 :::
 
 ::: {.mm-cell .orange}
-{{< fa sitemap >}} Jaguar, puma y ocelote: baja diversidad filogenética — comparten un ancestro común relativamente reciente.
+{{< fa sitemap >}} Jaguar, puma y ocelote presentan menor diversidad filogenética que un conjunto de especies de órdenes distantes, como tapir, mono aullador y murciélago.
 :::
 
 :::
 
 ::: {.mm-example}
 {{< fa link >}} Ninguna de estas alternativas reemplaza a la riqueza o a Shannon-Wiener — las complementan. Un análisis completo suele reportar varias, porque cada una responde una pregunta distinta: ¿cuántas especies hay?, ¿qué tan repartidas están?, ¿qué tan diferentes son entre sí? (ver *Diversidad funcional: qué hacen las especies, no solo cuántas hay*).
+:::
+
+::: {.mm-banner .purple}
+UN PROBLEMA MÁS PROFUNDO: ¿ES "DIVERSIDAD" UN PARÁMETRO?
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Hurlbert (1971) cuestionó que "diversidad de especies" designara una única propiedad claramente definida. Distintas medidas combinan riqueza y abundancia de maneras diferentes y pueden ordenar las mismas comunidades de forma distinta. En lugar de buscar un índice universal, propuso formular parámetros explícitos asociados con preguntas concretas, como la probabilidad de encuentro interespecífico (PIE): la probabilidad de que dos individuos elegidos al azar pertenezcan a especies diferentes. PIE está estrechamente relacionado con Gini-Simpson —son casi la misma cantidad—, pero su nombre expresa directamente la probabilidad que representa.
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[PARÁMETRO EXPLÍCITAMENTE DEFINIDO]{.pill}
+
+Una comunidad delimitada posee una riqueza, una distribución de abundancias, una probabilidad de encuentro interespecífico y números de Hill determinados — aunque deban estimarse mediante una muestra.
+:::
+
+::: {.mm-def .orange}
+[CONCEPTO MULTIDIMENSIONAL]{.pill}
+
+"Diversidad" no identifica por sí sola una única cantidad. Puede referirse a riqueza, equidad, dominancia, diferencias funcionales o historia evolutiva. La medida escogida define qué dimensión se está cuantificando.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa question >}} Toda medida de diversidad exige delimitar antes la comunidad: área, período, grupo taxonómico y reglas de inclusión. Esas decisiones forman parte de la definición del parámetro y deben hacerse explícitas — un ejemplo clásico es el debate entre Clements y Gleason sobre qué es, siquiera, una "comunidad" ecológica, que merecería su propia infografía aparte.
+:::
+
+::: {.mm-example}
+{{< fa users >}} Esto también aplica a N: "tamaño poblacional" tampoco es un parámetro hasta especificar especie, área, momento y reglas de pertenencia — ¿cuántos jaguares hay? no está definido hasta decir dónde y cuándo. La diferencia es de grado, no de tipo: una vez delimitado el sistema, N responde a un conteo directo, mientras que "diversidad" todavía exige elegir qué función de la comunidad se desea medir.
 :::
 
 ::: {.mm-banner .gray}
@@ -198,7 +234,7 @@ EJEMPLO
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-Los índices clásicos presentan tres limitaciones conceptualmente independientes: dependen de la detectabilidad, tratan todas las especies como equivalentes, y sus valores no son lineales. Los modelos de ocupación abordan la primera (ver *Modelos de ocupación*); los índices de diversidad funcional y filogenética abordan la segunda; los números de Hill resuelven la tercera (ver *Números de Hill: la diversidad verdadera detrás de los índices clásicos*). Cada problema tiene soluciones distintas, y ninguna sustituye completamente a las demás — la pregunta de investigación debe guiar cuál, o cuáles, usar.
+Los índices clásicos describen dimensiones concretas de la diversidad taxonómica, pero no representan por sí solos todos los aspectos de una comunidad. Sus estimaciones pueden verse afectadas por un muestreo incompleto; utilizan las especies como categorías sin incorporar sus diferencias funcionales, evolutivas o de conservación; y, en el caso de Shannon y Gini-Simpson, están expresados en escalas no lineales (la riqueza, en cambio, ya es un número de Hill de orden cero). Estas limitaciones requieren soluciones distintas: los métodos de cobertura y los modelos de detección abordan distintos aspectos del muestreo incompleto; la diversidad funcional y filogenética incorpora diferencias entre especies; y los números de Hill expresan Shannon y Simpson como números efectivos de especies (ver *Números de Hill: la diversidad efectiva detrás de los índices clásicos*). Además, "diversidad" no es una única propiedad hasta que se especifica qué comunidad se delimitó y qué dimensión se desea medir. Ninguna medida es universalmente correcta — la pregunta de investigación debe determinar qué parámetro o conjunto de medidas resulta pertinente.
 :::
 
 ::: {.mm-credito}

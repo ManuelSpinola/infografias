@@ -1,6 +1,6 @@
 ---
-title: "Números de Hill: la diversidad verdadera detrás de los índices clásicos"
-description: "Por qué Shannon-Wiener y Simpson no son ellos mismos 'la diversidad', sino medidas no lineales de ella, y cómo los números de Hill unifican riqueza, Shannon y Simpson en una sola familia comparable, expresada en 'especies efectivas'."
+title: "Números de Hill: la diversidad efectiva detrás de los índices clásicos"
+description: "Por qué la entropía de Shannon y el índice de Gini-Simpson resumen la diversidad en escalas no lineales, y cómo los números de Hill expresan riqueza, Shannon y Simpson como números efectivos de especies, comparables mediante diferencias y proporciones intuitivas."
 date: 2026-07-30
 author:
   - name: "Manuel Spínola"
@@ -28,43 +28,57 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [EL PROBLEMA]{.pill}
 
-Índices como Shannon-Wiener o Simpson no son ellos mismos "la diversidad" — son medidas no lineales de ella. Igual que el diámetro de una esfera no es su volumen, son solo indicadores indirectos, y tratarlos como si fueran la diversidad produce comparaciones engañosas.
+La entropía de Shannon y el índice de Gini-Simpson resumen la estructura de abundancias en escalas no lineales. Por eso, una diferencia pequeña entre sus valores puede corresponder a una diferencia muy grande en diversidad, y sus cambios no deben interpretarse directamente como porcentajes.
 :::
 
 ::: {.mm-def .orange}
 [LA SOLUCIÓN]{.pill}
 
-Los **números de Hill** convierten cualquier índice clásico en un "número efectivo de especies": cuántas especies igualmente comunes producirían ese mismo valor del índice. Así, todos quedan en las mismas unidades — número de especies — y se vuelven comparables de forma lineal e intuitiva.
+Los **números de Hill** expresan la riqueza y las medidas basadas en Shannon y Simpson como números efectivos de especies: cuántas especies igualmente abundantes producirían el mismo valor de diversidad. De esta manera, los resultados quedan en unidades de especies y pueden compararse mediante diferencias y proporciones intuitivas.
 :::
 
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} **Malentendido común:** un índice de diversidad que baja de 0.99 a 0.97 representa una caída pequeña, de apenas un 2 %. **Interpretación correcta:** convertido a número efectivo de especies, 0.99 equivale a 100 especies efectivas y 0.97 equivale a 33 — una caída real del 66 %. Los índices crudos no son lineales, y sus diferencias no se pueden leer como porcentajes directos de cambio en diversidad.
+{{< fa triangle-exclamation >}} **Malentendido común:** un índice de diversidad que baja de 0.99 a 0.97 representa una caída pequeña, de apenas un 2 %. **Interpretación correcta:** convertido a diversidad efectiva de orden 2, 0.99 equivale a 100 especies igualmente abundantes y 0.97 equivale a aproximadamente 33 — una caída de casi 67 %. Los índices crudos no son lineales, y sus diferencias no se pueden leer como porcentajes directos de cambio en diversidad.
 :::
 
-<div style="display:flex; align-items:flex-end; justify-content:center; gap:2.5rem; margin:1.2rem 0;">
+<div style="text-align:center; font-size:0.68rem; color:var(--gray); font-style:italic; margin-bottom:0.4rem;">Ejemplo hipotético</div>
+
+<div style="display:flex; align-items:flex-end; justify-content:center; gap:2.5rem; margin:0.4rem 0 1.2rem 0;">
 
 <div style="text-align:center;">
-<div style="font-size:0.7rem; color:var(--gray); margin-bottom:4px;">100 especies efectivas</div>
+<div style="font-size:0.7rem; color:var(--gray); margin-bottom:4px;">100 especies efectivas (orden 2)</div>
 <div style="width:70px; height:120px; background-color:var(--blue); border-radius:8px 8px 0 0;"></div>
-<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:6px;">ANTES DEL DERRAME<br><span style="font-weight:400;">Gini-Simpson = 0.99</span></div>
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:6px;">COMUNIDAD A<br><span style="font-weight:400;">Gini-Simpson = 0.99</span></div>
 </div>
 
 <div style="text-align:center;">
-<div style="font-size:0.7rem; color:var(--gray); margin-bottom:4px;">33 especies efectivas</div>
+<div style="font-size:0.7rem; color:var(--gray); margin-bottom:4px;">≈33 especies efectivas (orden 2)</div>
 <div style="width:70px; height:40px; background-color:#e03131; border-radius:8px 8px 0 0;"></div>
-<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:6px;">DESPUÉS DEL DERRAME<br><span style="font-weight:400;">Gini-Simpson = 0.97</span></div>
+<div style="font-size:0.72rem; font-weight:700; color:var(--gray); margin-top:6px;">COMUNIDAD B<br><span style="font-weight:400;">Gini-Simpson = 0.97</span></div>
 </div>
 
 </div>
 
-<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:1rem;">
-El índice crudo cambió solo 0.02 — la diversidad verdadera cayó 66 %
+<div style="text-align:center; font-size:0.78rem; font-weight:700; color:var(--gray); margin-bottom:0.4rem;">
+El índice crudo cambió solo 0.02 — la diversidad efectiva de orden 2 cayó ≈67 %
+</div>
+
+<div style="text-align:center; font-size:0.7rem; color:var(--gray); margin-bottom:1rem; max-width:480px; margin-left:auto; margin-right:auto;">
+Esto no implica necesariamente pérdida de especies: como el orden 2 pondera sobre todo a las especies comunes, la misma caída puede reflejar un aumento en la dominancia de unas pocas especies, sin que hayan desaparecido las demás.
 </div>
 
 ::: {.mm-example}
-{{< fa clock-rotate-left >}} La fórmula que unifica estos índices la introdujo el ecólogo británico Mark Hill en 1973, a partir de la entropía de Rényi. Pero fueron los trabajos de Lou Jost, tres décadas después, los que rescataron esta idea —poco usada hasta entonces— y demostraron por qué es la interpretación correcta de "diversidad verdadera", incluyendo cómo particionar correctamente la diversidad alfa y beta en estas unidades, algo que los índices crudos no permiten hacer de forma consistente.
+{{< fa clock-rotate-left >}} Mark Hill presentó en 1973 una familia unificada de medidas interpretables como números efectivos de especies, basada en la entropía generalizada de Rényi. Décadas después, Lou Jost mostró con especial claridad por qué las entropías de Shannon y Gini-Simpson no deben interpretarse directamente como diversidades, y por qué sus números equivalentes permiten comparaciones y particiones más coherentes. El desarrollo posterior de métodos de estimación, rarefacción y extrapolación, junto con herramientas como iNEXT, facilitó su adopción práctica.
+:::
+
+::: {.mm-banner .gray}
+NO SON DATOS NUEVOS — ES UNA ESCALA DE PRESENTACIÓN DISTINTA
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} Los números de Hill no requieren datos nuevos: se calculan a partir de las mismas abundancias relativas que usan Shannon y Simpson. Lo que cambia es la escala de presentación — H' se transforma en exp(H'), y la concentración de Simpson (Σpᵢ²) en su inverso. Nota: "índice de Simpson" es ambiguo, porque distintos programas y textos usan la concentración (Σpᵢ²), el índice de Gini-Simpson (1 − Σpᵢ²) o su inverso — conviene siempre precisar cuál se está reportando.
 :::
 
 ::: {.mm-banner .purple}
@@ -84,12 +98,12 @@ QUÉ SON LOS NÚMEROS DE HILL
 
 <div style="flex:1; min-width:160px; background-color:var(--orange); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
 <div style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">q = 1</div>
-<strong>Exponencial de Shannon</strong><br>Cada especie pesa según su abundancia real — ni se ignoran las raras ni se sobre-representan.
+<strong>Exponencial de Shannon</strong><br>Pondera las especies según sus abundancias relativas. Todas contribuyen, pero las comunes influyen más que las raras.
 </div>
 
 <div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.8rem;">
 <div style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">q = 2</div>
-<strong>Inverso de Simpson</strong><br>Domina la respuesta de las especies más abundantes — las raras casi no influyen.
+<strong>Inverso de Simpson</strong><br>Da un peso particularmente alto a las especies comunes; las especies muy raras tienen poca influencia.
 </div>
 
 </div>
@@ -100,12 +114,16 @@ QUÉ SON LOS NÚMEROS DE HILL
 </div>
 </div>
 
+<div style="text-align:center; font-size:0.72rem; color:var(--gray); margin-bottom:0.3rem;">
+p<sub>i</sub> = abundancia relativa de la especie i · válida para q ≠ 1
+</div>
+
 <div style="text-align:center; font-size:0.72rem; color:var(--gray); margin-bottom:1rem;">
-p<sub>i</sub> = abundancia relativa de la especie i · q determina el peso de las especies raras
+Para q = 1, la expresión se obtiene mediante su límite: <sup>1</sup>D = exp(−Σ p<sub>i</sub> ln p<sub>i</sub>) = exp(H′)
 </div>
 
 ::: {.mm-example}
-{{< fa arrow-down-wide-short >}} A medida que q aumenta, las especies raras pierden peso en el cálculo. Por eso, para una misma comunidad, siempre se cumple que <sup>0</sup>D ≥ <sup>1</sup>D ≥ <sup>2</sup>D. Comparar los tres valores —un "perfil de diversidad"— revela qué tan pareja o desigual es la comunidad: si los tres son similares, las abundancias son equitativas; si caen abruptamente, pocas especies dominan.
+{{< fa arrow-down-wide-short >}} A medida que q aumenta, las especies raras pierden peso en el cálculo — q=0, 1 y 2 son los órdenes más usados, pero q puede tomar otros valores positivos. Por eso, para una misma comunidad, siempre se cumple que <sup>0</sup>D ≥ <sup>1</sup>D ≥ <sup>2</sup>D. Comparar estos valores —un "perfil de diversidad"— revela qué tan pareja o desigual es la comunidad: si son similares, las abundancias son equitativas; si caen abruptamente, pocas especies dominan.
 :::
 
 ::: {.mm-banner .gray}
@@ -113,7 +131,7 @@ UN PERFIL DE DIVERSIDAD DICE MÁS QUE UN SOLO NÚMERO
 :::
 
 ::: {.mm-example}
-{{< fa magnifying-glass-chart >}} Una comunidad con <sup>0</sup>D = 20, <sup>1</sup>D = 12 y <sup>2</sup>D = 5 tiene 20 especies en total, pero solo unas 12 "típicas" al ponderar por abundancia, y apenas 5 dominan la mayor parte de los individuos — la caída revela pocas especies dominantes y muchas raras, algo que ningún índice aislado muestra por sí solo.
+{{< fa magnifying-glass-chart >}} Una comunidad con <sup>0</sup>D = 20, <sup>1</sup>D = 12 y <sup>2</sup>D = 5 tiene una riqueza de 20 especies, una diversidad de especies comunes equivalente a 12 especies igualmente abundantes, y una concentración de dominancia equivalente a solo 5 — no significa que existan exactamente 5 especies identificables como dominantes, sino que la concentración de abundancias equivale a la de una comunidad con 5 especies igualmente abundantes. La fuerte caída del perfil indica una distribución desigual, con algunas especies muy comunes y muchas de baja abundancia.
 :::
 
 ::: {.mm-banner .purple}
@@ -121,7 +139,7 @@ POR QUÉ IMPORTA
 :::
 
 ::: {.mm-example}
-{{< fa link >}} Al expresar cualquier índice en "número efectivo de especies", los valores se vuelven comparables entre estudios y entre métodos, y pueden combinarse correctamente en análisis de diversidad alfa y beta — algo que los índices crudos no permiten hacer de forma consistente. Por eso los números de Hill son hoy el marco recomendado para reportar diversidad en ecología cuantitativa.
+{{< fa link >}} Al expresar las medidas de riqueza, Shannon y Simpson en una escala común de especies efectivas, los valores de un mismo orden pueden compararse mediante diferencias y proporciones intuitivas entre comunidades, sitios o momentos — algo que no puede decirse directamente de, por ejemplo, H'=3 frente a H'=1.5. Además, poseen propiedades de replicación y partición que permiten formular relaciones coherentes entre diversidad alfa, gamma y beta (ver *¿Gamma = alfa + beta o alfa × beta?*), algo que los índices crudos no logran de forma consistente. Por estas propiedades, los números de Hill se han convertido en uno de los marcos más sólidos y utilizados para cuantificar y comparar diversidad taxonómica.
 :::
 
 ::: {.mm-example}
@@ -131,7 +149,7 @@ POR QUÉ IMPORTA
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-Los índices clásicos de diversidad no son, en sí mismos, "la diversidad": son medidas no lineales que pueden ocultar o exagerar cambios reales. Los números de Hill resuelven esto expresando cualquier índice como un número efectivo de especies, definido por un orden q que va de tratar a todas las especies por igual (q=0, riqueza) a dar peso casi exclusivo a las dominantes (q=2, Simpson). No resuelven la detectabilidad imperfecta ni la equivalencia entre especies, pero sí resuelven un problema distinto e igual de importante: que los números realmente signifiquen lo que creemos que significan.
+Los índices clásicos de diversidad no son, en sí mismos, "la diversidad": son medidas no lineales que pueden ocultar o exagerar cambios reales. Los números de Hill resuelven esto expresando riqueza, Shannon y Simpson como números efectivos de especies, definidos por un orden q: q=0 trata a todas las especies por igual (riqueza), y valores crecientes de q dan progresivamente más peso a las especies comunes — q=1 y q=2 son los órdenes más usados después de la riqueza. No resuelven la detectabilidad imperfecta ni la equivalencia entre especies, pero sí resuelven un problema distinto e igual de importante: que los números realmente signifiquen lo que creemos que significan.
 :::
 
 ::: {.mm-credito}
