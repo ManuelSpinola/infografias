@@ -1,0 +1,132 @@
+---
+title: "Muestreo por distancias: la distancia también informa sobre lo no detectado"
+description: "El muestreo por distancias es un método muy usado para estimar densidad o abundancia animal: su nombre viene de que la información central para la inferencia es la distancia misma a cada detección —registrada al recorrer transectos o pararse en puntos de conteo—, no solo cuántos individuos se contaron. Cómo se modela esa distancia, y por qué no hace falta repetir visitas al mismo sitio."
+date: 2026-07-30
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Ver menos animales lejos del transecto no significa que haya menos animales lejos — significa que es más difícil verlos]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[LA IDEA]{.pill}
+
+El nombre del método viene de ahí: la información central usada para la inferencia es la distancia misma —registrada al recorrer transectos o pararse en puntos de conteo—, no solo el número de individuos contados. El muestreo por distancias utiliza esa distancia entre cada individuo (o grupo) detectado y el transecto o punto. En transectos lineales se registra la distancia perpendicular a la línea; en puntos, la distancia radial al observador. El modelo convencional supone que todos los animales disponibles situados exactamente sobre la línea o el punto son detectados —g(0)=1— y que la detección decae con la distancia.
+:::
+
+::: {.mm-def .orange}
+[QUÉ PERMITE ESTIMAR]{.pill}
+
+La distribución de las distancias observadas permite ajustar una función de detección g(x) y estimar la probabilidad promedio de detectar a los animales disponibles dentro del área cubierta. Combinando esa probabilidad con el número de detecciones y el esfuerzo se estima la densidad, que puede expandirse a abundancia si el diseño representa bien la región de estudio.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** si se detectan menos individuos lejos del transecto, es porque hay menos individuos ahí. **Interpretación correcta:** la caída en las detecciones con la distancia refleja, sobre todo, que es más difícil detectar animales lejanos — no necesariamente que estén menos presentes. Esta interpretación requiere que la ubicación de los transectos no dependa de dónde se concentran los animales, típicamente mediante un diseño aleatorio o sistemático con inicio aleatorio.
+:::
+
+<div style="margin: 1.2rem 0;">
+<div style="position:relative; height:150px; background:#fafafa; border-radius:8px; border:1px solid #eee; overflow:hidden;">
+<div style="position:absolute; top:50%; left:4%; right:4%; height:2px; background:var(--purple);"></div>
+<div style="position:absolute; top:40%; left:6%; font-size:1.3rem; color:var(--purple);">{{< fa person-walking >}}</div>
+<div style="position:absolute; top:45%; left:22%; font-size:1rem; color:#333;">{{< fa paw >}}</div>
+<div style="position:absolute; top:28%; left:34%; font-size:1rem; color:#333;">{{< fa paw >}}</div>
+<div style="position:absolute; top:58%; left:44%; font-size:0.95rem; color:#888;">{{< fa paw >}}</div>
+<div style="position:absolute; top:14%; left:58%; font-size:0.85rem; color:#bbb;">{{< fa paw >}}</div>
+<div style="position:absolute; top:74%; left:68%; font-size:0.85rem; color:#bbb;">{{< fa paw >}}</div>
+<div style="position:absolute; top:33%; left:84%; font-size:0.75rem; color:#ddd;">{{< fa paw >}}</div>
+</div>
+<div style="font-size:0.7rem; color:var(--gray); text-align:center; margin-top:6px; max-width:520px; margin-left:auto; margin-right:auto;">
+Representación conceptual, no datos reales: entre más lejos del transecto, menor la probabilidad de detección (íconos más tenues). En la práctica no se conoce la ubicación de los individuos no detectados — esta ilustración solo representa la idea del proceso.
+</div>
+</div>
+
+::: {.mm-banner .purple}
+LA FUNCIÓN DE DETECCIÓN g(x)
+:::
+
+::: {.mm-example}
+{{< fa chart-line >}} g(x) es la probabilidad de detectar un individuo, **dado que está disponible** a una distancia x de la línea o el punto — no la probabilidad de que haya animales a esa distancia. "Disponible" importa especialmente en aves: un ave presente puede no vocalizar o permanecer oculta, y en ese caso disponibilidad y perceptibilidad son procesos distintos. En el modelo convencional se supone g(0)=1 como una condición exacta del modelo, no algo que se estima a partir de los datos de distancia; cuando g(0)<1, existen extensiones con captura-recaptura y observadores múltiples.
+:::
+
+<div style="text-align:center; margin: 1.2rem 0;">
+<svg viewBox="0 0 320 170" style="width:100%; max-width:440px; display:block; margin:0 auto;">
+  <line x1="30" y1="140" x2="305" y2="140" stroke="#ccc" stroke-width="1"/>
+  <line x1="30" y1="15" x2="30" y2="140" stroke="#ccc" stroke-width="1"/>
+  <path d="M 30 25 Q 90 28 140 60 T 305 115" fill="none" stroke="var(--purple)" stroke-width="3"/>
+  <text x="4" y="22" font-size="10" fill="var(--gray)">g(x)</text>
+  <text x="270" y="152" font-size="10" fill="var(--gray)">distancia (x)</text>
+  <text x="24" y="150" font-size="9" fill="var(--gray)">0</text>
+</svg>
+<div style="font-size:0.72rem; color:var(--gray); max-width:480px; margin:0 auto;">La curva representa la probabilidad estimada de detectar a un individuo disponible a cada distancia, ajustada a partir de la distribución de las distancias de los individuos efectivamente detectados — no se conoce ni se grafica la distancia de los que no se detectaron. La curva no tiene que llegar exactamente a cero en el límite de truncamiento (w).</div>
+</div>
+
+::: {.mm-example}
+{{< fa circle-info >}} La función suele modelarse con formas como la media normal (*half-normal*) o la tasa de riesgo (*hazard-rate*) — el paquete `Distance` de R las implementa para transectos lineales y de puntos. La selección no debe basarse solo en cuál ajusta mejor: también importa la forma de la curva cerca de cero (con un "hombro" razonable), la plausibilidad biológica y la estabilidad de la densidad resultante, además del criterio estadístico (como AIC) y la bondad de ajuste.
+:::
+
+::: {.mm-banner .gray}
+DEL ÁREA EFECTIVA A LA DENSIDAD
+:::
+
+::: {.mm-example}
+{{< fa ruler-combined >}} A partir de g(x) se estima la fracción promedio de individuos disponibles que habría sido detectada dentro del área cubierta. En transectos lineales, esto se expresa como un **semiancho efectivo de franja** (μ): el ancho hipotético, a cada lado de la línea, dentro del cual el número esperado de animales no detectados equivale al número esperado de animales detectados más allá de μ (área efectiva = 2Lμ, con L la longitud recorrida). En puntos se usa un **radio efectivo de detección** (ρ), con área efectiva πρ². Con el número detectado, el esfuerzo y esa área efectiva se estima la densidad — y, si el diseño representa adecuadamente la región de estudio, esa densidad puede expandirse a abundancia total.
+:::
+
+::: {.mm-example}
+{{< fa users >}} Cuando la unidad detectada es un grupo (bandada, manada), debe estimarse además su tamaño esperado — los grupos grandes suelen ser más fáciles de detectar que los pequeños, lo que puede introducir sesgo por tamaño de grupo si no se corrige.
+:::
+
+::: {.mm-banner .purple}
+LÍNEA VS. PUNTO
+:::
+
+::: {.mm-example}
+{{< fa route >}} En **transectos lineales**, el observador recorre una línea y registra la distancia perpendicular a cada detección. En **muestreo por puntos**, el observador permanece fijo y registra la distancia radial. Ambos comparten la lógica de g(x), pero difieren en el diseño de campo y en la geometría usada para convertir la función de detección en área efectiva — en puntos, el área disponible crece con la distancia, el movimiento de los animales durante el conteo pesa más, y la disponibilidad acústica suele ser especialmente importante.
+:::
+
+::: {.mm-banner .gray}
+SUPUESTOS CLAVE
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Los animales disponibles situados sobre la línea o el punto se detectan con certeza (g(0)=1); se registran en su ubicación inicial, antes de responder al observador, y su movimiento durante el conteo no genera un exceso de encuentros incompatible con el modelo; las distancias y tamaños de grupo se miden correctamente; los transectos o puntos se ubican de forma independiente de dónde están los animales; y cada detección corresponde a una unidad independiente, o la dependencia entre individuos se maneja tratándolos como grupos. Violar estos supuestos —animales que huyen antes de ser vistos, distancias mal estimadas, transectos ubicados donde ya se sabe que hay más animales— puede sesgar la densidad estimada.
+:::
+
+::: {.mm-banner .purple}
+EN QUÉ SE DIFERENCIA DE OCUPACIÓN Y N-MIXTURE
+:::
+
+::: {.mm-example}
+{{< fa circle-info >}} No necesita réplicas temporales para identificar la función de detección (ver *Detectabilidad imperfecta*): la información proviene de la distribución de las distancias registradas en el conjunto de transectos o puntos del estudio, no de repetir el muestreo en el tiempo. Pero sí requiere suficiente replicación **espacial**, esfuerzo y número de detecciones para ajustar g(x) con precisión — y algunos diseños avanzados sí incorporan revisitas u observadores múltiples, especialmente cuando g(0)<1.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El muestreo por distancias estima densidad y abundancia a partir de cómo cambia la probabilidad de detección con la distancia al transecto o punto. La función g(x), bajo el supuesto convencional g(0)=1, permite calcular un semiancho efectivo de franja o un radio efectivo de detección, y con ellos corregir el conteo observado por los individuos no detectados. A diferencia de ocupación y N-mixture clásicos, no necesita réplicas temporales para identificar la detección — pero sí requiere replicación espacial suficiente, un diseño representativo, mediciones precisas y supuestos razonables sobre disponibilidad y movimiento. Comparte con los demás modelos la separación entre estado ecológico y proceso de observación, pero se apoya en una fuente de información distinta.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
