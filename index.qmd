@@ -26,7 +26,7 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 
 ### Metodología de la investigación
 
-[7 infografías]{.home-count}
+[9 infografías]{.home-count}
 
 - [{{< fa arrow-right >}} Método vs. Metodología](infografias/metodo_vs_metodologia.qmd)
 - [{{< fa arrow-right >}} El método científico](infografias/metodo_cientifico.qmd)
@@ -35,6 +35,8 @@ Infografías sobre metodología de la investigación, estadística y ciencia de 
 - [{{< fa arrow-right >}} Objetivos de investigación](infografias/objetivos_investigacion.qmd)
 - [{{< fa arrow-right >}} Correlación vs. causalidad](infografias/correlacion_vs_causalidad.qmd)
 - [{{< fa arrow-right >}} Patrón vs. mecanismo](infografias/patron_vs_mecanismo.qmd)
+- [{{< fa arrow-right >}} Diseño de muestreo](infografias/diseno_muestreo.qmd)
+- [{{< fa arrow-right >}} Tipos de muestreo](infografias/tipos_muestreo.qmd)
 :::
 
 ::: {.home-card .accent-blue}

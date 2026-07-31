@@ -44,6 +44,10 @@ website:
             href: infografias/correlacion_vs_causalidad.qmd
           - text: "Patrón vs. mecanismo"
             href: infografias/patron_vs_mecanismo.qmd
+          - text: "Diseño de muestreo"
+            href: infografias/diseno_muestreo.qmd
+          - text: "Tipos de muestreo"
+            href: infografias/tipos_muestreo.qmd
       - section: "Estadística y ciencia de datos"
         contents:
           - section: "Inferencia"

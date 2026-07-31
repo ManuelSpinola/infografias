@@ -1,6 +1,6 @@
 ---
 title: "Modelos de captura-recaptura: población cerrada y población abierta"
-description: "Los modelos de captura-recaptura permiten estimar parámetros poblacionales —abundancia, supervivencia, reclutamiento— a partir de la captura, marcado y recaptura repetida de individuos. Por qué el supuesto de cierre poblacional separa a los modelos de población cerrada (M0, Mt, Mb, Mh) de los modelos de población abierta (Jolly-Seber, Cormack-Jolly-Seber), y cómo el estimador de Lincoln-Petersen es el caso más simple de esta familia."
+description: "Los modelos de captura-recaptura (o captura-marcaje-recaptura) permiten estimar parámetros poblacionales —abundancia, supervivencia, probabilidad de detección, reclutamiento— a partir de la captura, marcado o identificación, y recaptura o reencuentro repetido de individuos. Por qué el supuesto de cierre poblacional separa a los modelos de población cerrada (M0, Mt, Mb, Mh) de los modelos de población abierta (Jolly-Seber, Cormack-Jolly-Seber), y cómo el estimador de Lincoln-Petersen es el caso más simple de esta familia."
 date: 2026-07-31
 author:
   - name: "Manuel Spínola"
@@ -28,13 +28,13 @@ LA IDEA CENTRAL
 ::: {.mm-def .blue}
 [LA IDEA]{.pill}
 
-Cada individuo capturado se marca (anillo, chip, foto-identificación, collar) y se libera. En ocasiones de muestreo posteriores se registra si vuelve a ser detectado. El resultado es una **historia de captura**: una secuencia de 1 (detectado) y 0 (no detectado), una por ocasión, para cada individuo alguna vez capturado.
+Cada individuo capturado se marca —por ejemplo, con un anillo, chip o collar— y se libera; también puede identificarse posteriormente mediante marcas naturales, fotografías o información genética, sin necesidad de una captura física repetida. En ocasiones de muestreo sucesivas se registra si vuelve a ser detectado. El resultado es una **historia de captura o encuentro**: una secuencia de 1 (detectado) y 0 (no detectado), una por ocasión, para cada individuo observado al menos una vez.
 :::
 
 ::: {.mm-def .orange}
 [QUÉ PERMITE ESTIMAR]{.pill}
 
-A partir de esas historias pueden estimarse abundancia, supervivencia o reclutamiento — pero no todo a la vez, ni de la misma manera. Lo que se puede estimar depende de un supuesto central: si la población permanece cerrada durante el estudio, o si está abierta a cambios.
+A partir de esas historias pueden estimarse abundancia, supervivencia, reclutamiento y probabilidad de detección, pero no todos los modelos estiman los mismos parámetros. Lo que puede estimarse depende de un supuesto central: si la población permanece cerrada durante el estudio, o si está abierta a cambios.
 :::
 
 :::
@@ -93,7 +93,7 @@ EL SUPUESTO QUE DIVIDE A LA FAMILIA: CIERRE
 ::: {.mm-def .blue}
 [POBLACIÓN CERRADA]{.pill}
 
-N permanece constante durante el estudio: no hay nacimientos, muertes ni migración (cierre demográfico y geográfico). Toda la variación en las historias de captura se atribuye a la probabilidad de captura p, no a cambios reales en la población. Exige estudios cortos en relación con la dinámica de la especie.
+Durante el estudio no ocurren nacimientos, muertes, inmigración ni emigración permanente que cambien el conjunto de individuos de interés. Las diferencias entre las historias de captura se explican por el proceso de detección y por su variación aleatoria, no por cambios demográficos reales en la población. Este supuesto suele requerir períodos de muestreo cortos en relación con la dinámica de la especie.
 :::
 
 ::: {.mm-def .orange}
@@ -127,7 +127,7 @@ EL CASO MÁS SIMPLE: LINCOLN-PETERSEN
 :::
 
 ::: {.mm-example}
-{{< fa calculator >}} Con solo dos ocasiones, M0 se reduce al estimador más antiguo de la familia:
+{{< fa calculator >}} Con dos ocasiones, bajo los supuestos del modelo más simple de captura homogénea, la estimación de N conduce al estimador más antiguo de la familia. Además del cierre, este estimador requiere que las marcas no se pierdan, que los individuos se mezclen bien en la población entre ocasiones, y que la captura en la segunda ocasión no dependa de haber sido marcado en la primera:
 
 N̂ = (n₁ × n₂) / m₂
 
@@ -135,7 +135,13 @@ N̂ = (n₁ × n₂) / m₂
 - **n₂** — individuos capturados en la ocasión 2
 - **m₂** — individuos marcados que fueron recapturados en la ocasión 2
 
-Por ejemplo: n₁ = 40, n₂ = 50, m₂ = 10 → N̂ = (40 × 50) / 10 = **200 individuos**. Con muestras pequeñas suele preferirse la corrección de Chapman, que reduce el sesgo del estimador sin cambiar su lógica.
+Por ejemplo: n₁ = 40, n₂ = 50, m₂ = 10 → N̂ = (40 × 50) / 10 = **200 individuos**.
+
+Con muestras pequeñas o pocas recapturas, suele preferirse la corrección de Chapman, que reduce el sesgo del estimador sin cambiar su lógica:
+
+N̂ (Chapman) = [(n₁+1)(n₂+1) / (m₂+1)] − 1
+
+Con los mismos datos: N̂ (Chapman) = (41 × 51 / 11) − 1 ≈ **189 individuos**.
 :::
 
 ::: {.mm-banner .gray}
@@ -143,17 +149,18 @@ POBLACIÓN ABIERTA: JOLLY-SEBER Y CORMACK-JOLLY-SEBER
 :::
 
 ::: {.mm-example}
-{{< fa route >}} Jolly (1965) y Seber (1965) propusieron, de forma independiente, un modelo que permite estimar, en cada ocasión:
+{{< fa route >}} Jolly (1965) y Seber (1965) propusieron, en trabajos estrechamente relacionados con los de Cormack (1964), un modelo que permite estimar, según la ocasión y la parametrización:
 
 - **N** — abundancia
 - **φ** — supervivencia aparente
-- **B** — reclutamiento (nuevos individuos que ingresan a la población)
+- **p** — probabilidad de captura o recaptura
+- **B** — ingreso o reclutamiento de nuevos individuos (por nacimiento o inmigración)
 
-De ese modelo se derivó, condicionando la verosimilitud a la primera captura de cada individuo, una versión más simple hoy conocida como **Cormack-Jolly-Seber (CJS)** — llamada así porque retoma la formulación de supervivencia que Cormack (1964) había propuesto antes.
+Una formulación condicionada de esta familia, hoy conocida como **Cormack-Jolly-Seber (CJS)**, usa únicamente la parte de la historia posterior a la primera captura de cada individuo. Al condicionar el análisis a que el individuo ya fue encontrado, no modela a los animales que nunca fueron detectados ni el ingreso de nuevos individuos — por eso estima φ y p, pero no N ni B.
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} **Malentendido común:** Cormack-Jolly-Seber (CJS) es lo mismo que Jolly-Seber, solo que con otro nombre. **Interpretación correcta:** CJS condiciona la verosimilitud a la primera captura de cada individuo. Eso elimina la necesidad de modelar el ingreso de nuevos individuos, pero también elimina la posibilidad de estimar N: CJS solo estima supervivencia aparente (φ) y probabilidad de recaptura (p), no abundancia — por eso se usa sobre todo en estudios centrados en supervivencia.
+{{< fa triangle-exclamation >}} **Malentendido común:** Cormack-Jolly-Seber (CJS) es lo mismo que Jolly-Seber, solo que con otro nombre. **Interpretación correcta:** CJS condiciona el análisis a la primera captura de cada individuo, por lo que solo contiene individuos detectados al menos una vez. No modela explícitamente la fracción de la población que nunca fue observada —la pieza necesaria para estimar N— así que solo estima φ y p, no abundancia ni reclutamiento.
 :::
 
 ::: {.mm-banner .purple}
@@ -161,13 +168,15 @@ CAPTURA-RECAPTURA Y OTROS MÉTODOS CON DETECCIÓN IMPERFECTA
 :::
 
 ::: {.mm-example}
-{{< fa circle-info >}} Captura-recaptura comparte con ocupación, N-mixture y muestreo por distancias la misma arquitectura general: separar un estado ecológico de un proceso de observación (ver *Detectabilidad imperfecta*). Lo distintivo aquí es que la unidad de réplica es el individuo marcado, no el sitio ni la distancia — y esa misma lógica, aplicada a especies en vez de individuos, es la raíz de estimadores usados en riqueza de especies (ver *MSOM y cobertura de muestra: un origen común*).
+{{< fa circle-info >}} Captura-recaptura comparte con ocupación, N-mixture y muestreo por distancias la misma arquitectura general: separar un estado ecológico de un proceso de observación (ver *Detectabilidad imperfecta*). Lo distintivo es que la información se organiza como una historia de encuentros para cada individuo identificado. En ocupación y N-mixture, las detecciones repetidas se organizan principalmente por sitio y ocasión; en muestreo por distancias, se utilizan las distancias de detección registradas a lo largo de puntos o transectos.
+
+Una lógica relacionada —inferir unidades no observadas a partir de patrones de detección repetida— también aparece en estimadores de riqueza de especies, donde las unidades de interés son especies en lugar de individuos (ver *MSOM y cobertura de muestra: un origen común*).
 :::
 
 ::: {.mm-summary}
 [EN RESUMEN]{.pill}
 
-Toda historia de captura responde a la misma pregunta —¿quién fue detectado y cuándo?— pero lo que se puede estimar a partir de ella depende del supuesto de cierre. Si N no cambia, el interés está en cuántos individuos hay (modelos de población cerrada: M0, Mt, Mb, Mh…, con Lincoln-Petersen como su caso más simple). Si N cambia, el interés se traslada a cómo cambia (Jolly-Seber) o, más frecuentemente en la práctica, a la supervivencia por sí sola (Cormack-Jolly-Seber).
+Toda historia de captura responde a la misma pregunta —¿quién fue detectado y cuándo?— pero lo que se puede estimar a partir de ella depende del supuesto de cierre. Si N no cambia, el interés está en cuántos individuos hay (modelos de población cerrada: M0, Mt, Mb, Mh…, con Lincoln-Petersen como su caso más simple). Si N cambia, el interés se traslada a cómo cambia (Jolly-Seber) o, más frecuentemente en la práctica, a la supervivencia aparente por sí sola (Cormack-Jolly-Seber).
 :::
 
 ::: {.mm-credito}

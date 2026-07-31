@@ -1,0 +1,195 @@
+---
+title: "Diseño de muestreo"
+description: "El diseño de muestreo es el conjunto de decisiones sobre cómo seleccionar, de una población, la parte que efectivamente se va a estudiar. Qué diferencia a un censo de una muestra, qué pasos sigue un diseño de muestreo, y por qué el tamaño de una muestra no basta por sí solo para que sea representativa."
+date: 2026-07-31
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Seleccionar bien a quién estudiar es tan importante como analizar bien los datos que produce]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[POBLACIÓN, MARCO MUESTRAL Y MUESTRA]{.pill}
+
+- **Población** — el conjunto completo de elementos sobre el que se quiere concluir.
+- **Marco muestral** — la lista o fuente concreta de la que la muestra se selecciona en la práctica (un directorio, un mapa de sitios, un registro).
+- **Muestra** — el subconjunto efectivamente estudiado.
+
+El diseño de muestreo comprende las decisiones sobre cómo pasar de la población a la muestra.
+:::
+
+::: {.mm-def .orange}
+[CENSO VS. MUESTRA]{.pill}
+
+- **Censo** — intenta recolectar datos de cada elemento de la población.
+- **Muestra** — recolecta datos de una parte y usa inferencia estadística para obtener conclusiones sobre la población.
+
+La muestra no es un censo "más barato": es una estrategia distinta, con una fuente propia de incertidumbre —el error de muestreo— que un censo no tiene. Sin embargo, tanto censos como muestras pueden sufrir errores de cobertura, medición, no respuesta y procesamiento.
+:::
+
+:::
+
+<div style="text-align:center; margin: 1.4rem 0;">
+<svg viewBox="0 0 300 280" style="width:100%; max-width:340px; display:block; margin:0 auto;">
+  <circle cx="150" cy="140" r="100" fill="#EBF1F8" stroke="var(--blue)" stroke-width="2"/>
+  <circle cx="150" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="180" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="135" cy="114" r="4" fill="var(--gray)"/>
+  <circle cx="120" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="135" cy="166" r="4" fill="var(--gray)"/>
+  <circle cx="165" cy="166" r="4" fill="var(--gray)"/>
+  <circle cx="210" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="198.5" cy="175.3" r="4" fill="var(--gray)"/>
+  <circle cx="168.5" cy="197.1" r="4" fill="var(--gray)"/>
+  <circle cx="131.5" cy="197.1" r="4" fill="var(--gray)"/>
+  <circle cx="101.5" cy="175.3" r="4" fill="var(--gray)"/>
+  <circle cx="90" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="101.5" cy="104.7" r="4" fill="var(--gray)"/>
+  <circle cx="131.5" cy="82.9" r="4" fill="var(--gray)"/>
+  <circle cx="238" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="226.2" cy="184" r="4" fill="var(--gray)"/>
+  <circle cx="194" cy="216.2" r="4" fill="var(--gray)"/>
+  <circle cx="150" cy="228" r="4" fill="var(--gray)"/>
+  <circle cx="106" cy="216.2" r="4" fill="var(--gray)"/>
+  <circle cx="73.8" cy="184" r="4" fill="var(--gray)"/>
+  <circle cx="62" cy="140" r="4" fill="var(--gray)"/>
+  <circle cx="73.8" cy="96" r="4" fill="var(--gray)"/>
+  <circle cx="106" cy="63.8" r="4" fill="var(--gray)"/>
+  <circle cx="150" cy="52" r="4" fill="var(--gray)"/>
+  <circle cx="165" cy="114" r="5" fill="var(--orange)"/>
+  <circle cx="168.5" cy="82.9" r="5" fill="var(--orange)"/>
+  <circle cx="198.5" cy="104.7" r="5" fill="var(--orange)"/>
+  <circle cx="194" cy="63.8" r="5" fill="var(--orange)"/>
+  <circle cx="226.2" cy="96" r="5" fill="var(--orange)"/>
+  <circle cx="192" cy="95" r="36" fill="none" stroke="var(--orange)" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="192" y1="32" x2="192" y2="58" stroke="var(--orange)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <defs>
+  <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+  <path d="M0,0 L6,3 L0,6 Z" fill="var(--orange)"/>
+  </marker>
+  </defs>
+  <text x="192" y="22" font-size="12" font-weight="700" fill="var(--orange)" text-anchor="middle">MUESTRA (n)</text>
+  <text x="150" y="266" font-size="12" font-weight="700" fill="var(--blue)" text-anchor="middle">POBLACIÓN (N)</text>
+</svg>
+<div style="font-size:0.72rem; color:var(--gray); max-width:400px; margin:6px auto 0 auto;">Cada punto representa un elemento de la población. La muestra (naranja) es el subconjunto efectivamente seleccionado y estudiado — no un grupo aparte, sino una parte de la misma población.</div>
+</div>
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** el marco muestral y la población son lo mismo. **Interpretación correcta:** casi nunca coinciden exactamente. Un directorio telefónico no incluye a quienes no tienen teléfono; un mapa de sitios de muestreo puede excluir áreas de difícil acceso. Cuando el marco deja fuera sistemáticamente a parte de la población, se produce **error de cobertura**. Una selección rigurosa dentro de ese marco no incorpora por sí sola a las unidades ausentes; reducir el problema exige mejorar o complementar el marco, o usar ajustes basados en información auxiliar.
+:::
+
+::: {.mm-banner .purple}
+VENTAJAS Y LIMITACIONES DEL MUESTREO
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[VENTAJAS]{.pill}
+
+- Cuesta menos que un censo
+- Toma menos tiempo
+- Requiere menos personal y logística
+- Es la única opción viable con poblaciones muy grandes o conceptualmente continuas, para las que no existe una lista completa de unidades — en ecología, a veces la población está bien definida pero el marco muestral se construye con parcelas, transectos o celdas espaciales, no con una lista de individuos
+:::
+
+::: {.mm-def .orange}
+[LIMITACIONES]{.pill}
+
+- Toda muestra conlleva error de muestreo, incluso con un diseño impecable
+- Un diseño mal planteado puede introducir sesgo, que ninguna cantidad de datos adicionales corrige
+- Con poblaciones pequeñas y accesibles, un censo puede ser más conveniente que una muestra
+- Un buen diseño exige experiencia técnica que no siempre está disponible
+:::
+
+:::
+
+::: {.mm-banner .gray}
+CRITERIOS PARA ELEGIR EL DISEÑO
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Antes de fijar el tamaño y la técnica de selección (pasos 4 y 5 más abajo), conviene revisar:
+
+- **Naturaleza de la población** — qué tan homogénea o heterogénea es, y si existe una estructura conocida (estratos, conglomerados) que convenga aprovechar.
+- **Objetivos de la investigación** — qué preguntas debe responder la muestra y con qué nivel de detalle.
+- **Parámetro o estimación de interés** — media, proporción, total, diferencia entre grupos, tendencia temporal o patrón espacial; el diseño y el tamaño necesarios cambian según qué se quiera estimar.
+- **Precisión requerida** — cuánto error de muestreo es aceptable para el propósito del estudio.
+- **Recursos y tiempo disponibles** — presupuesto, personal y plazo, que en la práctica limitan tanto el tamaño como la técnica posibles.
+:::
+
+::: {.mm-banner .purple}
+PASOS EN EL DISEÑO DE MUESTREO
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Un diseño de muestreo típico sigue esta secuencia:
+
+1. **Definir la población** — delimitar con precisión a quién o qué se quiere estudiar.
+2. **Definir el marco muestral** — identificar la fuente concreta de la que se seleccionará la muestra.
+3. **Elegir la unidad de muestreo** — decidir qué se selecciona directamente (individuos, hogares, sitios, cuadrantes).
+4. **Elegir la técnica de selección** — probabilística o no probabilística (ver *Tipos de muestreo*).
+5. **Determinar el tamaño de muestra** — cuántas unidades se necesitan para la precisión que se busca, dado ese diseño.
+
+En la práctica, los pasos 4 y 5 suelen evaluarse de forma iterativa: una muestra aleatoria simple, una estratificada y una por conglomerados pueden requerir tamaños distintos para alcanzar la misma precisión, así que el tamaño se ajusta según el diseño elegido y el presupuesto disponible.
+:::
+
+::: {.mm-banner .gray}
+QUÉ HACE BUENA A UNA MUESTRA
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[REPRESENTATIVIDAD Y SESGO]{.pill}
+
+- **Representatividad** — una muestra permite inferencias representativas cuando el mecanismo de selección, la cobertura y el análisis reflejan adecuadamente a la población objetivo. Su composición no tiene que reproducir exactamente todas las proporciones poblacionales: algunos grupos pueden seleccionarse deliberadamente en mayor proporción, siempre que el diseño se tenga en cuenta mediante ponderaciones u otros ajustes.
+- **Sesgo** — un error sistemático que aleja las estimaciones de sus valores poblacionales, por ejemplo cuando el método de selección favorece consistentemente a cierto tipo de elementos sin que el análisis lo compense.
+
+Un sesgo no desaparece por tener más datos: se repite en cada unidad adicional.
+:::
+
+::: {.mm-def .orange}
+[PRECISIÓN Y TAMAÑO]{.pill}
+
+El **error de muestreo** es la diferencia que surge porque se observa una muestra y no toda la población. La **precisión** indica cuánto variaría una estimación si se repitiera el muestreo bajo el mismo diseño, y suele expresarse mediante el error estándar o el ancho de un intervalo de confianza. A diferencia del sesgo, la precisión sí mejora con muestras más grandes —pero solo si el diseño no tiene sesgo de por medio. Una muestra grande y sesgada sigue siendo sesgada.
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** una muestra grande garantiza que los resultados sean confiables. **Interpretación correcta:** el tamaño reduce la variabilidad (mejora la precisión), pero no corrige el sesgo.
+
+La ganancia de precisión depende también de cómo se distribuyen las unidades y de la dependencia entre ellas: en muestreos por conglomerados, muchas unidades muy parecidas entre sí pueden aportar menos información que las mismas unidades repartidas entre más conglomerados — algo especialmente relevante en ecología, donde la autocorrelación espacial y temporal es común.
+
+El caso clásico es la encuesta de *Literary Digest* de 1936: con más de dos millones de respuestas —una muestra enorme para la época— predijo el resultado equivocado de una elección presidencial en Estados Unidos, porque su marco muestral (listas telefónicas y de suscriptores de revista) subrepresentaba a ciertos sectores del electorado y, además, quienes respondieron diferían sistemáticamente de quienes no lo hicieron: error de cobertura y error de no respuesta actuando juntos.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+El diseño de muestreo comprende las decisiones que permiten pasar de una población a una muestra: qué marco se utiliza, qué unidades se seleccionan, mediante qué técnica y en qué cantidad —decisiones que dependen de los objetivos del estudio, la estructura de la población, el parámetro que se quiere estimar, la precisión requerida y los recursos disponibles. Un censo elimina el error de muestreo, pero no los errores de cobertura, medición, no respuesta o procesamiento. Una muestra grande mejora la precisión, pero no corrige por sí sola un marco incompleto ni un mecanismo de selección sesgado — cobertura, sesgo y precisión son tres cosas distintas que hay que evaluar por separado.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

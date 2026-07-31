@@ -1,0 +1,172 @@
+---
+title: "Tipos de muestreo: probabilístico vs. no probabilístico"
+description: "El muestreo probabilístico y el no probabilístico se diferencian en si la probabilidad de inclusión de cada unidad es conocida o calculable a partir del diseño — no en si esas probabilidades son iguales entre unidades, ni en qué tan al azar se ve el procedimiento. Qué distingue entre sí a los tipos probabilísticos (aleatorio simple, sistemático, estratificado, por conglomerados, multietápico) y a los no probabilísticos (conveniencia, juicio, cuotas, bola de nieve), y por qué esa diferencia determina si el error de muestreo puede estimarse formalmente."
+date: 2026-07-31
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[La diferencia no es qué tan al azar parece la selección, sino si puede calcularse la probabilidad de inclusión de cada unidad]{}
+:::
+
+::: {.mm-banner .gray}
+LA IDEA CENTRAL
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[MUESTREO PROBABILÍSTICO]{.pill}
+
+Cada unidad cubierta por el marco muestral tiene una probabilidad de inclusión conocida o calculable a partir del diseño, y mayor que cero — no hace falta que sea la misma para todas las unidades, como ocurre en algunos diseños con probabilidad proporcional al tamaño. Esa información permite estimar el error de muestreo y sustentar inferencias sobre la población cubierta por el diseño, siempre que también se consideren la cobertura, la no respuesta y las ponderaciones correspondientes.
+:::
+
+::: {.mm-def .orange}
+[MUESTREO NO PROBABILÍSTICO]{.pill}
+
+La probabilidad de inclusión de cada unidad no se conoce ni puede calcularse a partir del procedimiento de selección. No basta con que las probabilidades sean distintas entre unidades para que un diseño sea no probabilístico —lo decisivo es que no sean calculables. Sin esa información, el error de muestreo no puede estimarse mediante los métodos convencionales del muestreo basado en diseño.
+:::
+
+:::
+
+<div style="margin:1.6rem 0;">
+<div style="display:flex; justify-content:center;">
+<div style="background:var(--gray); color:#fff; padding:0.65rem 1.3rem; border-radius:10px; font-weight:600; text-align:center; max-width:420px; font-size:0.9rem;">
+{{< fa list-check >}} Se selecciona una muestra de la población
+</div>
+</div>
+<div style="display:flex; justify-content:center;">
+<div style="width:2px; height:22px; background:var(--gray);"></div>
+</div>
+<div style="display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap; border-top:2px solid var(--gray); max-width:700px; margin:0 auto;">
+<div style="flex:1; min-width:260px; display:flex; flex-direction:column; align-items:center; padding-top:1.3rem;">
+<div style="background:var(--blue); color:#fff; padding:0.55rem 1rem; border-radius:8px; font-weight:700; text-align:center; width:100%;">PROBABILÍSTICO</div>
+<div style="font-size:0.78rem; color:var(--gray); margin-top:0.6rem; text-align:center;">probabilidad de inclusión conocida o calculable</div>
+<div style="margin-top:0.7rem; font-size:0.8rem; text-align:center; line-height:1.5;">Aleatorio simple · Sistemático · Estratificado · Conglomerados · Multietápico</div>
+</div>
+<div style="flex:1; min-width:260px; display:flex; flex-direction:column; align-items:center; padding-top:1.3rem;">
+<div style="background:var(--orange); color:#fff; padding:0.55rem 1rem; border-radius:8px; font-weight:700; text-align:center; width:100%;">NO PROBABILÍSTICO</div>
+<div style="font-size:0.78rem; color:var(--gray); margin-top:0.6rem; text-align:center;">probabilidad de inclusión no calculable</div>
+<div style="margin-top:0.7rem; font-size:0.8rem; text-align:center; line-height:1.5;">Conveniencia · Juicio · Cuotas · Bola de nieve</div>
+</div>
+</div>
+</div>
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** el muestreo no probabilístico siempre es un método inferior o inválido. **Interpretación correcta:** es una herramienta distinta, no una versión defectuosa del muestreo probabilístico. Es útil, e incluso necesario, cuando no existe un marco muestral completo, en estudios exploratorios, o en investigación cualitativa donde el objetivo no es generalizar con un margen de error estadísticamente estimable. Lo que no permite es cuantificar formalmente ese error — no que los resultados carezcan de valor.
+:::
+
+::: {.mm-banner .purple}
+TIPOS DE MUESTREO PROBABILÍSTICO
+:::
+
+::: {.mm-example}
+{{< fa route >}} Se diferencian en cómo se usa esa probabilidad de inclusión para seleccionar:
+
+- **Aleatorio simple** — cada unidad del marco muestral tiene la misma probabilidad de ser seleccionada; equivale a un sorteo sobre todo el marco.
+- **Sistemático** — se ordenan las unidades del marco, se elige al azar un punto de inicio y se selecciona cada *k*-ésima unidad (el intervalo *k* se determina a partir del tamaño del marco y de la muestra deseada). Es eficiente y sencillo, pero puede producir sesgo o poca precisión si el orden del marco tiene un patrón periódico relacionado con la variable de interés.
+- **Estratificado** — la población se divide en estratos mutuamente excluyentes, definidos por características relevantes, y se selecciona una muestra probabilística dentro de cada uno. La estratificación asegura representación de los subgrupos, y mejora la precisión cuando las unidades son relativamente similares dentro de cada estrato.
+- **Por conglomerados** — la población se organiza en grupos naturales, como comunidades, parcelas o sitios, y se selecciona probabilísticamente una parte de esos grupos. Puede estudiarse a todas las unidades de cada conglomerado elegido (una etapa) o tomar después una submuestra dentro de ellos (dos o más etapas).
+- **Multietápico** — no es un mecanismo paralelo a los anteriores, sino una forma de combinarlos: dos o más etapas de selección sucesivas, que pueden usar técnicas distintas en cada una (por ejemplo, regiones seleccionadas con probabilidad proporcional al tamaño, comunidades por aleatorio simple dentro de cada región, y hogares por sistemático dentro de cada comunidad).
+:::
+
+::: {.mm-banner .gray}
+ESTRATIFICADO VS. CONGLOMERADOS: EL PUNTO QUE MÁS SE CONFUNDE
+:::
+
+::: {.mm-example}
+{{< fa triangle-exclamation >}} **Malentendido común:** muestreo estratificado y por conglomerados son básicamente lo mismo, porque ambos empiezan dividiendo la población en grupos. **Interpretación correcta:** en el estratificado se seleccionan unidades dentro de **todos** los estratos; en conglomerados se selecciona solo una **parte** de los grupos, y dentro de los elegidos puede estudiarse a todas las unidades (una etapa) o tomar una submuestra (dos o más etapas). La estratificación suele buscar representación y mayor precisión; los conglomerados suelen priorizar eficiencia logística, aunque pueden perder precisión cuando las unidades de un mismo grupo se parecen mucho entre sí.
+:::
+
+<div style="margin: 1.2rem 0;">
+<svg viewBox="0 0 360 160" style="width:100%; max-width:480px; display:block; margin:0 auto;">
+  <text x="180" y="14" font-size="11" font-weight="700" fill="var(--blue)" text-anchor="middle">ESTRATIFICADO — se selecciona dentro de cada estrato</text>
+  <rect x="15" y="25" width="90" height="95" rx="8" fill="#F7F7F6" stroke="var(--gray)" stroke-width="1.5"/>
+  <rect x="135" y="25" width="90" height="95" rx="8" fill="#F7F7F6" stroke="var(--gray)" stroke-width="1.5"/>
+  <rect x="255" y="25" width="90" height="95" rx="8" fill="#F7F7F6" stroke="var(--gray)" stroke-width="1.5"/>
+  <circle cx="40" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="80" cy="45" r="5" fill="var(--gray)"/>
+  <circle cx="40" cy="72" r="5" fill="var(--gray)"/>
+  <circle cx="80" cy="72" r="5" fill="var(--gray)"/>
+  <circle cx="40" cy="99" r="5" fill="var(--gray)"/>
+  <circle cx="80" cy="99" r="5" fill="var(--orange)"/>
+  <circle cx="160" cy="45" r="5" fill="var(--gray)"/>
+  <circle cx="200" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="160" cy="72" r="5" fill="var(--orange)"/>
+  <circle cx="200" cy="72" r="5" fill="var(--gray)"/>
+  <circle cx="160" cy="99" r="5" fill="var(--gray)"/>
+  <circle cx="200" cy="99" r="5" fill="var(--gray)"/>
+  <circle cx="280" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="320" cy="45" r="5" fill="var(--gray)"/>
+  <circle cx="280" cy="72" r="5" fill="var(--gray)"/>
+  <circle cx="320" cy="72" r="5" fill="var(--gray)"/>
+  <circle cx="280" cy="99" r="5" fill="var(--gray)"/>
+  <circle cx="320" cy="99" r="5" fill="var(--orange)"/>
+  <text x="60" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Estrato 1</text>
+  <text x="180" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Estrato 2</text>
+  <text x="300" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Estrato 3</text>
+</svg>
+<svg viewBox="0 0 360 160" style="width:100%; max-width:480px; display:block; margin:0.8rem auto 0 auto;">
+  <text x="180" y="14" font-size="11" font-weight="700" fill="var(--orange)" text-anchor="middle">CONGLOMERADOS, UNA ETAPA — se seleccionan grupos y se estudian completos</text>
+  <rect x="15" y="25" width="90" height="95" rx="8" fill="#FDEFE1" stroke="var(--orange)" stroke-width="1.5"/>
+  <rect x="135" y="25" width="90" height="95" rx="8" fill="#F4F4F4" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="255" y="25" width="90" height="95" rx="8" fill="#FDEFE1" stroke="var(--orange)" stroke-width="1.5"/>
+  <circle cx="40" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="80" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="40" cy="72" r="5" fill="var(--orange)"/>
+  <circle cx="80" cy="72" r="5" fill="var(--orange)"/>
+  <circle cx="40" cy="99" r="5" fill="var(--orange)"/>
+  <circle cx="80" cy="99" r="5" fill="var(--orange)"/>
+  <circle cx="160" cy="45" r="5" fill="#ccc"/>
+  <circle cx="200" cy="45" r="5" fill="#ccc"/>
+  <circle cx="160" cy="72" r="5" fill="#ccc"/>
+  <circle cx="200" cy="72" r="5" fill="#ccc"/>
+  <circle cx="160" cy="99" r="5" fill="#ccc"/>
+  <circle cx="200" cy="99" r="5" fill="#ccc"/>
+  <circle cx="280" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="320" cy="45" r="5" fill="var(--orange)"/>
+  <circle cx="280" cy="72" r="5" fill="var(--orange)"/>
+  <circle cx="320" cy="72" r="5" fill="var(--orange)"/>
+  <circle cx="280" cy="99" r="5" fill="var(--orange)"/>
+  <circle cx="320" cy="99" r="5" fill="var(--orange)"/>
+  <text x="60" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Conglomerado 1</text>
+  <text x="180" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Conglomerado 2</text>
+  <text x="300" y="135" font-size="10" fill="var(--gray)" text-anchor="middle">Conglomerado 3</text>
+</svg>
+<div style="font-size:0.72rem; color:var(--gray); max-width:460px; margin:8px auto 0 auto;">En el estratificado, cada grupo aporta parte de la muestra. En conglomerados de una etapa, algunos grupos completos entran a la muestra y otros quedan fuera; en diseños de dos o más etapas, dentro de los grupos elegidos se toma además una submuestra.</div>
+</div>
+
+::: {.mm-banner .purple}
+TIPOS DE MUESTREO NO PROBABILÍSTICO
+:::
+
+::: {.mm-example}
+{{< fa route >}} Comparten la ausencia de una probabilidad de inclusión calculable, pero difieren en el criterio de selección:
+
+- **Conveniencia** — se seleccionan unidades por su accesibilidad, disponibilidad o facilidad de contacto, sin un mecanismo probabilístico que cubra a la población objetivo.
+- **Juicio (o intencional)** — quien investiga selecciona deliberadamente las unidades que considera más informativas para el objetivo del estudio.
+- **Cuotas** — se fija de antemano cuántas unidades se necesitan por categoría, y se completan sin selección aleatoria dentro de cada cuota. Se parece visualmente al estratificado, pero ahí la selección dentro de cada categoría no es aleatoria ni tiene probabilidades conocidas.
+- **Bola de nieve** — los participantes ya incluidos ayudan a identificar a nuevos participantes; útil para poblaciones difíciles de ubicar mediante un marco muestral convencional.
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Lo que distingue al muestreo probabilístico del no probabilístico no es cuánto azar parece haber en la selección, sino si la probabilidad de inclusión de cada unidad es conocida o puede calcularse a partir del diseño. En el muestreo probabilístico, técnicas como el aleatorio simple, sistemático, estratificado, por conglomerados y multietápico organizan esa selección de distintas maneras: el estratificado selecciona unidades dentro de todos los estratos, mientras que el muestreo por conglomerados selecciona solo algunos grupos y puede estudiar todas sus unidades o tomar una submuestra dentro de ellos. En el no probabilístico —conveniencia, juicio, cuotas o bola de nieve— las probabilidades de inclusión no son calculables. Esto impide estimar el error de muestreo mediante los métodos convencionales, pero no vuelve inútiles sus resultados: puede ser la estrategia apropiada para estudios exploratorios, cualitativos o de poblaciones difíciles de localizar.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
