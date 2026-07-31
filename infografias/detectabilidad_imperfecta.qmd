@@ -130,7 +130,7 @@ UNA FAMILIA DE MODELOS, SEGÚN QUÉ SE QUIERE ESTIMAR
 </div>
 
 <div style="flex:1; min-width:160px; background-color:#59A14F; color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
-<strong>Captura-recaptura</strong><br>Individuos marcados y reobservados. La réplica son las ocasiones de recaptura.
+<strong>Captura-recaptura</strong><br>Individuos marcados y reobservados. La réplica son las ocasiones de recaptura. Ver <em>Modelos de captura-recaptura</em>.
 </div>
 
 </div>
@@ -152,7 +152,14 @@ UN SUPUESTO CLAVE EN LOS DISEÑOS CON RÉPLICAS: CIERRE
 :::
 
 ::: {.mm-example}
-{{< fa triangle-exclamation >}} La separación entre estado y detección también depende de otros supuestos: ausencia (o modelado explícito) de falsos positivos, independencia condicional entre observaciones, correcta definición del sitio, y suficiente información para identificar ambos procesos. Los modelos N-mixture, en particular, pueden ser sensibles a la distribución elegida para N y a la heterogeneidad no modelada — no deben presentarse como una corrección automática.
+{{< fa triangle-exclamation >}} La separación entre estado y detección también depende de otros supuestos:
+
+- Ausencia (o modelado explícito) de falsos positivos
+- Independencia condicional entre observaciones
+- Correcta definición del sitio
+- Suficiente información para identificar ambos procesos
+
+Los modelos N-mixture, en particular, pueden ser sensibles a la distribución elegida para N y a la heterogeneidad no modelada — no deben presentarse como una corrección automática.
 :::
 
 ::: {.mm-summary}
