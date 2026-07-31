@@ -126,7 +126,7 @@ UNA FAMILIA DE MODELOS, SEGÚN QUÉ SE QUIERE ESTIMAR
 </div>
 
 <div style="flex:1; min-width:160px; background-color:var(--purple); color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
-<strong>Muestreo por distancias</strong><br>Usa las distancias de los individuos detectados para estimar cómo disminuye la detección al alejarse del transecto o punto, e inferir densidad o abundancia.
+<strong>Muestreo por distancias</strong><br>Usa las distancias de los individuos detectados para estimar cómo disminuye la detección al alejarse del transecto o punto, e inferir densidad o abundancia. Ver <em>Muestreo por distancias</em>.
 </div>
 
 <div style="flex:1; min-width:160px; background-color:#59A14F; color:white; border-radius:8px; padding:0.9rem; text-align:center; font-size:0.78rem;">
