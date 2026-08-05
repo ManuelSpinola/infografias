@@ -1,0 +1,263 @@
+---
+title: "Cómo interpretar y escribir resultados estadísticos"
+description: "Qué elementos no deben faltar al reportar un resultado estadístico, cómo interpretar y redactar comparaciones de medias, correlaciones y coeficientes de regresión, y los errores más comunes al comunicar resultados."
+date: 2026-08-04
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[La salida del software no es el resultado: el resultado es la interpretación científica de esa salida]{}
+:::
+
+::: {.mm-banner .gray}
+ANATOMÍA DE UN RESULTADO BIEN REPORTADO
+:::
+
+<div style="text-align:center; margin: 1.4rem 0;">
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:620px; margin:0 auto;">
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px 18px; font-size:14px; color:#23272F;">La altura promedio fue mayor en el sitio A que en el sitio B</div>
+</div>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:620px; margin:10px auto 0 auto;">
+<div style="background:#FDEFE1; border:1.5px solid var(--orange); border-radius:10px; padding:10px 18px; font-size:14px; color:#23272F;">diferencia = 4.2 m</div>
+<div style="background:#F1ECFA; border:1.5px solid var(--purple); border-radius:10px; padding:10px 18px; font-size:14px; color:#23272F;">IC 95% [1.1, 7.3]</div>
+</div>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:620px; margin:10px auto 0 auto;">
+<div style="background:#EEF0F2; border:1.5px solid var(--gray); border-radius:10px; padding:10px 18px; font-size:14px; color:#23272F;">t(38) = 2.71, p = 0.010</div>
+</div>
+<div style="font-size:0.72rem; color:var(--gray); max-width:480px; margin:10px auto 0 auto;">Azul = dirección del efecto · naranja = magnitud · morado = incertidumbre · gris = estadístico de prueba y significancia.</div>
+</div>
+
+::: {.mm-example}
+{{< fa list-check >}} En la mayoría de los análisis frecuentistas, un resultado bien reportado responde cuatro preguntas: ¿hacia dónde va el efecto?, ¿qué tan grande es?, ¿con cuánta incertidumbre se conoce? y ¿qué tan compatibles son los datos con la hipótesis nula? Omitir cualquiera de estos elementos deja al lector con una interpretación incompleta.
+:::
+
+::: {.mm-banner .purple}
+TRES EJEMPLOS APLICADOS
+:::
+
+::: {.mm-banner .gray}
+COMPARACIÓN DE MEDIAS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ REPORTAR]{.pill}
+
+Más que "hubo diferencia significativa": las medias de cada grupo o, preferiblemente, la diferencia entre medias con su intervalo de confianza, el estadístico de prueba con sus grados de libertad, el valor de p y, cuando sea posible, un tamaño del efecto (por ejemplo, d de Cohen) que indique si la diferencia es grande o trivial en términos prácticos.
+:::
+
+::: {.mm-def .orange}
+[EJEMPLO]{.pill}
+
+<span style="display:inline-block; background:#59A14F; color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">ECOLOGÍA</span> "La altura promedio de los árboles fue mayor en el sitio A que en el sitio B (diferencia = 4.2 m, IC 95% [1.1, 7.3], t(38) = 2.71, p = 0.010, d de Cohen = 0.86)."
+
+<span style="display:inline-block; background:var(--una-red); color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">CIENCIAS DE LA SALUD</span> "La presión arterial sistólica promedio fue menor en el grupo con el nuevo fármaco que en el grupo placebo (diferencia = -8.4 mmHg, IC 95% [-13.1, -3.7], t(58) = 3.42, p = 0.001, d de Cohen = 0.62)."
+:::
+
+:::
+
+::: {.mm-banner .gray}
+CORRELACIÓN
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ REPORTAR]{.pill}
+
+El coeficiente (r de Pearson o rho de Spearman según corresponda), su dirección, el tamaño de muestra, el valor de p y, cuando sea posible, un intervalo de confianza. Describir la fuerza de una correlación como "débil", "moderada" o "fuerte" es útil como referencia, pero esos umbrales son convenciones, no reglas fijas: su interpretación depende del campo y de la variabilidad típica del sistema estudiado. Una correlación, por fuerte que sea, no implica causalidad — ver *Correlación vs. causalidad*.
+:::
+
+::: {.mm-def .orange}
+[EJEMPLO]{.pill}
+
+<span style="display:inline-block; background:#59A14F; color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">ECOLOGÍA</span> "Se encontró una correlación positiva entre la cobertura de dosel y la riqueza de aves (r = 0.52, IC 95% [0.21, 0.74], n = 35, p = 0.002)."
+
+<span style="display:inline-block; background:var(--una-red); color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">CIENCIAS DE LA SALUD</span> "Se encontró una correlación positiva entre el índice de masa corporal y la glucosa en ayunas (r = 0.41, IC 95% [0.18, 0.60], n = 120, p < 0.001)."
+:::
+
+:::
+
+::: {.mm-banner .gray}
+COEFICIENTE DE REGRESIÓN
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[QUÉ REPORTAR]{.pill}
+
+El estimado del coeficiente (β), su error estándar o intervalo de confianza, el estadístico de prueba correspondiente y el valor de p — y, sobre todo, traducir el coeficiente a una frase interpretable en las unidades originales de la variable: "por cada incremento de una unidad en X, Y cambia en β unidades, manteniendo las demás variables del modelo constantes". Interpretar el coeficiente fuera del rango de datos observado es extrapolación, no inferencia.
+
+Si se reporta el modelo completo y no solo un coeficiente aislado, conviene acompañarlo de una medida de ajuste apropiada para el modelo — por ejemplo, R², R² ajustado, pseudo-R² o deviance explicada, según corresponda — junto con las estadísticas globales pertinentes.
+:::
+
+::: {.mm-def .orange}
+[EJEMPLO]{.pill}
+
+<span style="display:inline-block; background:#59A14F; color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">ECOLOGÍA</span> "Por cada grado Celsius adicional de temperatura promedio, la densidad de la especie disminuyó en 2.3 individuos/ha (β = -2.3, EE = 0.8, IC 95% [-3.9, -0.7], p = 0.004), controlando por elevación."
+
+<span style="display:inline-block; background:var(--una-red); color:white; font-size:0.68rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-right:6px;">CIENCIAS DE LA SALUD</span> "Por cada 10 minutos adicionales de actividad física semanal, la frecuencia cardíaca en reposo disminuyó en 0.4 latidos por minuto (β = -0.04, EE = 0.01, IC 95% [-0.06, -0.02], p < 0.001), controlando por edad y sexo."
+:::
+
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} **Un mismo modelo, distintos tipos de coeficiente:** en un modelo con predictores mixtos, cada tipo de variable se interpreta distinto. El coeficiente de un predictor **categórico** (como *tipo de cobertura*) es la diferencia entre esa categoría y la categoría de referencia — lo mismo que se calcula en una comparación de medias. El coeficiente de un predictor **numérico** (como *elevación*) es una pendiente: el cambio esperado en la variable respuesta por cada unidad adicional. Ver *Pruebas estadísticas como modelos lineales*.
+:::
+
+::: {.mm-banner .purple}
+CÓMO REPORTAR EL AJUSTE DE UN MODELO
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Cuando se reporta un modelo completo, conviene traducir tanto el ajuste global como cada coeficiente a una redacción clara — no basta con copiar la tabla de salida del software.
+:::
+
+```r
+model <- lm(densidad_ave ~ cobertura + elevacion, data = datos)
+```
+
+::: {.mm-summary}
+[ASÍ SE REPORTA]{.pill}
+Se ajustó un modelo lineal para modelar la densidad de una especie de ave en función del tipo de cobertura y la elevación. El modelo explica una proporción significativa de la varianza (R² = 0.41, F(2, 57) = 19.8, p < 0.001, R² ajustado = 0.39). La densidad fue menor en bosque secundario que en bosque primario (β = -1.8 individuos/ha, IC 95% [-2.9, -0.7], t(57) = -3.28, p = 0.002), y disminuyó en promedio 0.015 individuos/ha por cada metro adicional de elevación (β = -0.015, IC 95% [-0.024, -0.006], t(57) = -3.41, p = 0.001).
+:::
+
+::: {.mm-banner .gray}
+ERRORES COMUNES AL REDACTAR RESULTADOS
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: reportar solo el valor de p, sin magnitud del efecto ni incertidumbre.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Un p = 0.03 no dice si el efecto es grande o trivial — hay que acompañarlo del tamaño del efecto y un IC.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: tratar "no significativo" como sinónimo de "no hay efecto".
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} No rechazar H₀ no es lo mismo que demostrar que H₀ es verdadera — el estudio pudo carecer de poder estadístico (ver *Prueba de hipótesis vs. estimación*).
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: asumir que significancia estadística implica relevancia práctica o biológica.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Con una muestra suficientemente grande, hasta una diferencia diminuta puede resultar "significativa".
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: redactar una correlación o un coeficiente de un estudio observacional como si demostrara causalidad.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Sin manipulación experimental, la asociación puede deberse a variables de confusión (ver *Correlación vs. causalidad*).
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: interpretar coeficientes de regresión fuera del rango de los datos observados.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} La relación estimada puede no mantenerse más allá de lo medido — es extrapolación, no inferencia.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: interpretar un intervalo de confianza que incluye cero como evidencia de que no existe efecto.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Un intervalo que incluye cero indica que los datos son compatibles con efectos positivos, negativos o nulos; no demuestra que el efecto sea exactamente cero.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: confundir precisión con significancia.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Intervalos de confianza estrechos indican estimaciones más precisas, independientemente de que el resultado sea o no estadísticamente significativo.
+:::
+
+:::
+
+::: {.mm-summary}
+[EN RESUMEN]{.pill}
+
+Un resultado bien reportado indica la dirección del efecto, su magnitud, una medida de incertidumbre (IC) y su significancia, siempre en el contexto de la pregunta de investigación. El valor de p por sí solo no basta, la significancia estadística no equivale a relevancia práctica, y ninguna asociación —por fuerte que sea— demuestra causalidad si el diseño no lo permite.
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::

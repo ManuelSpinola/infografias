@@ -1,105 +1,344 @@
 ---
-title: "Infografías"
-css: /design-system.css
-title-block-banner: "#f8ecec"
-title-block-banner-color: "#A31E32"
-author:
-  - name: "Manuel Spínola"
-    url: http://www.icomvis.una.ac.cr/index.php/manuel
-    affiliation: ICOMVIS - UNA
-    affiliation-url: http://www.icomvis.una.ac.cr/
-    orcid: 0000-0002-7839-1908
-citation: true
-lang: es
+title: ""
+page-layout: article
+toc: false
 ---
 
-::: {.home-hero}
-[COLECCIÓN VISUAL]{.eyebrow}
+<style>
+#quarto-content { padding-top: 0 !important; }
+main.content {
+  max-width: 1100px !important;
+  padding: 1.2rem clamp(1rem, 2vw, 2rem) 3rem !important;
+}
 
-Infografías sobre metodología de la investigación, estadística y ciencia de datos, modelado ecológico, y conservación de la biodiversidad — pensadas para explicar de un vistazo conceptos e ideas que suelen prestarse a confusión.
-:::
+.home-page {
+  --wine: #8b0d2d;
+  --wine-dark: #640a20;
+  --green: #315f52;
+  --blue: #23647a;
+  --violet: #51358d;
+  --ochre: #9a681c;
+  --ink: #17262d;
+  --muted: #52616a;
+  --line: #e9e3db;
+  --paper: #fffdfa;
+  --cream: #fbf8f3;
+  color: var(--ink);
+}
 
-::: {.home-grid}
+.home-page *, .home-page *::before, .home-page *::after { box-sizing: border-box; }
+.home-page a { text-decoration: none; }
 
-::: {.home-card .accent-purple}
-<div class="home-icon">{{< fa compass-drafting >}}</div>
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4.4rem);
+  align-items: center;
+  min-height: 385px;
+  padding: clamp(1.6rem, 3vw, 3rem);
+  border: 1px solid var(--line);
+  border-radius: 1.45rem;
+  background: linear-gradient(135deg, #fffefb 0%, #f8f4ed 100%);
+  box-shadow: 0 18px 50px rgba(61, 46, 34, .07);
+  overflow: hidden;
+}
 
-### Metodología de la investigación
+.home-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .4rem .72rem;
+  border: 1px solid rgba(139,13,45,.18);
+  border-radius: 999px;
+  color: var(--wine);
+  background: rgba(255,255,255,.8);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
 
-[9 infografías]{.home-count}
+.home-kicker svg { width: 1rem; height: 1rem; }
 
-- [{{< fa arrow-right >}} Método vs. Metodología](infografias/metodo_vs_metodologia.qmd)
-- [{{< fa arrow-right >}} El método científico](infografias/metodo_cientifico.qmd)
-- [{{< fa arrow-right >}} Hipótesis en ciencia](infografias/hipotesis_ciencia.qmd)
-- [{{< fa arrow-right >}} Investigación cualitativa vs. cuantitativa](infografias/cualitativa_vs_cuantitativa.qmd)
-- [{{< fa arrow-right >}} Objetivos de investigación](infografias/objetivos_investigacion.qmd)
-- [{{< fa arrow-right >}} Correlación vs. causalidad](infografias/correlacion_vs_causalidad.qmd)
-- [{{< fa arrow-right >}} Patrón vs. mecanismo](infografias/patron_vs_mecanismo.qmd)
-- [{{< fa arrow-right >}} Diseño de muestreo](infografias/diseno_muestreo.qmd)
-- [{{< fa arrow-right >}} Tipos de muestreo](infografias/tipos_muestreo.qmd)
-:::
+.home-title {
+  margin: 1.15rem 0 1.15rem;
+  max-width: 760px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+  line-height: .99;
+  letter-spacing: -.045em;
+  color: var(--ink);
+}
 
-::: {.home-card .accent-blue}
-<div class="home-icon">{{< fa chart-simple >}}</div>
+.home-title .wine { color: var(--wine); }
+.home-title .green { color: var(--green); }
 
-### Estadística y Ciencia de Datos
+.home-lead {
+  max-width: 690px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+  line-height: 1.72;
+}
 
-[11 infografías]{.home-count}
+.home-visual {
+  position: relative;
+  min-height: 310px;
+  display: grid;
+  place-items: center;
+}
 
-*Inferencia*
+.visual-blob {
+  position: absolute;
+  width: 96%;
+  aspect-ratio: 1.12;
+  border-radius: 52% 48% 46% 54% / 45% 52% 48% 55%;
+  background: #efebe4;
+  transform: rotate(-5deg);
+}
 
-- [{{< fa arrow-right >}} Prueba de hipótesis vs. estimación de parámetros](infografias/prueba_hipotesis_vs_estimacion.qmd)
-- [{{< fa arrow-right >}} Valores de p](infografias/valores_p.qmd)
-- [{{< fa arrow-right >}} Críticas a los valores de p](infografias/criticas_valores_p.qmd)
-- [{{< fa arrow-right >}} Tamaño del efecto](infografias/tamano_efecto.qmd)
+.visual-board {
+  position: relative;
+  width: min(100%, 330px);
+  aspect-ratio: 1.15;
+  padding: 3rem 1.2rem 1rem;
+  border: 2px solid rgba(49,95,82,.2);
+  border-radius: .5rem;
+  background: rgba(255,253,250,.88);
+  box-shadow: 0 20px 42px rgba(49,95,82,.12);
+}
 
-*Paradigmas estadísticos*
+.visual-board::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2.15rem;
+  border-radius: .38rem .38rem 0 0;
+  background: #173c3a;
+}
 
-- [{{< fa arrow-right >}} Estadística frecuentista](infografias/estadistica_frecuentista.qmd)
-- [{{< fa arrow-right >}} Estadística bayesiana](infografias/estadistica_bayesiana.qmd)
-- [{{< fa arrow-right >}} Machine learning](infografias/machine_learning.qmd)
-- [{{< fa arrow-right >}} Comparación de paradigmas](infografias/comparativa_frecuentista_bayesiana_ml.qmd)
+.visual-board::after {
+  content: "•••";
+  position: absolute;
+  top: .2rem;
+  left: .72rem;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: .12rem;
+}
 
-*Modelos*
+.chart-area { position: relative; height: 120px; border-left: 2px solid #d6d2ca; border-bottom: 2px solid #d6d2ca; }
+.chart-area svg { width: 100%; height: 100%; }
+.chart-bars { display: flex; align-items: end; gap: .42rem; height: 62px; margin-top: .8rem; }
+.chart-bars span { flex: 1; background: #e8e3da; border-radius: .18rem .18rem 0 0; }
+.chart-bars span:nth-child(1){height:28%}.chart-bars span:nth-child(2){height:52%}.chart-bars span:nth-child(3){height:40%}.chart-bars span:nth-child(4){height:75%}.chart-bars span:nth-child(5){height:100%}
 
-- [{{< fa arrow-right >}} Métodos de validación](infografias/metodos_validacion.qmd)
-- [{{< fa arrow-right >}} Pruebas estadísticas como modelos lineales](infografias/pruebas_como_modelos.qmd)
-- [{{< fa arrow-right >}} La familia de los modelos lineales](infografias/tipos_de_modelos.qmd)
-:::
+.visual-pie {
+  position: absolute;
+  left: -2rem;
+  bottom: -1.45rem;
+  width: 106px;
+  aspect-ratio: 1;
+  border: 7px solid var(--paper);
+  border-radius: 50%;
+  background: conic-gradient(var(--green) 0 25%, #b7cabd 25% 39%, var(--wine) 39% 72%, #a63b57 72% 100%);
+  box-shadow: 0 14px 28px rgba(23,38,45,.14);
+}
 
-::: {.home-card .accent-green}
-<div class="home-icon">{{< fa leaf >}}</div>
+.visual-leaves {
+  position: absolute;
+  right: -1.1rem;
+  bottom: -.65rem;
+  width: 108px;
+  color: var(--green);
+}
 
-### Modelado ecológico
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.1rem 0 3rem;
+}
 
-[5 infografías]{.home-count}
+.home-stat {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  min-height: 104px;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(61,46,34,.045);
+}
 
-- [{{< fa arrow-right >}} Nicho ecológico vs. distribución de especies](infografias/nicho_vs_distribucion.qmd)
-- [{{< fa arrow-right >}} Detectabilidad imperfecta](infografias/detectabilidad_imperfecta.qmd)
-- [{{< fa arrow-right >}} Modelos de ocupación](infografias/modelos_ocupacion.qmd)
-- [{{< fa arrow-right >}} Muestreo por distancias](infografias/muestreo_por_distancias.qmd)
-- [{{< fa arrow-right >}} Modelos de captura-recaptura](infografias/modelos_captura_recaptura.qmd)
-:::
+.stat-icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+}
+.stat-icon svg { width: 1.55rem; height: 1.55rem; }
+.home-stat:nth-child(1) .stat-icon { color: var(--wine); background: #f6e7eb; }
+.home-stat:nth-child(2) .stat-icon { color: var(--green); background: #eaf1ed; }
+.home-stat:nth-child(3) .stat-icon { color: var(--ochre); background: #f7efe2; }
+.stat-number { display:block; font-family: Georgia, "Times New Roman", serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+.home-stat:nth-child(1) .stat-number { color: var(--wine); }
+.home-stat:nth-child(2) .stat-number { color: var(--green); }
+.home-stat:nth-child(3) .stat-number { color: var(--ochre); }
+.stat-label { display:block; margin-top:.28rem; color:var(--ink); line-height:1.3; }
 
-::: {.home-card .accent-orange}
-<div class="home-icon">{{< fa paw >}}</div>
+.topic-heading { margin: 0 0 .3rem; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 3vw, 2.7rem); }
+.topic-intro { margin: 0 0 1.35rem; max-width: 720px; color: var(--muted); line-height: 1.65; }
 
-### Conservación de la biodiversidad
+.topic-grid { display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:.9rem; }
+.topic-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 1.15rem 1.05rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--paper);
+  color: var(--ink);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.topic-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(61,46,34,.08); border-color:#d8d0c6; }
+.topic-icon { display:grid; place-items:center; width:3rem; height:3rem; margin-bottom:1rem; border-radius:.9rem; }
+.topic-icon svg { width:1.45rem; height:1.45rem; }
+.topic-card h3 { margin: 0 0 .55rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; line-height:1.1; }
+.topic-card p { margin:0; color:var(--muted); font-size:.93rem; line-height:1.55; }
+.topic-arrow { margin-top:auto; align-self:flex-end; font-size:1.55rem; line-height:1; }
+.topic-card.met .topic-icon {color:var(--wine);background:#f6e7eb}.topic-card.met .topic-arrow{color:var(--wine)}
+.topic-card.stat .topic-icon {color:var(--green);background:#eaf1ed}.topic-card.stat .topic-arrow{color:var(--green)}
+.topic-card.model .topic-icon {color:var(--blue);background:#e8f1f4}.topic-card.model .topic-arrow{color:var(--blue)}
+.topic-card.div .topic-icon {color:var(--violet);background:#eee9f6}.topic-card.div .topic-arrow{color:var(--violet)}
+.topic-card.cons .topic-icon {color:var(--ochre);background:#f7efe2}.topic-card.cons .topic-arrow{color:var(--ochre)}
 
-[12 infografías]{.home-count}
+.home-note {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1rem;
+  align-items:center;
+  margin-top:2rem;
+  padding:1.2rem 1.4rem;
+  border:1px solid var(--line);
+  border-radius:1rem;
+  background:#faf8f3;
+}
+.home-note svg { width:2.3rem; height:2.3rem; color:var(--green); }
+.home-note strong { display:block; margin-bottom:.2rem; color:var(--green); font-family:Georgia,"Times New Roman",serif; font-size:1.15rem; }
+.home-note span { color:var(--muted); line-height:1.55; }
 
-- [{{< fa arrow-right >}} Conservación biológica: qué es y qué no es](infografias/conservacion_biologica_definicion.qmd)
-- [{{< fa arrow-right >}} Niveles de biodiversidad](infografias/niveles_biodiversidad.qmd)
-- [{{< fa arrow-right >}} Diversidad genética y viabilidad poblacional](infografias/diversidad_genetica_viabilidad.qmd)
-- [{{< fa arrow-right >}} Corredores biológicos: conectividad estructural vs. funcional](infografias/corredores_biologicos_conectividad.qmd)
-- [{{< fa arrow-right >}} Límites de los índices clásicos de diversidad](infografias/limites_indices_diversidad_clasicos.qmd)
-- [{{< fa arrow-right >}} Riqueza observada vs. riqueza estimada](infografias/riqueza_observada_vs_estimada.qmd)
-- [{{< fa arrow-right >}} Números de Hill](infografias/numeros_de_hill.qmd)
-- [{{< fa arrow-right >}} Diversidad alfa, beta y gamma](infografias/diversidad_alfa_beta_gamma.qmd)
-- [{{< fa arrow-right >}} ¿Gamma = alfa + beta o alfa × beta?](infografias/particion_alfa_beta_gamma.qmd)
-- [{{< fa arrow-right >}} Diversidad funcional](infografias/diversidad_funcional.qmd)
-- [{{< fa arrow-right >}} Cobertura de muestra: rarefacción y extrapolación](infografias/cobertura_muestra_rarefaccion.qmd)
-- [{{< fa arrow-right >}} MSOM y cobertura de muestra: un origen común](infografias/msom_vs_cobertura_muestra.qmd)
-:::
+@media (max-width: 1050px) {
+  .home-hero { grid-template-columns: 1fr; }
+  .home-visual { min-height: 285px; }
+  .topic-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 720px) {
+  main.content { padding-left: .8rem !important; padding-right: .8rem !important; }
+  .home-hero { padding: 1.6rem; border-radius: 1.1rem; }
+  .home-title { font-size: clamp(2.35rem, 12vw, 3.8rem); }
+  .home-stats { grid-template-columns: 1fr; }
+  .topic-grid { grid-template-columns: 1fr; }
+  .topic-card { min-height: 220px; }
+}
+</style>
 
-:::
+```{=html}
+<div class="home-page">
+  <section class="home-hero">
+    <div class="home-copy">
+      <div class="home-kicker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg>
+        COLECCIÓN VISUAL
+      </div>
+      <h1 class="home-title">Ideas complejas,<br>explicadas de forma<br><span class="wine">clara</span> y <span class="green">visual</span></h1>
+      <p class="home-lead">Una biblioteca de infografías sobre metodología de la investigación, estadística y ciencia de datos, modelado ecológico, diversidad biológica y conservación de la biodiversidad.</p>
+    </div>
+
+    <div class="home-visual" aria-hidden="true">
+      <div class="visual-blob"></div>
+      <div class="visual-board">
+        <div class="chart-area">
+          <svg viewBox="0 0 300 120" preserveAspectRatio="none">
+            <polyline points="12,92 70,60 122,82 178,45 236,68 286,25" fill="none" stroke="#173c3a" stroke-width="4"/>
+            <g fill="#173c3a">
+              <circle cx="12" cy="92" r="5"/><circle cx="70" cy="60" r="5"/><circle cx="122" cy="82" r="5"/><circle cx="178" cy="45" r="5"/><circle cx="236" cy="68" r="5"/><circle cx="286" cy="25" r="5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="chart-bars"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="visual-pie"></div>
+      </div>
+      <svg class="visual-leaves" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M20 104C52 81 70 53 90 14"/><path d="M51 75C33 70 25 58 28 45c17 1 28 12 29 26"/><path d="M68 55C79 37 95 31 108 35c-3 16-16 26-33 25"/><path d="M78 37C69 24 69 13 77 5c12 8 14 20 7 32"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="home-stats" aria-label="Resumen de la colección">
+    <div class="home-stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v5h5M9 12h6M9 16h6"/></svg></div>
+      <div><span class="stat-number">39</span><span class="stat-label">infografías disponibles</span></div>
+    </div>
+    <div class="home-stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+      <div><span class="stat-number">5</span><span class="stat-label">áreas temáticas</span></div>
+    </div>
+    <div class="home-stat">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 3 6 7 .9-5 4.8 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5-4.8L9 8z"/></svg></div>
+      <div><span class="stat-number">1</span><span class="stat-label">idea central por página</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="topic-heading">Explorar por tema</h2>
+    <p class="topic-intro">Cada colección reúne conceptos relacionados y permite avanzar desde las bases hasta temas más especializados.</p>
+
+    <div class="topic-grid">
+      <a class="topic-card met" href="infografias/metodologia/metodo_vs_metodologia.qmd">
+        <div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M8 15h8"/></svg></div>
+        <h3>Metodología de la investigación</h3>
+        <p>Fundamentos de la investigación científica y del proceso de generar conocimiento.</p>
+        <span class="topic-arrow">→</span>
+      </a>
+
+      <a class="topic-card stat" href="infografias/estadistica/proceso/plantear_problema_estadistico.qmd">
+        <div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Estadística y ciencia de datos</h3>
+        <p>Conceptos clave para recolectar, analizar e interpretar datos.</p>
+        <span class="topic-arrow">→</span>
+      </a>
+
+      <a class="topic-card model" href="infografias/modelado_ecologico/nicho_vs_distribucion.qmd">
+        <div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v4M7 17l3.5-4M17 17l-3.5-4"/></svg></div>
+        <h3>Modelado ecológico</h3>
+        <p>Modelos y técnicas para entender patrones ecológicos y distribuciones.</p>
+        <span class="topic-arrow">→</span>
+      </a>
+
+      <a class="topic-card div" href="infografias/diversidad/riqueza_observada_vs_estimada.qmd">
+        <div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/></svg></div>
+        <h3>Diversidad biológica</h3>
+        <p>Herramientas para describir, comparar y comprender la biodiversidad.</p>
+        <span class="topic-arrow">→</span>
+      </a>
+
+      <a class="topic-card cons" href="infografias/conservacion/conservacion_biologica_definicion.qmd">
+        <div class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7h14M7 7l-4 7h8zM17 7l-4 7h8z"/></svg></div>
+        <h3>Conservación de la biodiversidad</h3>
+        <p>Principios y herramientas para proteger especies, poblaciones y ecosistemas.</p>
+        <span class="topic-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="home-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21c8-1 13-6 15-16-7 1-12 5-15 12"/><path d="M4 21c3-4 7-7 12-10"/></svg>
+    <div><strong>Aprende con ayuda de recursos visuales</strong><span>Cada infografía presenta una idea central, definiciones claras, ejemplos y notas históricas para comprender a fondo los conceptos.</span></div>
+  </div>
+</div>
+```

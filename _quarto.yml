@@ -22,102 +22,119 @@ website:
     right:
       - icon: github
         href: https://github.com/ManuelSpinola
+
   sidebar:
-    style: "floating"
+    style: "docked"
     search: true
     background: light
     collapse-level: 3
     contents:
+      - text: "Inicio"
+        href: index.qmd
+
       - section: "Metodología de la investigación"
         contents:
           - text: "Método vs. metodología de investigación"
-            href: infografias/metodo_vs_metodologia.qmd
+            href: infografias/metodologia/metodo_vs_metodologia.qmd
           - text: "El método científico"
-            href: infografias/metodo_cientifico.qmd
-          - text: "Hipótesis en ciencia"
-            href: infografias/hipotesis_ciencia.qmd
+            href: infografias/metodologia/metodo_cientifico.qmd
           - text: "Investigación cualitativa vs. cuantitativa"
-            href: infografias/cualitativa_vs_cuantitativa.qmd
+            href: infografias/metodologia/cualitativa_vs_cuantitativa.qmd
           - text: "Objetivos de investigación"
-            href: infografias/objetivos_investigacion.qmd
+            href: infografias/metodologia/objetivos_investigacion.qmd
+          - text: "Hipótesis en ciencia"
+            href: infografias/metodologia/hipotesis_ciencia.qmd
           - text: "Correlación vs. causalidad"
-            href: infografias/correlacion_vs_causalidad.qmd
+            href: infografias/metodologia/correlacion_vs_causalidad.qmd
           - text: "Patrón vs. mecanismo"
-            href: infografias/patron_vs_mecanismo.qmd
+            href: infografias/metodologia/patron_vs_mecanismo.qmd
           - text: "Diseño de muestreo"
-            href: infografias/diseno_muestreo.qmd
+            href: infografias/metodologia/diseno_muestreo.qmd
           - text: "Tipos de muestreo"
-            href: infografias/tipos_muestreo.qmd
+            href: infografias/metodologia/tipos_muestreo.qmd
+
       - section: "Estadística y ciencia de datos"
         contents:
+          - section: "Proceso de análisis"
+            contents:
+              - text: "Cómo plantear un problema estadístico"
+                href: infografias/estadistica/proceso/plantear_problema_estadistico.qmd
+              - text: "Cómo interpretar resultados estadísticos"
+                href: infografias/estadistica/proceso/interpretar_resultados_estadisticos.qmd
+
+          - section: "Modelos"
+            contents:
+              - text: "Pruebas estadísticas como modelos lineales"
+                href: infografias/estadistica/modelos/pruebas_como_modelos.qmd
+              - text: "La familia de los modelos lineales"
+                href: infografias/estadistica/modelos/tipos_de_modelos.qmd
+              - text: "Métodos de validación"
+                href: infografias/estadistica/modelos/metodos_validacion.qmd
+
           - section: "Inferencia"
             contents:
               - text: "Prueba de hipótesis vs. estimación"
-                href: infografias/prueba_hipotesis_vs_estimacion.qmd
+                href: infografias/estadistica/inferencia/prueba_hipotesis_vs_estimacion.qmd
               - text: "Valores de p"
-                href: infografias/valores_p.qmd
+                href: infografias/estadistica/inferencia/valores_p.qmd
               - text: "Críticas a los valores de p"
-                href: infografias/criticas_valores_p.qmd
+                href: infografias/estadistica/inferencia/criticas_valores_p.qmd
               - text: "Tamaño del efecto"
-                href: infografias/tamano_efecto.qmd
+                href: infografias/estadistica/inferencia/tamano_efecto.qmd
+
           - section: "Paradigmas estadísticos"
             contents:
               - text: "Estadística frecuentista"
-                href: infografias/estadistica_frecuentista.qmd
+                href: infografias/estadistica/paradigmas/estadistica_frecuentista.qmd
               - text: "Estadística bayesiana"
-                href: infografias/estadistica_bayesiana.qmd
+                href: infografias/estadistica/paradigmas/estadistica_bayesiana.qmd
               - text: "Machine learning"
-                href: infografias/machine_learning.qmd
+                href: infografias/estadistica/paradigmas/machine_learning.qmd
               - text: "Comparación de paradigmas"
-                href: infografias/comparativa_frecuentista_bayesiana_ml.qmd
-          - section: "Modelos"
-            contents:
-              - text: "Métodos de validación"
-                href: infografias/metodos_validacion.qmd
-              - text: "Pruebas estadísticas como modelos lineales"
-                href: infografias/pruebas_como_modelos.qmd
-              - text: "La familia de los modelos lineales"
-                href: infografias/tipos_de_modelos.qmd
+                href: infografias/estadistica/paradigmas/comparativa_frecuentista_bayesiana_ml.qmd
+
       - section: "Modelado ecológico"
         contents:
           - text: "Nicho ecológico vs. distribución de especies"
-            href: infografias/nicho_vs_distribucion.qmd
+            href: infografias/modelado_ecologico/nicho_vs_distribucion.qmd
           - text: "Detectabilidad imperfecta"
-            href: infografias/detectabilidad_imperfecta.qmd
+            href: infografias/modelado_ecologico/detectabilidad_imperfecta.qmd
           - text: "Modelos de ocupación"
-            href: infografias/modelos_ocupacion.qmd
+            href: infografias/modelado_ecologico/modelos_ocupacion.qmd
           - text: "Muestreo por distancias"
-            href: infografias/muestreo_por_distancias.qmd
+            href: infografias/modelado_ecologico/muestreo_por_distancias.qmd
           - text: "Modelos de captura-recaptura"
-            href: infografias/modelos_captura_recaptura.qmd
+            href: infografias/modelado_ecologico/modelos_captura_recaptura.qmd
+
+      - section: "Diversidad biológica"
+        contents:
+          - text: "Riqueza observada vs. riqueza estimada"
+            href: infografias/diversidad/riqueza_observada_vs_estimada.qmd
+          - text: "Cobertura de muestra: rarefacción y extrapolación"
+            href: infografias/diversidad/cobertura_muestra_rarefaccion.qmd
+          - text: "Límites de los índices clásicos de diversidad"
+            href: infografias/diversidad/limites_indices_diversidad_clasicos.qmd
+          - text: "Números de Hill"
+            href: infografias/diversidad/numeros_de_hill.qmd
+          - text: "Diversidad alfa, beta y gamma"
+            href: infografias/diversidad/diversidad_alfa_beta_gamma.qmd
+          - text: "¿Gamma = alfa + beta o alfa × beta?"
+            href: infografias/diversidad/particion_alfa_beta_gamma.qmd
+          - text: "Diversidad funcional"
+            href: infografias/diversidad/diversidad_funcional.qmd
+          - text: "MSOM y cobertura de muestra: un origen común"
+            href: infografias/diversidad/msom_vs_cobertura_muestra.qmd
+
       - section: "Conservación de la biodiversidad"
         contents:
           - text: "Conservación biológica: qué es y qué no es"
-            href: infografias/conservacion_biologica_definicion.qmd
+            href: infografias/conservacion/conservacion_biologica_definicion.qmd
           - text: "Niveles de biodiversidad"
-            href: infografias/niveles_biodiversidad.qmd
+            href: infografias/conservacion/niveles_biodiversidad.qmd
           - text: "Diversidad genética y viabilidad poblacional"
-            href: infografias/diversidad_genetica_viabilidad.qmd
+            href: infografias/conservacion/diversidad_genetica_viabilidad.qmd
           - text: "Corredores biológicos: conectividad estructural vs. funcional"
-            href: infografias/corredores_biologicos_conectividad.qmd
-          - section: "Medición de la biodiversidad"
-            contents:
-              - text: "Límites de los índices clásicos de diversidad"
-                href: infografias/limites_indices_diversidad_clasicos.qmd
-              - text: "Riqueza observada vs. riqueza estimada"
-                href: infografias/riqueza_observada_vs_estimada.qmd
-              - text: "Números de Hill"
-                href: infografias/numeros_de_hill.qmd
-              - text: "Diversidad alfa, beta y gamma"
-                href: infografias/diversidad_alfa_beta_gamma.qmd
-              - text: "¿Gamma = alfa + beta o alfa × beta?"
-                href: infografias/particion_alfa_beta_gamma.qmd
-              - text: "Diversidad funcional"
-                href: infografias/diversidad_funcional.qmd
-              - text: "Cobertura de muestra: rarefacción y extrapolación"
-                href: infografias/cobertura_muestra_rarefaccion.qmd
-              - text: "MSOM y cobertura de muestra: un origen común"
-                href: infografias/msom_vs_cobertura_muestra.qmd
+            href: infografias/conservacion/corredores_biologicos_conectividad.qmd
 
 format:
   html:
@@ -125,8 +142,9 @@ format:
     css: /design-system.css
     include-after-body: _credito.html
     toc: false
+
     grid:
-      sidebar-width: 260px
-      body-width: 900px
-      margin-width: 250px
-      gutter-width: 1.5rem
+      sidebar-width: 280px
+      body-width: 1100px
+      margin-width: 0px
+      gutter-width: 2rem

@@ -1,0 +1,285 @@
+---
+title: "Cómo plantear un problema en un análisis estadístico"
+description: "Cómo identificar la variable respuesta y las variables explicativas a partir de la pregunta de investigación, por qué el tipo de variable determina el análisis, y los errores más comunes al plantear un problema estadístico."
+date: 2026-08-04
+author:
+  - name: "Manuel Spínola"
+    url: http://www.icomvis.una.ac.cr/index.php/manuel
+    affiliation: ICOMVIS - UNA
+    affiliation-url: http://www.icomvis.una.ac.cr/
+    orcid: 0000-0002-7839-1908
+citation: true
+css: /design-system.css
+lang: es
+---
+
+::: {.mm-wrap}
+
+::: {.mm-subtitle}
+[Antes de elegir un análisis, hay que saber qué se quiere explicar o modelar y qué variables podrían explicarlo.]{}
+:::
+
+::: {.mm-banner .gray}
+PUNTO DE PARTIDA: LA PREGUNTA DE INVESTIGACIÓN
+:::
+
+::: {.mm-example}
+{{< fa list-check >}} Todo análisis estadístico responde a una pregunta de investigación concreta. Esa pregunta, bien formulada, ya distingue qué se quiere explicar de qué se cree que lo explica — el análisis solo formaliza esa relación. Plantear mal esta distinción desde el inicio lleva a elegir el análisis equivocado, sin importar qué tan bien se ejecute después. Ver *Objetivos de investigación*.
+:::
+
+::: {.mm-banner .purple}
+VARIABLE RESPUESTA VS. VARIABLES EXPLICATIVAS
+:::
+
+::: {.mm-grid2}
+
+::: {.mm-def .blue}
+[VARIABLE RESPUESTA]{.pill}
+
+Lo que se mide, explica o predice — el resultado de interés. También se le llama variable dependiente. Es el "qué" de la pregunta de investigación.
+
+Pregunta guía: *¿qué es lo que quiero explicar o predecir?*
+:::
+
+::: {.mm-def .orange}
+[VARIABLES EXPLICATIVAS]{.pill}
+
+Lo que se hipotetiza que influye sobre la variable respuesta. También se conocen como predictores o covariables; en muchos textos también se denominan variables independientes. o predictoras. Pueden ser una o varias.
+
+Pregunta guía: *¿qué creo que influye sobre eso?*
+:::
+
+:::
+
+<div style="text-align:center; margin: 1.2rem 0;">
+<div style="font-size:14px; color:#23272F; margin-bottom:12px;">Un mismo modelo puede tener varias explicativas candidatas — no todas necesariamente entran al análisis final (ver errores comunes más abajo):</div>
+<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; max-width:600px; margin:0 auto;">
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Cobertura del suelo ↘</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Temperatura promedio ↓</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Precipitación anual ↙</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Elevación →</div>
+<div style="background:var(--orange); border-radius:50%; aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; color:white; font-weight:700; font-size:12px; text-align:center; padding:8px;">
+<div style="font-size:26px; line-height:1;">🐦</div>
+Densidad especie de ave<br>(respuesta)
+</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">← Distancia al borde</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Estructura vegetal ↗</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">Alimento disponible ↑</div>
+<div style="background:#EBF1F8; border:1.5px solid var(--blue); border-radius:10px; padding:10px; text-align:center; font-size:13px; color:#23272F; display:flex; align-items:center; justify-content:center;">↖ Presión de depredación</div>
+</div>
+</div>
+
+::: {.mm-banner .gray}
+EL TIPO DE VARIABLE DETERMINA EL MODELO
+:::
+
+::: {.mm-example}
+{{< fa scale-balanced >}} La mayoría de estos análisis son, en el fondo, el mismo modelo lineal (general): la respuesta se explica como una combinación de predictores más error. Lo que cambia es (1) cómo entra cada predictor en la fórmula, y (2) — cuando la respuesta no es continua — la distribución del modelo, lo que se conoce como modelo lineal generalizado. Ver *La familia de los modelos lineales* y *Pruebas estadísticas como modelos lineales*.
+:::
+
+**El tipo de predictor cambia la fórmula, no el modelo:**
+
+::: {.mm-row}
+::: {.mm-cell .blue}
+Predictor continuo (ej. elevación)
+:::
+::: {.mm-tag}
+→
+:::
+::: {.mm-cell .orange}
+Entra como pendiente — `y ~ x`
+:::
+:::
+
+::: {.mm-row}
+::: {.mm-cell .blue}
+Predictor categórico (ej. tipo de cobertura)
+:::
+::: {.mm-tag}
+→
+:::
+::: {.mm-cell .orange}
+Entra como diferencia entre grupos — `y ~ grupo` (lo que tradicionalmente se llama ANOVA, pero es el mismo modelo lineal)
+:::
+:::
+
+**El tipo de respuesta cambia la familia del modelo:**
+
+::: {.mm-row}
+::: {.mm-cell .blue}
+Respuesta continua (ej. densidad)
+:::
+::: {.mm-tag}
+→
+:::
+::: {.mm-cell .orange}
+Modelo lineal, distribución normal
+:::
+:::
+
+::: {.mm-row}
+::: {.mm-cell .blue}
+Respuesta binaria (ej. presente / ausente)
+:::
+::: {.mm-tag}
+→
+:::
+::: {.mm-cell .orange}
+Modelo lineal generalizado, familia binomial (regresión logística)
+:::
+:::
+
+::: {.mm-row}
+::: {.mm-cell .blue}
+Respuesta de conteo (ej. número de individuos, riqueza de especies)
+:::
+::: {.mm-tag}
+→
+:::
+::: {.mm-cell .orange}
+Modelo lineal generalizado, familia Poisson o binomial negativa
+:::
+:::
+
+::: {.mm-banner .purple}
+CÓMO DIFERENCIARLAS CUANDO NO ES OBVIO
+:::
+
+::: {.mm-example}
+{{< fa link-slash >}} Cuando la distinción no es evidente, algunas preguntas ayudan a resolverla:
+
+- ¿Qué se mide como consecuencia de otra cosa? Esa suele ser la respuesta.
+- ¿Qué ocurre o se establece primero, en el tiempo o en la lógica del sistema? Eso tiende a ser explicativo.
+- ¿La pregunta de investigación ya lo dice explícitamente? Releerla suele resolver la duda antes de mirar los datos.
+- ¿El diseño del estudio es experimental o solo observacional? Sin manipulación, la "explicativa" solo está asociada, no necesariamente causa el resultado.
+
+El diseño del estudio, no la intuición, es lo que finalmente respalda una dirección causal. Ver *Correlación vs. causalidad* y *Patrón vs. mecanismo*.
+:::
+
+::: {.mm-banner .gray}
+ERRORES COMUNES AL PLANTEAR EL PROBLEMA
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: invertir la variable respuesta y la explicativa, por ejemplo tratar la elevación como si fuera lo que se predice.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Preguntarse primero qué se quiere explicar — esa es la respuesta; lo demás son candidatas a explicativas.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: confundir una variable de control (covariable) con la variable de interés principal.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Distinguir la pregunta central de las variables que solo se incluyen para aislar su efecto.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: incluir demasiadas variables explicativas sin justificación teórica.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Cada explicativa debe tener una razón biológica o teórica para estar en el modelo, no solo estar disponible en los datos.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: tratar una variable de conteo como continua y ajustarle un modelo lineal ordinario sin más.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Los conteos suelen requerir modelos específicos para ese tipo de dato — ver *La familia de los modelos lineales*.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: no distinguir entre una variable manipulada experimentalmente y una simplemente medida u observada.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Esa distinción determina si se puede hablar de causalidad — ver *Correlación vs. causalidad*.
+:::
+
+:::
+
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: elegir primero la prueba estadística y luego intentar acomodar la pregunta de investigación.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} Primero se define la pregunta y las variables; el análisis se deriva de ellas, no al revés.
+:::
+
+:::
+
+::: {.mm-row}
+
+::: {.mm-cell .blue}
+{{< fa circle-question >}} Error: seleccionar variables únicamente porque fueron significativas en análisis univariados.
+:::
+
+::: {.mm-tag}
+CORRECCIÓN
+:::
+
+::: {.mm-cell .orange}
+{{< fa circle-check >}} La selección de variables debe basarse en la pregunta de investigación, el conocimiento del sistema y, cuando corresponda, criterios estadísticos adecuados.
+:::
+
+:::
+
+::: {.mm-summary}
+[ANTES DE ANALIZAR]{.pill}
+Antes de elegir un análisis conviene responder cuatro preguntas: ¿qué quiero explicar o modelar?, ¿qué variables podrían explicarlo?, ¿qué tipo de variable es cada una? y ¿el modelo elegido es compatible con esos tipos de variables? ¿Identifiqué qué se hipotetiza que la explica? ¿Sé qué tipo es cada variable? ¿Cada explicativa tiene una razón para estar incluida?
+:::
+
+::: {.mm-credito}
+Manuel Spínola · ICOMVIS-UNA
+:::
+
+:::
