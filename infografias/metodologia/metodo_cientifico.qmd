@@ -43,19 +43,21 @@ No es la única manera de hacer ciencia, sino una lógica de indagación entre v
 {{< fa triangle-exclamation >}} **Malentendido común:** la ciencia sigue siempre los mismos pasos, en el mismo orden, como una receta de cocina. **Interpretación correcta:** la investigación real avanza en ciclos y con retrocesos — un resultado inesperado obliga a replantear la pregunta, y muchas teorías nacen de observar patrones antes de tener una hipótesis que probar.
 :::
 
-<div style="margin: 1rem 0;">
-<p style="text-align:center; font-weight:600; margin-bottom:0.5rem;">{{< fa book >}} El mito: un proceso lineal</p>
-<div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.5rem; font-size:0.85rem;">
-<span>Observar</span> {{< fa arrow-right >}} <span>Preguntar</span> {{< fa arrow-right >}} <span>Hipótesis</span> {{< fa arrow-right >}} <span>Predecir</span> {{< fa arrow-right >}} <span>Contrastar con datos</span> {{< fa arrow-right >}} <span>Concluir</span>
-</div>
-</div>
+::: {.mm-flow .gray}
+[{{< fa book >}} El mito: un proceso lineal]{.mm-flow-title}
 
-<div style="margin: 1rem 0;">
-<p style="text-align:center; font-weight:600; margin-bottom:0.5rem;">{{< fa arrows-rotate >}} La realidad: un proceso iterativo</p>
-<div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.5rem; font-size:0.85rem;">
-<span>Observar</span> {{< fa arrow-right >}} <span>Hipótesis</span> {{< fa arrow-right >}} <span>Contrastar con datos</span> {{< fa arrow-right >}} <span>Resultado inesperado</span> {{< fa long-arrow-alt-left >}} <span style="font-style:italic;">se replantea la pregunta</span>
+<div class="mm-flow-steps">
+Observar {{< fa arrow-right >}} Preguntar {{< fa arrow-right >}} Hipótesis {{< fa arrow-right >}} Predecir {{< fa arrow-right >}} Contrastar con datos {{< fa arrow-right >}} Concluir
 </div>
+:::
+
+::: {.mm-flow .blue}
+[{{< fa arrows-rotate >}} La realidad: un proceso iterativo]{.mm-flow-title}
+
+<div class="mm-flow-steps">
+Observar {{< fa arrow-right >}} Hipótesis {{< fa arrow-right >}} Contrastar con datos {{< fa arrow-right >}} Resultado inesperado {{< fa long-arrow-alt-left >}} <span style="font-style:italic;">se replantea la pregunta</span>
 </div>
+:::
 
 ::: {.mm-example}
 {{< fa circle-info >}} "Contrastar con datos" puede ser un experimento manipulativo (con grupo control), pero también una comparación, un muestreo o un análisis de datos observacionales — buena parte de la investigación, especialmente en ecología y ciencias ambientales, pone a prueba sus predicciones sin manipular experimentalmente el sistema de estudio.
@@ -104,6 +106,11 @@ Parte de un hallazgo inesperado y busca la explicación más plausible — gener
 :::
 
 :::
+
+::: {.mm-example}
+{{< fa circle-info >}} **En la práctica**, el método científico no utiliza una única forma de razonamiento. Combina **abducción** (proponer hipótesis), **inducción** (generalizar a partir de observaciones) y **deducción** (derivar predicciones comprobables).
+:::
+
 
 ::: {.mm-example}
 {{< fa link >}} La teoría fundamentada (*grounded theory*) es un ejemplo de aproximación cualitativa en la que los conceptos y categorías emergen del análisis de los datos, antes de formular hipótesis a contrastar — aunque otras aproximaciones cualitativas sí parten de marcos teóricos o preguntas bien definidas (ver la infografía *Cualitativa vs. cuantitativa*).

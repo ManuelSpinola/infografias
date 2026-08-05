@@ -16,7 +16,7 @@ lang: es
 ::: {.mm-wrap}
 
 ::: {.mm-subtitle}
-[Dos formas de acercarse a un fenómeno de estudio]{}
+[Dos formas de estudiar un mismo fenómeno]{}
 :::
 
 ::: {.mm-grid2}
