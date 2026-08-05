@@ -27,7 +27,7 @@ website:
     style: "docked"
     search: true
     background: light
-    collapse-level: 3
+    collapse-level: 2
     contents:
       - text: "Inicio"
         href: index.qmd
